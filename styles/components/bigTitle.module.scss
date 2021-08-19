@@ -1,0 +1,14 @@
+@import '../variable/var.scss';
+
+.page-title {
+    background-image: url('../../public/title/bg-title.png');
+    text-align: center;
+    padding: 120px 0 100px;
+
+    .ini-title {
+        font-family: $rubik;
+        color: white;
+        font-weight: bold;
+        font-size: 48px;
+    }
+}

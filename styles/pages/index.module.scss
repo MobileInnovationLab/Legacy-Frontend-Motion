@@ -1,0 +1,275 @@
+@import '../variable/var.scss';
+
+.main-bg {
+  background: url('../../public/main-index/bg-main.png') left top no-repeat, url('../../public/main-index/bg-main2.png') right 1450px no-repeat;
+  background-size: 100%, 60%;
+  background-color: $background;
+
+  .main-body {
+    padding: 40px 0 0 0;
+
+    //content
+  
+    .box-first-section {
+      @include variable-penengah-jati-diri(100px, 92px);
+      display: flex;
+  
+      .first-section-article {
+        width: 800px;
+  
+        .first-section-title {
+          font-family: $rubik;
+          color: $text-header;
+          font-size: 55px;
+          margin-bottom: 30px;
+        }
+  
+        .first-section-p {
+          font-family: $inter;
+          color: $text-header;
+          font-size: 18px;
+          line-height: 32px;
+          margin-bottom: 60px;
+        }
+
+        .first-section-button {
+          font-family: $rubik;
+          font-weight: 600;
+          color: $sub-text-header;
+          background-color: $black;
+          padding: 20px 42px 20px 42px;
+          border-radius: 100px;
+          text-decoration: none;
+        }
+      }
+
+      .first-section-img {
+        margin-top: 45px;
+      }
+
+    }
+
+    .box-second-section {
+      @include variable-penengah-jati-diri(150px, 0);
+      text-align: center;
+
+      .second-small-title {
+        @include red-small-title();
+      }
+      .second-big-title {
+        margin-top: 5px;
+        @include black-title();
+      }
+
+      .second-box-division {
+        margin-top: 10px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        
+        .second-box-div-inside {
+          transition: 0.3s;
+
+          .second-box-article {
+            background-color: white;
+            padding: 70px 40px 40px 40px;
+            margin-top: -130px;
+            max-width: 250px;
+            
+            .second-box-article-title {
+              font-family: $rubik;
+              font-weight: 600;
+              color: $black;
+              font-size: 24px;
+            }
+
+            .second-box-article-p {
+              font-family: $inter;
+              font-weight: 400;
+              line-height: 28px;
+              color: $text-desc;
+              font-size: 16px;
+            }
+          }
+
+          &:hover {
+            .second-box-article {
+              box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.035);
+            }
+          }
+        }
+      }
+    }
+
+    .box-third-section {
+      padding: 0 0 0 135px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      display: flex;
+
+
+      .third-section-left {
+        max-width: 40%;
+
+        .third-small-title {
+          @include red-small-title();
+
+        }
+        .third-big-title {
+          @include black-title();
+          margin-top: 25px;
+        }
+        .third-p-left {
+          font-family: $inter;
+          font-size: 18px;
+          color: $text-desc;
+        }
+
+        .third-box-button {
+          display: flex;
+
+          .third-round-button {
+            transition: 0.1s;
+            width: 70px;
+            height: 70px;
+            border: 1px solid #858585;
+            box-sizing: border-box;
+            border-radius: 50%;
+            position: relative;
+            margin-top: 50px;
+            margin-right: 10px;
+    
+            .third-svg {
+              fill: #6A6A6A;
+              position: absolute;
+              top: 38%;
+              left: 38%;
+            }
+    
+            &:hover {
+              background-color: $main2;
+              border: 0;
+              cursor: pointer;
+    
+              .third-svg {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+
+      .third-section-right {
+        margin-top: 20px;
+        max-width: 60%;
+      }
+    }
+
+    .box-fourth-section {
+
+      @include variable-penengah-jati-diri(0, 20px);
+      padding-bottom: 80px;
+      padding-top: 80px;
+      background-color: white;
+      text-align: center;
+
+      .fourth-small-title {
+        @include red-small-title;
+      }
+
+      .fourth-big-title {
+        @include black-title;
+        margin-top: 0;
+      }
+
+      .fourth-gallery {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .fourth-flex-first {
+          margin-top: 0;
+        }
+
+        .fourth-flex-second {
+          margin-top: 30px;
+        }
+
+        .fourth-flex-third {
+          margin-top: 60px;
+        }
+
+      }
+
+      .fourth-button-see {
+        font-family: $rubik;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: $text-desc;
+
+        border: 1px solid #858585;
+        box-sizing: border-box;
+        border-radius: 60px;
+        background-color: transparent;
+        
+        width: 160px;
+        height: 50px;
+      }
+    }
+
+    .box-fifth-section {
+      @include variable-penengah-jati-diri(50px, 0);
+
+      .fifth-top {
+        display: flex;
+        justify-content: space-between;
+
+        .fifth-top-left {
+          width: 50%;
+
+          .fifth-small-title {
+            @include red-small-title;
+          }
+    
+          .fifth-big-title {
+            @include black-title;
+            margin-top: 25px;
+          }
+        }
+
+        .fifth-top-right {
+          margin: 120px 0 0;
+
+          .fifth-round-button {
+            transition: 0.1s;
+            width: 70px;
+            height: 70px;
+            border: 1px solid #858585;
+            box-sizing: border-box;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 10px;
+    
+            .fifth-svg {
+              fill: #6A6A6A;
+              position: absolute;
+              top: 38%;
+              left: 38%;
+            }
+    
+            &:hover {
+              background-color: $main2;
+              border: 0;
+              cursor: pointer;
+    
+              .fifth-svg {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

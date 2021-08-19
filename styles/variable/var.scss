@@ -1,0 +1,39 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Rubik:wght@400;600;700&display=swap');
+
+$inter: 'Inter', sans-serif;
+$rubik: 'Rubik', sans-serif;
+
+/*colors*/
+
+$main1: #C1271A;
+$main2: #F82F1E;
+$black: #332C2B;
+$text-header: #FFFFFF;
+$sub-text-header: #FFEAEA;
+$text-desc: #6A6A6A;
+$button-outline: #858585;
+
+$background: #FCF6F6;
+
+// multiple variables
+
+@mixin red-small-title() {
+    font-family: $rubik;
+    color: $main2;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+@mixin black-title() {
+    font-family: $rubik;
+    color: $black;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 65px;
+}
+
+@mixin variable-penengah-jati-diri($mid-top, $mid-bottom) {
+    padding: 0 135px 0 135px;
+    margin: $mid-top 0 $mid-bottom 0;
+}
