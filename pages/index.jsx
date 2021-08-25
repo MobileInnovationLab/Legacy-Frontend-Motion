@@ -37,7 +37,7 @@ export default class Home extends Component {
 
   render() {
     
-    const settings = {
+    const firstSlider = {
       arrows: false,
       dots: false,
       autoplay: true,
@@ -48,7 +48,7 @@ export default class Home extends Component {
       pauseOnHover: true
     };
 
-    const settings2 = {
+    const secondSlider = {
       arrows: false,
       dots: false,
       autoplay: true,
@@ -146,7 +146,7 @@ export default class Home extends Component {
               </div>
             </div>
             <div className={styles['third-section-right']}>
-              <Slider ref={c => (this.slider = c)} {...settings}>
+              <Slider ref={c => (this.slider = c)} {...firstSlider}>
                 <div>
                   <Image
                     src={require("../public/main-index/main-illu.png")}
@@ -286,7 +286,7 @@ export default class Home extends Component {
               </div>
             </div>
             <div className={styles['fifth-bottom']}>
-              <Slider ref={c => (this.slider2 = c)} {...settings2}>
+              <Slider ref={c => (this.slider2 = c)} {...secondSlider}>
                   <div>
                     <Image
                       src={require("../public/main-index/main-illu.png")}

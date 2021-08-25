@@ -9,14 +9,39 @@
     @include variable-penengah-jati-diri(10px, 0);
     padding-top: 60px;
     padding-bottom: 100px;
+    justify-content: space-between;
+    padding-right: 200px;
 
     .footer-first {
+        margin-right: 20px;
+
         .bottom-text {
             font-family: $inter;
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
             margin-top: 10px;
+        }
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+
+        .footer-titles {
+            font-family: $rubik;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .footer-item {
+            display: flex;
+            font-family: $rubik;
+            color: white;
+            margin-top: 20px;
+            align-items: center;
+            column-gap: 10px;
         }
     }
 }
