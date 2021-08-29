@@ -4,7 +4,7 @@ import { withRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import styles from '../styles/components/navbar.module.scss'
 
-function Navbar({ router }) {
+function Navbar({ router }, props) {
   const [navbar, setNavbar] = useState(false);
 
   const navs = [

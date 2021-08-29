@@ -8,7 +8,7 @@
     display: flex;
     @include variable-penengah-jati-diri(10px, 0);
     padding-top: 60px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     justify-content: space-between;
     padding-right: 200px;
 
@@ -43,5 +43,30 @@
             align-items: center;
             column-gap: 10px;
         }
+
+        .link {
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 60%;
+            }
+        }
+    }
+
+}
+
+.footer-copyright {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #282828;
+    padding: 10px 0;
+    font-family: $inter;
+
+    .copyright {
+        margin-left: 10px;
+        font-size: 16px;
     }
 }

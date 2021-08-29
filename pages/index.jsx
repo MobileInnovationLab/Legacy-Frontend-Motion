@@ -1,6 +1,5 @@
 import { Component } from 'react';
 
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,6 +7,8 @@ import Navbar from '../components/navbar';
 import styles from '../styles/pages/index.module.scss';
 import Slider from 'react-slick';
 import Footer from '../components/footer';
+import TopButton from '../components/topButton';
+import ProductContainer from '../components/productContainer';
 
 export default class Home extends Component {
   
@@ -58,6 +59,16 @@ export default class Home extends Component {
       autoplaySpeed: 5000,
       pauseOnHover: true
     };
+
+    let container = {
+      title: 'Text',
+      image: {
+        src: '/main-index/role/role-ba.png',
+        alt: 'ini foto'
+      },
+      text: 'Lorem ipsum dolor sit amet, elite consectetur adipiscing, sed do eiusmod...',
+      writer: 'Zara Adisty'
+    }
   
     return (
       <div className={styles['main-bg']}>
@@ -148,10 +159,7 @@ export default class Home extends Component {
             <div className={styles['third-section-right']}>
               <Slider ref={c => (this.slider = c)} {...firstSlider}>
                 <div>
-                  <Image
-                    src={require("../public/main-index/main-illu.png")}
-                    alt='Computer Illustration'
-                  />
+                  <ProductContainer {...container} />
                 </div>
                 <div>
                   <Image
@@ -326,6 +334,9 @@ export default class Home extends Component {
                 </Slider>
             </div>
           </section>
+          
+          <TopButton />
+
           <Footer />
         </div>
       </div>
