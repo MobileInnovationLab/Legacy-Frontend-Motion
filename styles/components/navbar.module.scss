@@ -1,9 +1,9 @@
 @import '../variable/var.scss';
 
 .navbar-main {
-
-  padding-top: 5px;
-  padding-bottom: 5px;
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
   left: 0;
   top: 0;
   width: 100%;
@@ -13,15 +13,23 @@
 
   .navbar-img-white {
     display: block;
+    width: 36px;
+    height: 34px;
   }
 
   .navbar-img-red {
     display: none;
+    width: 36px;
+    height: 34px;
+  }
+
+  .button {
+    fill: white;
   }
 
   .flex-container {
 
-    margin: 0 135px;
+    margin: 0 25px;
     display: flex;
     justify-content: space-between;
 
@@ -37,47 +45,13 @@
         list-style: none;
         font-family: $inter;
       
-        .nav-item {
-  
-          position: relative;
-          display: inline-block;
-          margin-left: 20px;
-          margin-right: 20px;
-          text-decoration: none;
-          transition: opacity .3s;
-          color: $sub-text-header;
-      
-          &.active {
-            font-weight: 400;
-            &:after {
-              content: '';
-              position: absolute;
-              bottom: -20px;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background-color: $text-header;
-            }
-          }
-      
-          &:hover {
-            opacity: .8;
-          }
-        }  
+        display: none;
       }
       
     }
 
     .nav-side {
-      position: relative;
-      background-color: $black;
-      padding: 15px 20px 15px 20px;
-      border-radius: 100px;
-      display: inline-block;
-      text-decoration: none;
-      transition: opacity .3s;
-      color: $sub-text-header;
-      font-family: $inter;
+      display: none;
     }
   }
 
@@ -92,6 +66,11 @@
     .navbar-img-red {
       display: block;
     }
+
+    .button {
+      fill: $main2;
+    }
+
     .flex-container {
       .container {
         .nav-links {
@@ -113,3 +92,122 @@
 
 }
 
+@media only screen and (min-width: 1024px) {
+
+  .navbar-main {
+  
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    transition: 0.5s;
+  
+    .navbar-img-white {
+      display: block;
+    }
+  
+    .navbar-img-red {
+      display: none;
+    }
+    .button {
+      display: none;
+    }
+  
+    .flex-container {
+  
+      margin: 0 135px;
+      display: flex;
+      justify-content: space-between;
+  
+      .container {
+  
+        display: flex;
+        align-items: center;
+        
+        .nav-links {
+    
+          margin-left: 100px;
+          display: flex;
+          list-style: none;
+          font-family: $inter;
+        
+          .nav-item {
+    
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-decoration: none;
+            transition: opacity .3s;
+            color: $sub-text-header;
+        
+            &.active {
+              font-weight: 400;
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $text-header;
+              }
+            }
+        
+            &:hover {
+              opacity: .8;
+            }
+          }  
+        }
+        
+      }
+  
+      .nav-side {
+        position: relative;
+        background-color: $black;
+        padding: 15px 20px 15px 20px;
+        border-radius: 100px;
+        display: inline-block;
+        text-decoration: none;
+        transition: opacity .3s;
+        color: $sub-text-header;
+        font-family: $inter;
+      }
+    }
+  
+    &.active {
+      background-color: white;
+      box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.10);
+  
+      .navbar-img-white {
+        display: none;
+      }
+    
+      .navbar-img-red {
+        display: block;
+      }
+      .flex-container {
+        .container {
+          .nav-links {
+            .nav-item {
+              color: $black;
+          
+              &.active {
+                color: $main2;
+              
+                &:after {
+                  background-color: $main2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+  }
+
+}  

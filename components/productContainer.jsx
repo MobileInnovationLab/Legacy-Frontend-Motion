@@ -1,5 +1,5 @@
 import Image from "next/image"
-import styles from '../styles/components/product.module.scss'
+import styles from '../styles/components/product-container.module.scss'
 
 export default function ProductContainer(props) {
     return (
@@ -8,9 +8,9 @@ export default function ProductContainer(props) {
                 <Image
                     src={props.image.src}
                     alt={props.image.alt}
-                    layout='responsive'
+                    layout='intrinsic'
                     width={320}
-                    height={250}
+                    height={200}
                 />
             </div>
             <h3 className={styles.title}>{props.title}</h3>

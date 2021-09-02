@@ -1,2 +1,46 @@
 @import '../variable/var.scss';
 
+.first {
+    @include variable-penengah-jati-diri(50px, 100px);
+
+    .first-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .title {
+            @include black-title;
+            width: 55%;
+        }
+
+        .subtitle {
+            font-family: $inter;
+            line-height: 32px;
+            font-size: 18px;
+            color: $text-desc;
+            width: 45%;
+        }
+    }
+
+    .first-flex {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .item {
+            width: 25%;
+            text-align: center;
+
+            h4 {
+                color: $main2;
+                font-family: $rubik;
+                font-size: 46px;
+                margin: 0;
+            }
+
+            p {
+                color: $text-desc;
+            }
+        }
+    }
+}
