@@ -1,0 +1,9 @@
+@import "../variable/var.scss";
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 20px;
+}

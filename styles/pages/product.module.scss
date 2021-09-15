@@ -1,5 +1,52 @@
 @import '../variable/var.scss';
 
-.container {
-    
+.main-body {
+    background-color: $background;
+
+    .search {
+        @include variable-penengah-jati-diri-small(20px, 50px);
+
+        .search-bar {
+            padding: 16px 30px;
+            width: auto;
+            background-color: white;
+            color: $text-desc;
+            font-family: $inter;
+            border-radius: 60px;
+
+            svg {
+                float: right;
+            }
+        }
+    }
+
+    .grid {
+        @include variable-penengah-jati-diri-small(0, 50px);
+        
+        display: grid;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .main-body {
+        
+        .search {
+            @include variable-penengah-jati-diri(20px, 20px);
+            display: flex;
+            justify-content: right;
+
+            .search-bar {
+                width: 300px;
+            }
+        }
+
+        .grid {
+            @include variable-penengah-jati-diri(0, 50px);
+
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;
+            row-gap: 30px;
+        }
+    }
 }

@@ -8,7 +8,9 @@ export default function Footer() {
             <footer className={styles['footer-container']}>
                 <section className={styles['footer-first']}>
                     <Image 
-                        src={require('../public/footer/logo-footer.png')}
+                        src={'/footer/logo-footer.png'}
+                        width={56}
+                        height={58}
                         alt='Logo Footer'
                     />
                     <p className={styles['bottom-text']}>Semboyan yel yel Motion <br />Lorem ipsum dolor</p>

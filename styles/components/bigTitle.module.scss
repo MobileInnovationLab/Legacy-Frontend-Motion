@@ -2,13 +2,27 @@
 
 .page-title {
     background-image: url('../../public/title/bg-title.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
     text-align: center;
-    padding: 120px 0 100px;
+    padding: 100px 0 40px;
 
     .ini-title {
         font-family: $rubik;
         color: white;
         font-weight: bold;
-        font-size: 48px;
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .page-title {
+        padding: 120px 0 100px;
+
+        .ini-title {
+            font-size: 48px;
+        }
     }
 }

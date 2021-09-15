@@ -8,7 +8,7 @@ function Blog() {
 
             <Navbar />
 
-            <BigTitle>Blog</BigTitle>
+            <BigTitle>Our Blog</BigTitle>
         </div>
     )
 }

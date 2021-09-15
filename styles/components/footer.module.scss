@@ -6,14 +6,17 @@
     background-repeat: no-repeat;
     color: $text-header;
     display: flex;
-    @include variable-penengah-jati-diri-small(10px, 0);
+    @include variable-penengah-jati-diri-small(0, 0);
     padding-top: 60px;
     padding-bottom: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
 
     .footer-first {
-        margin-right: 20px;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
 
         .bottom-text {
             font-family: $inter;
@@ -72,6 +75,17 @@
     }
 }
 
+@media only screen and (min-width: 453px) {
+    .footer-container {
+        .footer-first {
+            margin-left: 0;
+            margin-right: 0;
+            text-align: left;
+            padding-right: 10px;
+        }
+    }
+}
+
 @media only screen and (min-width: 1024px) {
     .footer-container {
         background-image: url('../../public/footer/bg-1.png');
@@ -79,7 +93,7 @@
         background-repeat: no-repeat;
         color: $text-header;
         display: flex;
-        @include variable-penengah-jati-diri(10px, 0);
+        @include variable-penengah-jati-diri( 0, 0);
         padding-top: 60px;
         padding-bottom: 50px;
         justify-content: space-between;

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import styles from '../styles/components/product-container.module.scss'
+import styles from '../styles/components/productContainer.module.scss'
 
 export default function ProductContainer(props) {
     return (
@@ -8,14 +8,13 @@ export default function ProductContainer(props) {
                 <Image
                     src={props.image.src}
                     alt={props.image.alt}
-                    layout='intrinsic'
-                    width={320}
-                    height={200}
+                    layout='fill'
+                    objectFit='cover'
                 />
             </div>
             <h3 className={styles.title}>{props.title}</h3>
             <p className={styles['description-text']}>{props.text}</p>
-            <div className={styles.divider} />
+            <hr className={styles.divider} />
             <p className={styles.writer}>by {props.writer}</p>
         </section>
     )
