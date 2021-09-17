@@ -2,38 +2,41 @@
 
 .main {
     background-color: $background;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 50px;
 
-    svg {
-        margin: auto;
-        margin-top: 60px;
-        width: 400px;
-    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
 
-    h1 {
-        font-family: $rubik;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 48px;
-        line-height: 57px;
-        color: $black;
-    }
+        svg {
+            margin: auto;
+            margin-top: 150px;
+            width: 400px;
+        }
 
-    .a {
-        margin: auto;
-        background-color: $main2;
-        padding: 25px 40px;
-        font-family: $inter;
-        width: 200px;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-        color: white;
-        border-radius: 100px;
-        margin-bottom: 100px;
+        h1 {
+            font-family: $rubik;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 57px;
+            color: $black;
+        }
+
+        .a {
+            margin: auto;
+            background-color: $main2;
+            padding: 25px 40px;
+            font-family: $inter;
+            width: 200px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: white;
+            border-radius: 100px;
+            margin-bottom: 300px;
+        }
     }
 }

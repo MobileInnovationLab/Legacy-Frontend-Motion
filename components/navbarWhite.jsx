@@ -2,9 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { withRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import styles from '../styles/components/navbar.module.scss'
+import styles from '../styles/components/navbarWhite.module.scss'
 
-function Navbar({ router }, props) {
+function NavbarWhite({ router }, props) {
   const [navbar, setNavbar] = useState(false);
   const [navModals, setNavModals] = useState(false);
   const [aboutExpand, setAboutExpand] = useState(false);
@@ -52,14 +52,6 @@ function Navbar({ router }, props) {
       <nav className={`${styles['navbar-main']} ${(navbar || navModals) && styles['active']}`}>
         <div className={styles['flex-container']}>
           <div className={styles['container']}>
-            <div className={styles['navbar-img-white']}>
-              <Link href=''>
-                <Image
-                  src={require('../public/navbar/logo-white-transparent.png')}
-                  alt="Motion Logo"
-                />
-              </Link>
-            </div>
             <div className={styles['navbar-img-red']}>
               <Link href=''>
                 <Image
@@ -152,4 +144,4 @@ function Navbar({ router }, props) {
   );
 }
 
-export default withRouter(Navbar);
+export default withRouter(NavbarWhite);

@@ -1,1 +1,10 @@
-@import '../variable/var.scss';
+@import "../variable/var.scss";
+
+.main-body {
+    .flex {
+        @include variable-penengah-jati-diri(100px, 100px);
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 30px;
+    }
+}

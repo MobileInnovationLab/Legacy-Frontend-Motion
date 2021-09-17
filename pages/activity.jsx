@@ -7,6 +7,7 @@ import Footer from "../components/footer";
 import ActivityContainer from '../components/activityContainer';
 
 import styles from '../styles/pages/activity.module.scss';
+import TopButton from '../components/topButton';
 
 function activity() {
     return (
@@ -35,6 +36,7 @@ function activity() {
                 activeClassName={'active'}
             />
 
+            <TopButton />
             <Footer />
         </div>
     )

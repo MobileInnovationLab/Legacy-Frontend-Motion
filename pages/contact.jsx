@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Navbar from '../components/navbar';
 import BigTitle from '../components/bigTitle';
 import Footer from '../components/footer';
+import TopButton from '../components/topButton';
 
 const contact = () => {
 
@@ -83,6 +84,7 @@ const contact = () => {
                     loading="lazy"
                 />
             </section>
+            <TopButton />
             <Footer />
         </div>
     )
