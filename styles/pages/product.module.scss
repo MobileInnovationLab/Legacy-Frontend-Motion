@@ -1,4 +1,4 @@
-@import '../variable/var.scss';
+@import "../variable/var.scss";
 
 .main-body {
     background-color: $background;
@@ -13,6 +13,23 @@
             color: $text-desc;
             font-family: $inter;
             border-radius: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                background: none;
+                border: none;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
 
             svg {
                 float: right;
@@ -22,15 +39,14 @@
 
     .grid {
         @include variable-penengah-jati-diri-small(0, 50px);
-        
-        display: grid;
-    }
 
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
     .main-body {
-        
         .search {
             @include variable-penengah-jati-diri(20px, 20px);
             display: flex;

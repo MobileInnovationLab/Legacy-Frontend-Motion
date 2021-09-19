@@ -8,14 +8,14 @@ export default function memberContainer() {
         <div className={styles.container}>
             <div className={styles.image}>
                 <Image
-                    src='/coba/sandal.jpg'
+                    src='/about/dummy.png'
                     layout='fill'
                     objectFit='cover'
                     className={styles['next-image']}
                 />
             </div>
-            <h3>Nama Doesnt</h3>
-            <p>Mobile Programming Expert</p>
+            <h3>Dummy Name</h3>
+            <p>This Dummy</p>
             <div className={styles.social}>
                 <Link href=''>
                     <div className={styles.item}>

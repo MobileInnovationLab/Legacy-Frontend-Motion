@@ -106,7 +106,16 @@ function About() {
 
                 <div className={styles.title}>
                     <hr />
-                    <h4>LABORATORY ASSISTANT</h4>
+                    <div className={styles.flex}>
+                        <h4>LABORATORY ASSISTANT</h4>
+                        <div className={styles.form}>
+                            <p>Generation: </p>
+                            <select>
+                                <option>none</option>
+                                <option>none</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div className={`${styles.slider} ${'slider-mobile'}`}>
                     <Slider {...responsiveLecturerSlider}>
@@ -131,7 +140,16 @@ function About() {
 
                 <div className={styles.title}>
                     <hr />
-                    <h4>LABORATORY MEMBER</h4>
+                    <div className={styles.flex}>
+                        <h4>LABORATORY MEMBER</h4>
+                        <div className={styles.form}>
+                            <p>Generation: </p>
+                            <select>
+                                <option>none</option>
+                                <option>none</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div className={`${styles.slider} ${'slider-mobile'}`}>
                     <Slider {...responsiveLecturerSlider}>

@@ -62,6 +62,34 @@
 
         .title {
             @include variable-penengah-jati-diri-small(50px, 0);
+
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .form {
+                    p {
+                        font-family: $inter;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    select {
+                        background-color: white;
+                        border: 1px solid #858585;
+                        box-sizing: border-box;
+                        border-radius: 40px;
+                        width: 200px;
+                        height: 45px;
+                        padding: 10px 20px;
+                    }
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
         }
         h1 {
             @include black-title;

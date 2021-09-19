@@ -1,5 +1,6 @@
-import Image from "next/image"
-import styles from '../styles/components/productContainer.module.scss'
+
+import Image from 'next/image';
+import styles from '../styles/components/productContainer.module.scss';
 
 export default function ProductContainer(props) {
     return (
@@ -7,7 +8,6 @@ export default function ProductContainer(props) {
             <div className={styles.img}>
                 <Image
                     src={props.image.src}
-                    alt={props.image.alt}
                     layout='fill'
                     objectFit='cover'
                 />
@@ -17,5 +17,5 @@ export default function ProductContainer(props) {
             <hr className={styles.divider} />
             <p className={styles.writer}>by {props.writer}</p>
         </section>
-    )
+    );
 }
