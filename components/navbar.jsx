@@ -129,7 +129,7 @@ function Navbar({ router }, props) {
                   </Link>
                 </div>
                 <div className={styles['about-link']}>
-                  <Link href='/contactUs'>
+                  <Link href='/contact'>
                     <a>Contact Us</a>
                   </Link>
                 </div>

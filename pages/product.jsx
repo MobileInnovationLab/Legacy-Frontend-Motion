@@ -50,6 +50,7 @@ function Product() {
                 {data?.map((val) => (
                     <ProductContainer
                         key={val.id}
+                        id={val.id}
                         image={{
                             src: '/coba/ical.png',
                             alt: val.title,

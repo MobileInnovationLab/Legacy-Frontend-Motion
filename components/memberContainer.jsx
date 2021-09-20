@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import styles from '../styles/components/memberContainer.module.scss'
 
-export default function memberContainer() {
+export default function memberContainer({ name, division }) {
     return (
         <div className={styles.container}>
             <div className={styles.image}>
@@ -14,8 +14,8 @@ export default function memberContainer() {
                     className={styles['next-image']}
                 />
             </div>
-            <h3>Dummy Name</h3>
-            <p>This Dummy</p>
+            <h3>{name}</h3>
+            <p>{division}</p>
             <div className={styles.social}>
                 <Link href=''>
                     <div className={styles.item}>

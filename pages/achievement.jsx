@@ -23,7 +23,11 @@ function Achievement() {
             <section className={styles.flex}>
                 {data?.map((achievement) => (
                     <React.Fragment key={achievement.id}>
-                        <AchievementContainer title={achievement.name} />
+                        <AchievementContainer
+                            title={achievement.name}
+                            team={achievement.team_name}
+                            id={achievement.id}
+                        />
                     </React.Fragment>
                 ))}
             </section>

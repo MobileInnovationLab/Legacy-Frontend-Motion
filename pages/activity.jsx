@@ -23,7 +23,7 @@ function activity() {
                 <ActivityContainer />
             </section>
 
-            <ReactPaginate
+            {/* <ReactPaginate
                 previousLabel={'previous'}
                 nextLabel={'next'}
                 breakLabel={'...'}
@@ -34,7 +34,7 @@ function activity() {
                 // onPageChange={this.handlePageClick}
                 containerClassName={'pagination'}
                 activeClassName={'active'}
-            />
+            /> */}
 
             <TopButton />
             <Footer />

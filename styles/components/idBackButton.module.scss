@@ -1,0 +1,23 @@
+@import "../variable/var.scss";
+
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: #ffeaea;
+    border: 1px solid #f82f1e;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f82f1e;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

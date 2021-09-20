@@ -2,9 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/components/productContainer.module.scss';
 
-export default function ProductContainer(props) {
+export default function BlogContainer(props) {
     return (
-        <Link href={`/product/${props.id}`}>
+        <Link href={`/blog/${props.id}`}>
             <section className={styles.container}>
                 <div className={styles.img}>
                     <Image

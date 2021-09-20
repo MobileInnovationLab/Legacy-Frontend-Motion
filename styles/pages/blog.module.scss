@@ -36,6 +36,13 @@
             }
         }
     }
+
+    .grid {
+        @include variable-penengah-jati-diri-small(0, 50px);
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -48,6 +55,14 @@
             .search-bar {
                 width: 300px;
             }
+        }
+
+        .grid {
+            @include variable-penengah-jati-diri(0, 50px);
+
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;
+            row-gap: 30px;
         }
     }
 }

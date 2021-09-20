@@ -14,7 +14,6 @@ import ProductContainer from '../components/productContainer';
 import AchievementContainer from '../components/achievementContainer';
 import IndexAchievementContainer from '../components/indexAchievementContainer';
 
-import axios from 'axios';
 import API from '../api';
 
 const firstSlider = {
@@ -175,13 +174,14 @@ export default class Home extends Component {
     };
 
     let container2 = {
-      title: '@rfh_isal',
+      id: '1',
+      title: 'Sendal Lempar',
       image: {
-        src: '/coba/ical.png',
+        src: '/coba/sandal.jpg',
         alt: 'ini foto',
       },
-      text: 'Ical the caster valorant terbaik di valorant esport telyu anjay no cap.',
-      writer: 'Ngatau',
+      text: 'Lorem ipsum dolor sit amet, elite consectetur adipiscing, sed do eiusmod adsdsadasdsad sdasfdfsd dsadasdas',
+      writer: 'Zara Adisty',
     };
 
     let container3 = {
@@ -274,6 +274,7 @@ export default class Home extends Component {
                 {products?.map((product) => (
                   <div key={product.name}>
                     <ProductContainer
+                      id={product.id}
                       image={{
                         src: '/coba/ical.png',
                         alt: product.title,
