@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
-import { Image } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head'
 
 import API from '../../api';
 import BigTitle from '../../components/bigTitle';
@@ -10,6 +11,7 @@ import Footer from '../../components/footer';
 
 import styles from '../../styles/pages/product/idProduct.module.scss';
 import IdBackButton from '../../components/idBackButton';
+import Skeleton from 'react-loading-skeleton';
 
 const DetailProduct = () => {
     const router = useRouter();
@@ -24,56 +26,57 @@ const DetailProduct = () => {
                 .finally(() => setLoading(false));
     }, [id]);
 
+    console.log(data?.photo)
+
     if (data?.status === 404 && !loading) {
-        return <BigTitle>Not Found</BigTitle>;
+        router.push('/404')
     }
 
     return (
         <>
+            <Head>
+                <title>{data?.name}</title>
+            </Head>
 
             <NavbarWhite />
             <div className={styles['main-bg']}>
                 {/* <BigTitle>{data?.name}</BigTitle> */}
                 <section className={styles.article}>
                     <IdBackButton />
-                    <h3>{data?.name}</h3>
-                    {/* <div className={styles.img}>
-                    <Image
-                        src={data?.photo}
-                        layout='fill'
-                        objectFit='cover'
-                    />
-                </div> */}
+                    <h3>{data?.name || <Skeleton />}</h3>
+                    <div className={styles.img}>
+                        <Image
+                            src={`https://motionlab.masuk.web.id/api/${data?.photo}`}
+                            layout='fill'
+                            objectFit='cover'
+                        />
+                    </div>
 
                     <hr />
 
                     <div className={styles.app}>
                         <p>Product Name:</p>
-                        <b>{data?.name}</b>
+                        <b>{data?.name || <Skeleton />}</b>
                         <p>Creator:</p>
-                        <b>{data?.creator}</b>
-                        <p>Released:</p>
-                        <b>{data?.created_at}</b>
+                        <b>{data?.creator || <Skeleton />}</b>
                         <p>Platform:</p>
-                        <b>{data?.platform}</b>
+                        <b>{data?.platform || <Skeleton />}</b>
                         <button>Download App</button>
                     </div>
 
                     <hr />
 
-                    <article>{data?.description}</article>
+                    <article>{data?.description || <Skeleton />}</article>
 
                 </section>
 
                 <div className={styles['app-responsive']}>
                     <p>Product Name:</p>
-                    <b>{data?.name}</b>
+                    <b>{data?.name || <Skeleton />}</b>
                     <p>Creator:</p>
-                    <b>{data?.creator}</b>
-                    <p>Released:</p>
-                    <b>{data?.created_at}</b>
+                    <b>{data?.creator || <Skeleton />}</b>
                     <p>Platform:</p>
-                    <b>{data?.platform}</b>
+                    <b>{data?.platform || <Skeleton />}</b>
                     <button>Download App</button>
                 </div>
 

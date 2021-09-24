@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import API from '../../api';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { WhatsappShareButton, LinkedinShareButton, FacebookShareButton } from 'react-share';
@@ -12,6 +13,7 @@ import IdBackButton from '../../components/idBackButton';
 import Footer from '../../components/footer';
 
 import styles from '../../styles/pages/product/idBlog.module.scss';
+import Skeleton from 'react-loading-skeleton';
 
 const DetailBlog = () => {
     const router = useRouter();
@@ -27,16 +29,20 @@ const DetailBlog = () => {
     }, [id]);
 
     if (data?.status === 404 && !loading) {
-        return <BigTitle>Not Found</BigTitle>;
+        router.push('/404')
     }
 
     return (
         <>
+            <Head>
+                <title>{data?.title}</title>
+            </Head>
+
             <NavbarWhite />
             <div className={styles['main-bg']}>
                 <section className={styles.article}>
                     <IdBackButton />
-                    <h3>{data?.title}</h3>
+                    <h3>{data?.title || <Skeleton />}</h3>
                     {/* <div className={styles.img}>
                 <Image
                     src={data?.thumbnail}
@@ -67,7 +73,7 @@ const DetailBlog = () => {
 
                     <hr />
 
-                    <article>{data?.description}</article>
+                    <article>{data?.description || <Skeleton />}</article>
 
                 </section>
 

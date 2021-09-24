@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Head from 'next/head';
 import ReactPaginate from 'react-paginate';
 
 import Navbar from "../components/navbar";
@@ -12,6 +13,9 @@ import TopButton from '../components/topButton';
 function activity() {
     return (
         <div className={styles['main-body']}>
+            <Head>
+                <title>Activity</title>
+            </Head>
 
             <Navbar />
 

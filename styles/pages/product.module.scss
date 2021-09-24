@@ -41,11 +41,64 @@
         @include variable-penengah-jati-diri-small(0, 50px);
 
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
+        justify-content: center;
+        row-gap: 20px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .main-body {
+        .search {
+            @include variable-penengah-jati-diri-small(20px, 20px);
+        }
+
+        .grid {
+            @include variable-penengah-jati-diri-small(0, 50px);
+
+            grid-template-columns: auto;
+            justify-content: center;
+            row-gap: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main-body {
+        .search {
+            @include variable-penengah-jati-diri-medium(20px, 20px);
+        }
+
+        .grid {
+            @include variable-penengah-jati-diri-medium(0, 50px);
+
+            grid-template-columns: auto auto;
+            justify-content: space-evenly;
+            row-gap: 30px;
+        }
     }
 }
 
 @media only screen and (min-width: 1024px) {
+    .main-body {
+        .search {
+            display: flex;
+            justify-content: right;
+
+            .search-bar {
+                width: 300px;
+            }
+        }
+
+        .grid {
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            row-gap: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
     .main-body {
         .search {
             @include variable-penengah-jati-diri(20px, 20px);

@@ -2,11 +2,16 @@ import styles from '../styles/pages/recruitment.module.scss';
 import Navbar from '../components/navbar';
 import BigTitle from '../components/bigTitle';
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function recruitment() {
     console.log('formErr')
     return (
         <div className={styles.main}>
+            <Head>
+                <title>Recruitment</title>
+            </Head>
+
             <Navbar />
             <BigTitle>Recruitment</BigTitle>
 

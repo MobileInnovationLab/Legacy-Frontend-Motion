@@ -5,6 +5,7 @@ import AchievementContainer from '../components/achievementContainer';
 import styles from '../styles/pages/achievement.module.scss';
 import Footer from '../components/footer';
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import API from '../api';
 
 function Achievement() {
@@ -16,6 +17,9 @@ function Achievement() {
 
     return (
         <div className={styles['main-body']}>
+            <Head>
+                <title>Achievement</title>
+            </Head>
             <Navbar />
 
             <BigTitle>Achievement</BigTitle>
@@ -24,6 +28,7 @@ function Achievement() {
                 {data?.map((achievement) => (
                     <React.Fragment key={achievement.id}>
                         <AchievementContainer
+                            image={`https://motionlab.masuk.web.id/api/${achievement?.photo}`}
                             title={achievement.name}
                             team={achievement.team_name}
                             id={achievement.id}

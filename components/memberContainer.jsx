@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Skeleton from 'react-loading-skeleton';
 
 import styles from '../styles/components/memberContainer.module.scss'
 
@@ -8,14 +9,14 @@ export default function memberContainer({ name, division }) {
         <div className={styles.container}>
             <div className={styles.image}>
                 <Image
-                    src='/about/dummy.png'
+                    src={'/about/dummy.png'}
                     layout='fill'
                     objectFit='cover'
                     className={styles['next-image']}
                 />
             </div>
-            <h3>{name}</h3>
-            <p>{division}</p>
+            <h3>{name || <Skeleton width={150} />}</h3>
+            <p>{division || <Skeleton width={100} />}</p>
             <div className={styles.social}>
                 <Link href=''>
                     <div className={styles.item}>

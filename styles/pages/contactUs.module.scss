@@ -89,9 +89,20 @@
     }
 }
 
+@media only screen and (min-width: 768px) {
+    .first {
+        @include variable-penengah-jati-diri-medium(30px, 20px);
+    }
+
+    .second {
+        @include variable-penengah-jati-diri-medium(30px, 0);
+        padding-bottom: 20px;
+    }
+}
+
 @media only screen and (min-width: 1024px) {
     .first {
-        @include variable-penengah-jati-diri(100px, 80px);
+        @include variable-penengah-jati-diri-medium(80px, 30px);
         text-align: left;
         flex-direction: row-reverse;
         padding-bottom: 50px;
@@ -103,6 +114,73 @@
             h3 {
                 font-size: 48px;
                 margin-bottom: 0;
+                line-height: 57px;
+            }
+
+            .sub {
+                font-size: 18px;
+                margin-top: 15px;
+            }
+
+            .first-address {
+                display: flex;
+                align-items: center;
+                line-height: 28px;
+
+                p {
+                    margin-left: 15px;
+                    max-width: 60%;
+                }
+            }
+        }
+
+        .first-img {
+            width: 430px;
+            height: 400px;
+        }
+    }
+
+    .second {
+        @include variable-penengah-jati-diri-medium(0, 0);
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        h3 {
+            font-size: 36px;
+        }
+
+        .second-social {
+            margin-top: 80px;
+
+            .social {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    .map {
+        iframe {
+            height: 500px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .first {
+        @include variable-penengah-jati-diri(80px, 30px);
+        text-align: left;
+        flex-direction: row-reverse;
+        padding-bottom: 50px;
+
+        .first-content {
+            margin-left: 50px;
+            width: 50%;
+
+            h3 {
+                font-size: 48px;
+                margin-bottom: 0;
+                line-height: 57px;
             }
 
             .sub {
@@ -122,7 +200,7 @@
         }
 
         .first-img {
-            width: 570px;
+            width: 430px;
             height: 400px;
         }
     }

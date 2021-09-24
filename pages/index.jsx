@@ -1,5 +1,7 @@
 import { Component } from 'react';
+import { useState } from 'react';
 
+import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,6 +17,7 @@ import AchievementContainer from '../components/achievementContainer';
 import IndexAchievementContainer from '../components/indexAchievementContainer';
 
 import API from '../api';
+import IndexModal from '../components/indexModal';
 
 const firstSlider = {
   arrows: false,
@@ -26,21 +29,7 @@ const firstSlider = {
   autoplaySpeed: 5000,
   responsive: [
     {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 400,
+      breakpoint: 1200,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -72,14 +61,7 @@ const secondSlider = {
       },
     },
     {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 500,
+      breakpoint: 768,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -101,13 +83,16 @@ export default class Home extends Component {
     this.previous = this.previous.bind(this);
     this.next2 = this.next2.bind(this);
     this.previous2 = this.previous2.bind(this);
+    this.state = {
+      ytModal: false
+    }
   }
 
   async componentDidMount() {
     try {
       const [products, achievements, blogs] = await Promise.all([
         API.getProductsSlider(),
-        API.getAchievements(),
+        API.getIndexAchievement(),
         API.getBlogs(),
       ]);
 
@@ -119,6 +104,14 @@ export default class Home extends Component {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  closeYtModals = () => {
+    this.setState({ ytModal: false })
+  }
+
+  openYtModals = () => {
+    this.setState({ ytModal: true })
   }
 
   next() {
@@ -135,6 +128,25 @@ export default class Home extends Component {
 
   previous2() {
     this.slider2.slickPrev();
+  }
+
+  sliders() {
+    const { products } = this.state
+
+    return products?.map((product) => (
+      <div key={product.name} className={styles["third-slider"]}>
+        <ProductContainer
+          id={product.id}
+          image={{
+            src: `https://motionlab.masuk.web.id/api/${product?.photo}`,
+            alt: product.title,
+          }}
+          title={product.name}
+          text={product.description}
+          writer={product.creator}
+        />
+      </div>
+    ))
   }
 
   render() {
@@ -196,6 +208,26 @@ export default class Home extends Component {
 
     return (
       <div className={styles['main-bg']}>
+        <Head>
+          <title>Mobile Innovation Lab</title>
+        </Head>
+
+        {this.state.ytModal ?
+          <div className={styles["whole-page"]} onClick={this.closeYtModals}>
+            <div className={styles.container}>
+              <iframe
+                width="860"
+                height="525"
+                src="https://www.youtube.com/embed/2FcHPaikrsM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+          </div>
+          : ''
+        }
         <Navbar />
 
         <div className={styles['main-body']}>
@@ -205,11 +237,11 @@ export default class Home extends Component {
                 Mobile Innovation Laboratory
               </h1>
               <p className={styles['first-section-p']}>
-                Mobile innovation laboratory is Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt{' '}
+                The Mobile Innovation Laboratory, or commonly called Motion Lab, is one of the latest
+                laboratories at the Faculty of Informatics, Telkom University under the auspices of K-Side.
               </p>
               <Link href=''>
-                <a className={styles['first-section-button']}>Explore More</a>
+                <a className={styles['first-section-button']} onClick={this.openYtModals}>Explore More</a>
               </Link>
             </article>
 
@@ -271,23 +303,7 @@ export default class Home extends Component {
             </div>
             <div className={styles['third-section-right']}>
               <Slider ref={(c) => (this.slider = c)} {...firstSlider}>
-                {products?.map((product) => (
-                  <div key={product.name}>
-                    <ProductContainer
-                      id={product.id}
-                      image={{
-                        src: '/coba/ical.png',
-                        alt: product.title,
-                      }}
-                      title={product.name}
-                      text={product.description}
-                      writer={product.creator}
-                    />
-                  </div>
-                ))}
-                <div>
-                  <ProductContainer {...container2} />
-                </div>
+                {this.sliders()}
               </Slider>
               <div className={styles['third-box-button-responsive']}>
                 <button
@@ -329,29 +345,32 @@ export default class Home extends Component {
             </h1>
 
             <div className={styles['fourth-gallery']}>
-              <div className={styles['fourth-flex-first']}>
-                <div className={styles['fourth-content']}>
-                  <IndexAchievementContainer />
-                </div>
-                <div className={styles['fourth-content']}>
-                  <IndexAchievementContainer />
-                </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
               </div>
-              <div className={styles['fourth-flex-second']}>
-                <div className={styles['fourth-content']}>
-                  <IndexAchievementContainer />
-                </div>
-                <div className={styles['fourth-content']}>
-                  <IndexAchievementContainer />
-                </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
               </div>
-              <div className={styles['fourth-flex-third']}>
-                <div className={styles['fourth-content']}>
-                  <IndexAchievementContainer />
-                </div>
-                <div className={styles['fourth-content']}>
-                  <IndexAchievementContainer />
-                </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
+              </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
+              </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
+              </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
+              </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
+              </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
+              </div>
+              <div className={styles['fourth-content']}>
+                <IndexAchievementContainer />
               </div>
             </div>
 
@@ -360,16 +379,20 @@ export default class Home extends Component {
                 } ${'slider-mobile'}`}
             >
               <Slider {...responsiveSlider}>
-                <div>
-                  <AchievementContainer />
+                <div className={styles['fourth-responsive-slider']}>
+                  <AchievementContainer image={`https://motionlab.masuk.web.id/api/${achievements?.photo}`} />
                 </div>
-                <div>
-                  <AchievementContainer />
+                <div className={styles['fourth-responsive-slider']}>
+                  <AchievementContainer image={`https://motionlab.masuk.web.id/api/${achievements?.photo}`} />
                 </div>
               </Slider>
             </div>
 
-            <button className={styles['fourth-button-see']}>See All</button>
+            <Link href="/achievement">
+              <a >
+                <button className={styles['fourth-button-see']}>See All</button>
+              </a>
+            </Link>
           </section>
 
           <section className={styles['box-fifth-section']}>
@@ -416,7 +439,7 @@ export default class Home extends Component {
             <div className={styles['fifth-bottom']}>
               <Slider ref={(c) => (this.slider2 = c)} {...secondSlider}>
                 {blogs?.map((blog) => (
-                  <div key={blog.id}>
+                  <div key={blog.id} className={styles['fifth-slider-item']}>
                     {console.log(blog)}
                     <ProductContainer
                       image={{
@@ -429,11 +452,10 @@ export default class Home extends Component {
                     />
                   </div>
                 ))}
-
-                <div>
+                <div className={styles['fifth-slider-item']}>
                   <ProductContainer {...container2} />
                 </div>
-                <div>
+                <div className={styles['fifth-slider-item']}>
                   <ProductContainer {...container3} />
                 </div>
               </Slider>

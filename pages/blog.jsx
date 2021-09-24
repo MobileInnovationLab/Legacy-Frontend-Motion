@@ -3,6 +3,7 @@ import BigTitle from '../components/bigTitle';
 import styles from '../styles/pages/blog.module.scss';
 import Footer from "../components/footer";
 import BlogContainer from '../components/blogContainer';
+import Head from 'next/head'
 
 let container2 = {
     id: '1',
@@ -18,6 +19,9 @@ let container2 = {
 function Blog() {
     return (
         <div className={styles['main-body']}>
+            <Head>
+                <title>Blog</title>
+            </Head>
 
             <Navbar />
 
@@ -28,8 +32,8 @@ function Blog() {
                     <input type="text" placeholder='Search..' />
                     <button type="submit">
                         <svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' >
-                            <circle cx='9.80565' cy='9.80547' r='7.49047' stroke='#F82F1E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' />
-                            <path d='M15.0154 15.4042L17.9521 18.3333' stroke='#F82F1E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' />
+                            <circle cx='9.80565' cy='9.80547' r='7.49047' stroke='#F82F1E' strokeWidth='1.5' stroke-linecap='round' stroke-linejoin='round' />
+                            <path d='M15.0154 15.4042L17.9521 18.3333' stroke='#F82F1E' strokeWidth='1.5' stroke-linecap='round' stroke-linejoin='round' />
                         </svg>
                     </button>
                 </form>

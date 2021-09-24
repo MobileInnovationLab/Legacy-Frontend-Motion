@@ -1,4 +1,4 @@
-import fetcher from './fetcher';
+import fetcher from "./fetcher";
 
 const apiProduct = {
   getProductsSlider: (perPage = 3) => {
@@ -25,6 +25,20 @@ const apiProduct = {
       .get(`/product/${id}`)
       .then((resp) => resp.data.data)
       .catch((err) => err.response),
+  getProductByName: (name) =>
+    fetcher
+      .get(`/product?search=${name}`)
+      .then((resp) => resp.data.data)
+      .catch((err) => err.response),
+  getProductByPaginate: () =>
+    fetcher
+      .get(`/product?paginate=9`)
+      .then((resp) => {
+        return resp.data.data;
+      })
+      .catch((err) => {
+        return err.response;
+      }),
 };
 
 export default apiProduct;

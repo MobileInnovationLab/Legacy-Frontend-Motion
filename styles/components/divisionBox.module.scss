@@ -1,10 +1,10 @@
-@import '../variable/var.scss';
+@import "../variable/var.scss";
 
 .second-box-division {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     .second-box-div-inside {
         transition: 0.3s;
 
@@ -13,7 +13,8 @@
             padding: 70px 40px 40px 40px;
             margin-top: -130px;
             max-width: 250px;
-            
+            height: 180px;
+
             .second-box-article-title {
                 font-family: $rubik;
                 font-weight: 600;
@@ -32,7 +33,7 @@
 
         &:hover {
             .second-box-article {
-            box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.035);
+                box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.035);
             }
         }
     }
@@ -50,6 +51,6 @@
 
 @media only screen and (min-width: 1280px) {
     .second-box-division {
-      flex-direction: row;
+        flex-direction: row;
     }
 }

@@ -6,22 +6,25 @@ import Link from 'next/link';
 export default function achievementContainer({
     title,
     id,
-    team
+    team,
+    image
 }) {
     return (
-        <>
-            <Link href={`/achievement/${id}`}>
-                <section className={styles.container}>
-                    <div className={styles.img}>
-                        <Image src='/coba/sandal.jpg' layout='fill' objectFit='cover' />
-                    </div>
-                    <div className={styles.text}>
-                        <h5>{title}</h5>
-                        <hr />
-                        <p>{team}</p>
-                    </div>
-                </section>
-            </Link>
-        </>
+        <Link href={`/achievement/${id}`}>
+            <section className={styles.container}>
+                <div className={styles.img}>
+                    <Image
+                        src={image}
+                        layout='fill'
+                        objectFit='cover'
+                    />
+                </div>
+                <div className={styles.text}>
+                    <h5>{title}</h5>
+                    <hr />
+                    <p>{team}</p>
+                </div>
+            </section>
+        </Link>
     );
 }
