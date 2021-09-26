@@ -6,7 +6,7 @@ export default function divisionBox() {
     <div className={styles['second-box-division']}>
       <div className={styles['second-box-div-inside']}>
         <Image
-          src={require("../public/main-index/role/role-ba.png")}
+          src='/main-index/role/role-ba.png'
           alt='Business Analyst Logo'
           width={180}
           height={180}
@@ -18,7 +18,7 @@ export default function divisionBox() {
       </div>
       <div className={styles['second-box-div-inside']}>
         <Image
-          src={require("../public/main-index/role/role-uiux.png")}
+          src='/main-index/role/role-uiux.png'
           alt='UI/UX Design Logo'
           width={180}
           height={180}
@@ -30,7 +30,7 @@ export default function divisionBox() {
       </div>
       <div className={styles['second-box-div-inside']}>
         <Image
-          src={require("../public/main-index/role/role-mp.png")}
+          src='/main-index/role/role-mp.png'
           alt='Mobile Programming Logo'
           width={180}
           height={180}

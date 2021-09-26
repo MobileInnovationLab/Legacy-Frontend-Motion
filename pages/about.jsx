@@ -198,7 +198,7 @@ export default function About() {
 				</div>
 				<section>
 					<Image
-						src={require('../public/about/first-meet.png')}
+						src='/about/first-meet.png'
 						alt='Image of meeting'
 					/>
 				</section>

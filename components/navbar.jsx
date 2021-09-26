@@ -55,7 +55,7 @@ function Navbar({ router }, props) {
             <div className={styles['navbar-img-white']}>
               <Link href='' passHref>
                 <Image
-                  src={require('../public/navbar/logo-white-transparent.png')}
+                  src='/navbar/logo-white-transparent.png'
                   alt="Motion Logo"
                 />
               </Link>
@@ -63,7 +63,7 @@ function Navbar({ router }, props) {
             <div className={styles['navbar-img-red']}>
               <Link href='' passHref>
                 <Image
-                  src={require('../public/navbar/logo-red-transparent.png')}
+                  src='/navbar/logo-red-transparent.png'
                   alt="Motion Logo"
                 />
               </Link>

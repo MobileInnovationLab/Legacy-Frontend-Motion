@@ -250,7 +250,7 @@ export default class Home extends Component {
 
             <div className={styles['first-section-img']}>
               <Image
-                src={require('../public/main-index/main-illu.png')}
+                src='/main-index/main-illu.png'
                 alt='Computer Illustration'
               />
             </div>
