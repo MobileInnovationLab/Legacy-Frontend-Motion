@@ -40,6 +40,7 @@
     .grid {
         @include variable-penengah-jati-diri-small(0, 50px);
 
+        height: 140vh;
         display: grid;
         grid-template-columns: auto;
         justify-content: center;

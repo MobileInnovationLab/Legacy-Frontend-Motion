@@ -54,28 +54,28 @@ export default function Footer() {
 				<section className={styles['footer-column']}>
 					<h1 className={styles['footer-titles']}>Socials</h1>
 
-					<a href='https://liff.line.me/1645278921-kWRPP32q?accountId=biy7493e#mst_challenge=B1ZDBAp9rbyTWPF3iAJ2k1b65qumuPvzH1IvhbvmgZM' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
+					<a rel='noreferrer' href='https://liff.line.me/1645278921-kWRPP32q?accountId=biy7493e#mst_challenge=B1ZDBAp9rbyTWPF3iAJ2k1b65qumuPvzH1IvhbvmgZM' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
 						<Image
 							src={require('../public/footer/footer-line.png')}
 							alt='Line Link'
 						/>
 						Line
 					</a>
-					<a href='https://www.linkedin.com/company/motion-laboratory/mycompany/' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
+					<a rel='noreferrer' href='https://www.linkedin.com/company/motion-laboratory/mycompany/' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
 						<Image
 							src={require('../public/footer/footer-linkedin.png')}
 							alt='Linkedin Link'
 						/>
 						Linkedin
 					</a>
-					<a href='https://www.instagram.com/motionlab_/' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
+					<a rel='noreferrer' href='https://www.instagram.com/motionlab_/' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
 						<Image
 							src={require('../public/footer/footer-instagram.png')}
 							alt='Instagram Link'
 						/>
 						Instagram
 					</a>
-					<a href='https://www.facebook.com/motionlab.telu' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
+					<a rel='noreferrer' href='https://www.facebook.com/motionlab.telu' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
 						<Image
 							src={require('../public/footer/footer-facebook.png')}
 							alt='Facebook Link'

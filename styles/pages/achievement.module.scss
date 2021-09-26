@@ -3,6 +3,8 @@
 .main-body {
     .flex {
         @include variable-penengah-jati-diri(100px, 100px);
+
+        height: 140vh;
         display: grid;
         grid-template-columns: auto auto auto;
         row-gap: 30px;

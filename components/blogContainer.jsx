@@ -4,11 +4,12 @@ import styles from '../styles/components/productContainer.module.scss';
 
 export default function BlogContainer(props) {
     return (
-        <Link href={`/blog/${props.id}`}>
+        <Link href={`/blog/${props.id}`} passHref>
             <section className={styles.container}>
                 <div className={styles.img}>
                     <Image
                         src={props.image.src}
+                        alt='blog photo'
                         layout='fill'
                         objectFit='cover'
                     />

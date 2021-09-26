@@ -28,7 +28,7 @@ function Achievement() {
                 {data?.map((achievement) => (
                     <React.Fragment key={achievement.id}>
                         <AchievementContainer
-                            image={`https://motionlab.masuk.web.id/api/${achievement?.photo}`}
+                            image={`https://kurniadiwijaya.my.id/api/${achievement?.photo}`}
                             title={achievement.name}
                             team={achievement.team_name}
                             id={achievement.id}

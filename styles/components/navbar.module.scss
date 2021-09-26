@@ -202,8 +202,8 @@
 
 @media only screen and (min-width: 1024px) {
   .navbar-main {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     left: 0;
     top: 0;
     width: 100%;
@@ -294,7 +294,7 @@
               &:after {
                 content: "";
                 position: absolute;
-                bottom: -6px;
+                bottom: -15px;
                 left: 0;
                 width: 100%;
                 height: 2px;
@@ -359,6 +359,20 @@
 
   .bg-active {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .navbar-main {
+    .flex-container {
+      .container {
+        .nav-links {
+          .about-dropdown {
+            left: 18%;
+          }
+        }
+      }
+    }
   }
 }
 

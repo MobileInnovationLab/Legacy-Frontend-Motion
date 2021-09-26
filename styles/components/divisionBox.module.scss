@@ -6,7 +6,7 @@
     align-items: center;
 
     .second-box-div-inside {
-        transition: 0.3s;
+        transition: 0.5s;
 
         .second-box-article {
             background-color: white;
@@ -52,5 +52,36 @@
 @media only screen and (min-width: 1280px) {
     .second-box-division {
         flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .second-box-division {
+        margin-top: 50px;
+
+        .second-box-div-inside {
+            .second-box-article {
+                background-color: white;
+                padding: 70px 40px 40px 40px;
+                margin-top: -130px;
+                max-width: 400px;
+                height: 180px;
+
+                .second-box-article-title {
+                    font-family: $rubik;
+                    font-weight: 600;
+                    color: $black;
+                    font-size: 28px;
+                }
+
+                .second-box-article-p {
+                    font-family: $inter;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $text-desc;
+                    font-size: 20px;
+                }
+            }
+        }
     }
 }

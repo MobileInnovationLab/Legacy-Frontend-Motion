@@ -10,11 +10,12 @@ export default function achievementContainer({
     image
 }) {
     return (
-        <Link href={`/achievement/${id}`}>
+        <Link href={`/achievement/${id}`} passHref>
             <section className={styles.container}>
                 <div className={styles.img}>
                     <Image
                         src={image}
+                        alt={title}
                         layout='fill'
                         objectFit='cover'
                     />

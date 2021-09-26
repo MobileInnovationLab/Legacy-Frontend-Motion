@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["motionlab.masuk.web.id"],
+    domains: ["kurniadiwijaya.my.id"],
   },
 };

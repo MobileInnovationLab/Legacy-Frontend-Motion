@@ -14,35 +14,35 @@ import styles from '../../styles/pages/product/idAchievement.module.scss';
 import Skeleton from 'react-loading-skeleton';
 
 const DetailAchievement = () => {
-    const router = useRouter();
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const { id } = router.query;
+	const router = useRouter();
+	const [data, setData] = useState(null);
+	const [loading, setLoading] = useState(true);
+	const { id } = router.query;
 
-    useEffect(() => {
-        id &&
-            API.getAchievementById(id)
-                .then((resp) => setData(resp))
-                .finally(() => setLoading(false));
-    }, [id]);
+	useEffect(() => {
+		id &&
+			API.getAchievementById(id)
+				.then((resp) => setData(resp))
+				.finally(() => setLoading(false));
+	}, [id]);
 
-    if (data?.status === 404 && !loading) {
-        router.push('/404')
-    }
+	if (data?.status === 404 && !loading) {
+		router.push('/404')
+	}
 
-    return (
-        <>
+	return (
+		<>
 
-            <Head>
-                <title>{data?.name}</title>
-            </Head>
+			<Head>
+				<title>{data?.name}</title>
+			</Head>
 
-            <NavbarWhite />
-            <div className={styles['main-bg']}>
-                <section className={styles.article}>
-                    <IdBackButton />
-                    <h3>{data?.name || <Skeleton />}</h3>
-                    {/* <div className={styles.img}>
+			<NavbarWhite />
+			<div className={styles['main-bg']}>
+				<section className={styles.article}>
+					<IdBackButton />
+					<h3>{data?.name || <Skeleton />}</h3>
+					{/* <div className={styles.img}>
                     <Image
                         src={data?.photo}
                         layout='fill'
@@ -50,54 +50,54 @@ const DetailAchievement = () => {
                     />
                 </div> */}
 
-                    <hr />
+					<hr />
 
-                    <div className={styles.app}>
-                        <p>Competition Name:</p>
-                        <b>{data?.name || <Skeleton />}</b>
-                        <p>Category:</p>
-                        <b>{data?.category || <Skeleton />}</b>
-                        <p>Organizer:</p>
-                        <b>{data?.organizer || <Skeleton />}</b>
-                        <p>Held On:</p>
-                        <b>{data?.platform || <Skeleton />}</b>
-                        <p>Won By:</p>
-                        <b>{data?.team_name || <Skeleton />}</b>
-                        <Link href={`${data?.showcase}`}>
-                            <button>
-                                Download Document
-                            </button>
-                        </Link>
-                    </div>
+					<div className={styles.app}>
+						<p>Competition Name:</p>
+						<b>{data?.name || <Skeleton />}</b>
+						<p>Category:</p>
+						<b>{data?.category || <Skeleton />}</b>
+						<p>Organizer:</p>
+						<b>{data?.organizer || <Skeleton />}</b>
+						<p>Held On:</p>
+						<b>{data?.platform || <Skeleton />}</b>
+						<p>Won By:</p>
+						<b>{data?.team_name || <Skeleton />}</b>
+						<Link href={`${data?.showcase}`} passHref>
+							<button>
+								Download Document
+							</button>
+						</Link>
+					</div>
 
-                    <hr />
+					<hr />
 
-                    <article>{data?.description || <Skeleton />}</article>
+					<article>{data?.description || <Skeleton />}</article>
 
-                </section>
+				</section>
 
-                <div className={styles['app-responsive']}>
-                    <p>Competition Name:</p>
-                    <b>{data?.name || <Skeleton />}</b>
-                    <p>Category:</p>
-                    <b>{data?.category || <Skeleton />}</b>
-                    <p>Organizer:</p>
-                    <b>{data?.organizer || <Skeleton />}</b>
-                    <p>Held On:</p>
-                    <b>{data?.platform || <Skeleton />}</b>
-                    <p>Won By:</p>
-                    <b>{data?.team_name}</b>
-                    <Link href={`${data?.showcase}`}>
-                        <button>
-                            Download Document
-                        </button>
-                    </Link>
-                </div>
+				<div className={styles['app-responsive']}>
+					<p>Competition Name:</p>
+					<b>{data?.name || <Skeleton />}</b>
+					<p>Category:</p>
+					<b>{data?.category || <Skeleton />}</b>
+					<p>Organizer:</p>
+					<b>{data?.organizer || <Skeleton />}</b>
+					<p>Held On:</p>
+					<b>{data?.platform || <Skeleton />}</b>
+					<p>Won By:</p>
+					<b>{data?.team_name}</b>
+					<Link href={`${data?.showcase}`} passHref>
+						<button>
+							Download Document
+						</button>
+					</Link>
+				</div>
 
-            </div>
-            <Footer />
-        </>
-    );
+			</div>
+			<Footer />
+		</>
+	);
 };
 
 export default DetailAchievement;

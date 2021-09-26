@@ -53,7 +53,7 @@ function Navbar({ router }, props) {
         <div className={styles['flex-container']}>
           <div className={styles['container']}>
             <div className={styles['navbar-img-white']}>
-              <Link href=''>
+              <Link href='' passHref>
                 <Image
                   src={require('../public/navbar/logo-white-transparent.png')}
                   alt="Motion Logo"
@@ -61,7 +61,7 @@ function Navbar({ router }, props) {
               </Link>
             </div>
             <div className={styles['navbar-img-red']}>
-              <Link href=''>
+              <Link href='' passHref>
                 <Image
                   src={require('../public/navbar/logo-red-transparent.png')}
                   alt="Motion Logo"
@@ -92,9 +92,9 @@ function Navbar({ router }, props) {
 
           </div>
 
-          <Link href="/recruitment">
+          {/* <Link href="/recruitment">
             <a className={styles['nav-side']}>Recruitment</a>
-          </Link>
+          </Link> */}
 
           <button className={`${styles['button-change']} ${navModals && styles.inactive}`} onClick={() => setNavModals(true)}>
             <svg width="32" height="32" className={styles.button} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">

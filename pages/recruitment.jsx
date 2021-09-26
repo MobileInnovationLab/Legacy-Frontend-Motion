@@ -18,6 +18,7 @@ export default function recruitment() {
             <div className={styles.illustration}>
                 <Image
                     src='/recruitment/recruit-illu.png'
+                    alt='Recruitment Illustration'
                     layout='fill'
                     objectFit='cover'
                 />

@@ -46,7 +46,8 @@ const DetailProduct = () => {
                     <h3>{data?.name || <Skeleton />}</h3>
                     <div className={styles.img}>
                         <Image
-                            src={`https://motionlab.masuk.web.id/api/${data?.photo}`}
+                            src={`https://kurniadiwijaya.my.id/api/${data?.photo}`}
+                            alt={`Photo of ${data?.name}`}
                             layout='fill'
                             objectFit='cover'
                         />

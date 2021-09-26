@@ -53,7 +53,7 @@ function NavbarWhite({ router }, props) {
         <div className={styles['flex-container']}>
           <div className={styles['container']}>
             <div className={styles['navbar-img-red']}>
-              <Link href=''>
+              <Link href='' passHref>
                 <Image
                   src={require('../public/navbar/logo-red-transparent.png')}
                   alt="Motion Logo"
