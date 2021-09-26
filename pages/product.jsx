@@ -5,6 +5,7 @@ import Footer from '../components/footer';
 import Head from 'next/head';
 import ReactPaginate from 'react-paginate';
 
+import { BASE_URL } from '../api/const';
 import styles from '../styles/pages/product.module.scss';
 import TopButton from '../components/topButton';
 import { useEffect, useState } from 'react';
@@ -63,7 +64,7 @@ function Product() {
 						key={val.id}
 						id={val.id}
 						image={{
-							src: `https://kurniadiwijaya.my.id/api/${val?.photo}`,
+							src: `${BASE_URL}${val?.photo}`,
 							alt: val.title,
 						}}
 						title={val.name}

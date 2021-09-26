@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const BASE_URL = "https://kurniadiwijaya.my.id/api/";
+import { BASE_URL } from "./const";
 
 const fetcher = axios.create({
   baseURL: BASE_URL,

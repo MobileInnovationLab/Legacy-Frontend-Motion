@@ -15,6 +15,7 @@ import ProductContainer from '../components/productContainer';
 import AchievementContainer from '../components/achievementContainer';
 import IndexAchievementContainer from '../components/indexAchievementContainer';
 
+import { BASE_URL } from '../api/const';
 import API from '../api';
 import IndexModal from '../components/indexModal';
 
@@ -137,7 +138,7 @@ export default class Home extends Component {
         <ProductContainer
           id={product.id}
           image={{
-            src: `https://kurniadiwijaya.my.id/api/${product?.photo}`,
+            src: `${BASE_URL}${product?.photo}`,
             alt: product.title,
           }}
           title={product.name}
@@ -383,10 +384,10 @@ export default class Home extends Component {
             >
               <Slider {...responsiveSlider}>
                 <div className={styles['fourth-responsive-slider']}>
-                  <AchievementContainer image={`https://kurniadiwijaya.my.id/api/${achievements?.photo}`} />
+                  <AchievementContainer image={`${BASE_URL}${achievements?.photo}`} />
                 </div>
                 <div className={styles['fourth-responsive-slider']}>
-                  <AchievementContainer image={`https://kurniadiwijaya.my.id/api/${achievements?.photo}`} />
+                  <AchievementContainer image={`${BASE_URL}${achievements?.photo}`} />
                 </div>
               </Slider>
             </div>

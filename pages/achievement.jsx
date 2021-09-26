@@ -2,6 +2,8 @@ import Navbar from '../components/navbar';
 import BigTitle from '../components/bigTitle';
 import AchievementContainer from '../components/achievementContainer';
 
+import { BASE_URL } from '../api/const';
+
 import styles from '../styles/pages/achievement.module.scss';
 import Footer from '../components/footer';
 import React, { useEffect, useState } from 'react';
@@ -28,7 +30,7 @@ function Achievement() {
                 {data?.map((achievement) => (
                     <React.Fragment key={achievement.id}>
                         <AchievementContainer
-                            image={`https://kurniadiwijaya.my.id/api/${achievement?.photo}`}
+                            image={`${BASE_URL}${achievement?.photo}`}
                             title={achievement.name}
                             team={achievement.team_name}
                             id={achievement.id}
