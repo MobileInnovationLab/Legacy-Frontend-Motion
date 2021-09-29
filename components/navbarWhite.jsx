@@ -57,6 +57,8 @@ function NavbarWhite({ router }, props) {
                 <Image
                   src='/navbar/logo-red-transparent.png'
                   alt="Motion Logo"
+                  layout='fill'
+                  objectFit='cover'
                 />
               </Link>
             </div>
@@ -84,9 +86,9 @@ function NavbarWhite({ router }, props) {
 
           </div>
 
-          <Link href="/recruitment">
+          {/* <Link href="/recruitment">
             <a className={styles['nav-side']}>Recruitment</a>
-          </Link>
+          </Link> */}
 
           <button className={`${styles['button-change']} ${navModals && styles.inactive}`} onClick={() => setNavModals(true)}>
             <svg width="32" height="32" className={styles.button} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">

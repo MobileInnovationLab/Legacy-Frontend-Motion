@@ -57,6 +57,8 @@ function Navbar({ router }, props) {
                 <Image
                   src='/navbar/logo-white-transparent.png'
                   alt="Motion Logo"
+                  layout='fill'
+                  objectFit='cover'
                 />
               </Link>
             </div>
@@ -64,7 +66,8 @@ function Navbar({ router }, props) {
               <Link href='' passHref>
                 <Image
                   src='/navbar/logo-red-transparent.png'
-                  alt="Motion Logo"
+                  alt="Motion Logo" layout='fill'
+                  objectFit='cover'
                 />
               </Link>
             </div>

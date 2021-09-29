@@ -1,7 +1,7 @@
-@import '../variable/var.scss';
+@import "../variable/var.scss";
 
 .footer-container {
-    background-image: url('../../public/footer/bg-1.png');
+    background-image: url("../../public/footer/bg-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     color: $text-header;
@@ -46,6 +46,12 @@
             margin-top: 10px;
             align-items: center;
             column-gap: 10px;
+
+            .footer-item-img {
+                position: relative;
+                width: 24px;
+                height: 24px;
+            }
         }
 
         .link {
@@ -56,7 +62,6 @@
             }
         }
     }
-
 }
 
 .footer-copyright {
@@ -88,20 +93,20 @@
 
 @media only screen and (min-width: 1024px) {
     .footer-container {
-        background-image: url('../../public/footer/bg-1.png');
+        background-image: url("../../public/footer/bg-1.png");
         background-size: cover;
         background-repeat: no-repeat;
         color: $text-header;
         display: flex;
-        @include variable-penengah-jati-diri( 0, 0);
+        @include variable-penengah-jati-diri(0, 0);
         padding-top: 60px;
         padding-bottom: 50px;
         justify-content: space-between;
         padding-right: 200px;
-    
+
         .footer-first {
             margin-right: 20px;
-    
+
             .bottom-text {
                 font-family: $inter;
                 font-size: 16px;
@@ -110,18 +115,18 @@
                 margin-top: 10px;
             }
         }
-    
+
         .footer-column {
             display: flex;
             flex-direction: column;
             margin-right: 20px;
-    
+
             .footer-titles {
                 font-family: $rubik;
                 font-size: 20px;
                 font-weight: 600;
             }
-    
+
             .footer-item {
                 display: flex;
                 font-family: $rubik;
@@ -130,18 +135,17 @@
                 align-items: center;
                 column-gap: 10px;
             }
-    
+
             .link {
                 transition: 0.3s;
-    
+
                 &:hover {
                     opacity: 60%;
                 }
             }
         }
-    
     }
-    
+
     .footer-copyright {
         text-align: center;
         display: flex;
@@ -151,7 +155,7 @@
         background-color: #282828;
         padding: 10px 0;
         font-family: $inter;
-    
+
         .copyright {
             margin-left: 10px;
             font-size: 16px;

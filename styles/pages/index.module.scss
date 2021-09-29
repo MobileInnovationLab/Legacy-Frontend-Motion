@@ -33,7 +33,7 @@
         .first-section-button {
           display: flex;
           align-items: center;
-          width: 120px;
+          width: 150px;
           font-family: $rubik;
           font-weight: 600;
           color: $sub-text-header;
@@ -41,6 +41,7 @@
           padding: 20px 20px 20px 20px;
           border-radius: 100px;
           text-decoration: none;
+          margin: auto;
 
           svg {
             margin-right: 20px;
@@ -53,6 +54,10 @@
       }
 
       .first-section-img {
+        width: 310px;
+        height: 240px;
+        position: relative;
+        margin: auto;
         margin-top: 60px;
       }
     }
@@ -253,6 +258,13 @@
     background-size: 200%;
 
     .main-body {
+      .box-first-section {
+        .first-section-img {
+          width: 450px;
+          height: 360px;
+        }
+      }
+
       .box-third-section {
         .third-section-right {
           margin-top: 20px;
@@ -286,6 +298,10 @@
     .main-body {
       .box-first-section {
         @include variable-penengah-jati-diri-medium(60px, 0);
+
+        .first-section-img {
+          height: 400px;
+        }
       }
       .box-second-section {
         @include variable-penengah-jati-diri-medium(20px, 0);
@@ -365,16 +381,18 @@
             padding: 20px 42px 20px 42px;
             border-radius: 100px;
             text-decoration: none;
+            margin: 0;
           }
         }
 
         .first-section-img {
           margin-top: 40px;
+          width: 654px;
         }
       }
 
       .box-second-section {
-        @include variable-penengah-jati-diri-medium(120px, 0);
+        @include variable-penengah-jati-diri-medium(100px, 0);
         text-align: center;
 
         .second-small-title {
@@ -649,6 +667,11 @@
             text-decoration: none;
             width: 150px;
           }
+        }
+
+        .first-section-img {
+          margin-top: 40;
+          margin-right: -40px;
         }
       }
 
@@ -1023,7 +1046,21 @@
   justify-content: center;
   align-items: center;
 
-  // .container {
+  .container {
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
 
-  // }
+    .responsiveYt {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

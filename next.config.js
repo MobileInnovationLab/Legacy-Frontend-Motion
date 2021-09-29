@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["kurniadiwijaya.my.id"],
+    domains: ["api.kurniadiwijaya.my.id"],
   },
 };

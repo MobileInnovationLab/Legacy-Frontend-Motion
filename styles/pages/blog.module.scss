@@ -1,122 +1,122 @@
 @import "../variable/var.scss";
 
 .main-body {
-    background-color: $background;
+	background-color: $background;
 
-    .search {
-        @include variable-penengah-jati-diri-small(20px, 50px);
+	.search {
+		@include variable-penengah-jati-diri-small(20px, 50px);
 
-        .search-bar {
-            padding: 16px 30px;
-            width: auto;
-            background-color: white;
-            color: $text-desc;
-            font-family: $inter;
-            border-radius: 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+		.search-bar {
+			padding: 16px 30px;
+			width: auto;
+			background-color: white;
+			color: $text-desc;
+			font-family: $inter;
+			border-radius: 60px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 
-            input {
-                &:focus {
-                    outline: none;
-                }
-            }
+			input {
+				&:focus {
+					outline: none;
+				}
+			}
 
-            button {
-                background: none;
-                border: none;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
+			button {
+				background: none;
+				border: none;
+				&:hover {
+					cursor: pointer;
+				}
+			}
 
-            svg {
-                float: right;
-            }
-        }
-    }
+			svg {
+				float: right;
+			}
+		}
+	}
 
-    .grid {
-        @include variable-penengah-jati-diri-small(0, 50px);
+	.grid {
+		@include variable-penengah-jati-diri-small(0, 50px);
 
-        height: 140vh;
-        display: grid;
-        grid-template-columns: auto;
-        justify-content: center;
-        row-gap: 20px;
-    }
+		height: 140vh;
+		display: grid;
+		grid-template-columns: auto;
+		justify-content: center;
+		row-gap: 20px;
+	}
 }
 
 @media only screen and (min-width: 640px) {
-    .main-body {
-        .search {
-            @include variable-penengah-jati-diri-small(20px, 20px);
-        }
+	.main-body {
+		.search {
+			@include variable-penengah-jati-diri-small(20px, 20px);
+		}
 
-        .grid {
-            @include variable-penengah-jati-diri-small(0, 50px);
+		.grid {
+			@include variable-penengah-jati-diri-small(0, 50px);
 
-            grid-template-columns: auto;
-            justify-content: center;
-            row-gap: 30px;
-        }
-    }
+			grid-template-columns: auto;
+			justify-content: center;
+			row-gap: 30px;
+		}
+	}
 }
 
 @media only screen and (min-width: 768px) {
-    .main-body {
-        .search {
-            @include variable-penengah-jati-diri-medium(20px, 20px);
-        }
+	.main-body {
+		.search {
+			@include variable-penengah-jati-diri-medium(20px, 20px);
+		}
 
-        .grid {
-            @include variable-penengah-jati-diri-medium(0, 50px);
+		.grid {
+			@include variable-penengah-jati-diri-medium(0, 50px);
 
-            grid-template-columns: auto auto;
-            justify-content: space-evenly;
-            row-gap: 30px;
-        }
-    }
+			grid-template-columns: auto auto;
+			justify-content: space-evenly;
+			row-gap: 30px;
+		}
+	}
 }
 
 @media only screen and (min-width: 1024px) {
-    .main-body {
-        .search {
-            display: flex;
-            justify-content: right;
+	.main-body {
+		.search {
+			display: flex;
+			justify-content: right;
 
-            .search-bar {
-                width: 300px;
-            }
-        }
+			.search-bar {
+				width: 300px;
+			}
+		}
 
-        .grid {
-            grid-template-columns: auto auto;
-            justify-content: space-between;
-            row-gap: 30px;
-        }
-    }
+		.grid {
+			grid-template-columns: auto auto;
+			justify-content: space-between;
+			row-gap: 30px;
+		}
+	}
 }
 
 @media only screen and (min-width: 1280px) {
-    .main-body {
-        .search {
-            @include variable-penengah-jati-diri(20px, 20px);
-            display: flex;
-            justify-content: right;
+	.main-body {
+		.search {
+			@include variable-penengah-jati-diri(20px, 20px);
+			display: flex;
+			justify-content: right;
 
-            .search-bar {
-                width: 300px;
-            }
-        }
+			.search-bar {
+				width: 300px;
+			}
+		}
 
-        .grid {
-            @include variable-penengah-jati-diri(0, 50px);
+		.grid {
+			@include variable-penengah-jati-diri(0, 50px);
 
-            grid-template-columns: auto auto auto;
-            justify-content: space-between;
-            row-gap: 30px;
-        }
-    }
+			grid-template-columns: auto auto auto;
+			justify-content: space-between;
+			row-gap: 30px;
+		}
+	}
 }

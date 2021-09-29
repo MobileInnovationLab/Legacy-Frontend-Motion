@@ -18,13 +18,14 @@ import IndexAchievementContainer from '../components/indexAchievementContainer';
 import { BASE_URL } from '../api/const';
 import API from '../api';
 import IndexModal from '../components/indexModal';
+import IndexIllustration from '../components/illustration/indexIllustration';
 
 const firstSlider = {
   arrows: false,
   dots: false,
   autoplay: true,
   infinite: true,
-  slidesToShow: 2,
+  slidesToShow: 1, //harusnya 2
   slidesToScroll: -1,
   autoplaySpeed: 5000,
   responsive: [
@@ -214,16 +215,17 @@ export default class Home extends Component {
 
         {this.state.ytModal ?
           <div className={styles["whole-page"]} onClick={this.closeYtModals}>
-            <div className={styles.container}>
-              <iframe
-                width="860"
-                height="525"
-                src="https://www.youtube.com/embed/vI64lbga0FY"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+            <div className={styles['main-container']}>
+              <div className={styles.container}>
+                <iframe
+                  className={styles.responsiveYt}
+                  src="https://www.youtube.com/embed/vI64lbga0FY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </div>
           : ''
@@ -250,10 +252,7 @@ export default class Home extends Component {
             </article>
 
             <div className={styles['first-section-img']}>
-              <Image
-                src='/main-index/main-illu.png'
-                alt='Computer Illustration'
-              />
+              <IndexIllustration />
             </div>
           </main>
 

@@ -55,31 +55,50 @@ export default function Footer() {
 					<h1 className={styles['footer-titles']}>Socials</h1>
 
 					<a rel='noreferrer' href='https://liff.line.me/1645278921-kWRPP32q?accountId=biy7493e#mst_challenge=B1ZDBAp9rbyTWPF3iAJ2k1b65qumuPvzH1IvhbvmgZM' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
-						<Image
-							src='/footer/footer-line.png'
-							alt='Line Link'
-						/>
+						<div className={styles['footer-item-img']}>
+							<Image
+								src='/footer/footer-line.png'
+								alt='Line Link'
+								layout='fill'
+								objectFit='cover'
+								className='footer-item-img'
+							/>
+						</div>
 						Line
 					</a>
 					<a rel='noreferrer' href='https://www.linkedin.com/company/motion-laboratory/mycompany/' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
-						<Image
-							src='/footer/footer-linkedin.png'
-							alt='Linkedin Link'
-						/>
+						<div className={styles['footer-item-img']}>
+							<Image
+								src='/footer/footer-linkedin.png'
+								alt='Linkedin Link'
+								layout='fill'
+								objectFit='cover'
+								className='footer-item-img'
+							/>
+						</div>
 						Linkedin
 					</a>
 					<a rel='noreferrer' href='https://www.instagram.com/motionlab_/' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
-						<Image
-							src='/footer/footer-instagram.png'
-							alt='Instagram Link'
-						/>
+						<div className={styles['footer-item-img']}>
+							<Image
+								src='/footer/footer-instagram.png'
+								alt='Instagram Link'
+								layout='fill'
+								objectFit='cover'
+							/>
+						</div>
 						Instagram
 					</a>
 					<a rel='noreferrer' href='https://www.facebook.com/motionlab.telu' target="_blank" className={`${styles['footer-item']} ${styles['link']}`}>
-						<Image
-							src='/footer/footer-facebook.png'
-							alt='Facebook Link'
-						/>
+						<div className={styles['footer-item-img']}>
+							<Image
+								src='/footer/footer-facebook.png'
+								alt='Facebook Link'
+								layout='fill'
+								objectFit='cover'
+								className='footer-item-img'
+							/>
+						</div>
 						Facebook
 					</a>
 				</section>

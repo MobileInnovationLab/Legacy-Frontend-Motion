@@ -200,6 +200,8 @@ export default function About() {
 					<Image
 						src='/about/first-meet.png'
 						alt='Image of meeting'
+						layout='fill'
+						objectFit='cover'
 					/>
 				</section>
 				<div className={styles['first-flex']}>
