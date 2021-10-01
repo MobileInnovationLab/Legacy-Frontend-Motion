@@ -55,6 +55,37 @@
     }
 }
 
+@media only screen and (min-width: 1536px) {
+    .second-box-division {
+        margin-top: 30px;
+
+        .second-box-div-inside {
+            .second-box-article {
+                background-color: white;
+                padding: 70px 40px 40px 40px;
+                margin-top: -130px;
+                max-width: 320px;
+                height: 200px;
+
+                .second-box-article-title {
+                    font-family: $rubik;
+                    font-weight: 600;
+                    color: $black;
+                    font-size: 28px;
+                }
+
+                .second-box-article-p {
+                    font-family: $inter;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $text-desc;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 1920px) {
     .second-box-division {
         margin-top: 50px;

@@ -67,3 +67,10 @@
         width: 320px;
     }
 }
+
+@media only screen and (min-width: 1536px) {
+    .container {
+        height: 300px;
+        width: 380px;
+    }
+}

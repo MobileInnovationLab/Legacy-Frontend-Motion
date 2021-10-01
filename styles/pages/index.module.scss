@@ -188,12 +188,6 @@
           cursor: pointer;
         }
       }
-
-      // .slick-active {
-      //   svg {
-      //     fill: #F82F1E !important;
-      //   }
-      // }
     }
 
     .box-fifth-section {
@@ -738,10 +732,65 @@
 
 @media only screen and (min-width: 1536px) {
   .main-bg {
+    background: url("../../public/main-index/bg-main.png") left top no-repeat,
+      url("../../public/main-index/bg-main2.png") right 1400px no-repeat,
+      url("../../public/main-index/bg-main3.png") left 3600px no-repeat;
+    background-size: 100%, 70%, 70%;
+    background-color: $background;
+
     .main-body {
+      .box-first-section {
+        .first-section-article {
+          .first-section-title {
+            font-size: 60px;
+            line-height: 74px;
+            margin-bottom: 20px;
+          }
+
+          .first-section-p {
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 60px;
+          }
+
+          .first-section-button {
+            font-family: $rubik;
+            font-weight: 600;
+            color: $sub-text-header;
+            background-color: $black;
+            padding: 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            width: 150px;
+          }
+        }
+      }
+
+      .box-second-section {
+        @include variable-penengah-jati-diri(260px, 0);
+      }
+
       .box-third-section {
         .third-section-left {
           margin-right: 50px;
+          width: 35%;
+        }
+      }
+
+      .box-fourth-section {
+        .fourth-gallery {
+          .fourth-content {
+            width: 380px;
+            height: 300px;
+          }
+        }
+        .fourth-button-see {
+          margin-top: 60px;
+          font-size: 18px;
+          border-radius: 60px;
+
+          width: 200px;
+          height: 60px;
         }
       }
     }
@@ -762,7 +811,7 @@
       //content
 
       .box-first-section {
-        @include variable-penengah-jati-diri(70px, 92px);
+        @include variable-penengah-jati-diri-large(70px, 92px);
         text-align: left;
         display: flex;
 
@@ -771,18 +820,14 @@
           margin-right: 180px;
 
           .first-section-title {
-            font-family: $rubik;
-            color: $text-header;
-            font-size: 68px;
+            font-size: 60px;
+            line-height: 74px;
             margin-bottom: 20px;
-            line-height: 82px;
           }
 
           .first-section-p {
-            font-family: $inter;
-            color: $text-header;
             font-size: 20px;
-            line-height: 26px;
+            line-height: 32px;
             margin-bottom: 60px;
           }
 
@@ -791,9 +836,10 @@
             font-weight: 600;
             color: $sub-text-header;
             background-color: $black;
-            padding: 20px 42px 20px 42px;
+            padding: 20px;
             border-radius: 100px;
             text-decoration: none;
+            width: 150px;
           }
         }
 
@@ -803,7 +849,7 @@
       }
 
       .box-second-section {
-        @include variable-penengah-jati-diri-medium(120px, 0);
+        @include variable-penengah-jati-diri-large(250px, 0);
         text-align: center;
 
         .second-small-title {
@@ -816,7 +862,7 @@
       }
 
       .box-third-section {
-        padding: 0 0 0 100px;
+        padding: 0 0 0 200px;
         margin-top: 100px;
         margin-bottom: 35px;
         display: flex;
@@ -889,7 +935,7 @@
       }
 
       .box-fourth-section {
-        @include variable-penengah-jati-diri(0, 20px);
+        @include variable-penengah-jati-diri-large(0, 20px);
         padding-bottom: 80px;
         padding-top: 80px;
         background-color: white;
@@ -1036,7 +1082,21 @@
   }
 }
 
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .whole-page {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -1050,8 +1110,24 @@
     margin: auto;
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 90vw;
     padding-top: 56.25%;
+
+    @media only screen and (min-width: 1024px) {
+      width: 80vw;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      width: 60vw;
+    }
+
+    @media only screen and (min-width: 1536px) {
+      width: 55vw;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      width: 50vw;
+    }
 
     .responsiveYt {
       position: absolute;

@@ -25,7 +25,7 @@ const firstSlider = {
   dots: false,
   autoplay: true,
   infinite: true,
-  slidesToShow: 1, //harusnya 2
+  slidesToShow: 2,
   slidesToScroll: -1,
   autoplaySpeed: 5000,
   responsive: [
@@ -455,12 +455,6 @@ export default class Home extends Component {
                     />
                   </div>
                 ))}
-                <div className={styles['fifth-slider-item']}>
-                  <ProductContainer {...container2} />
-                </div>
-                <div className={styles['fifth-slider-item']}>
-                  <ProductContainer {...container3} />
-                </div>
               </Slider>
               <div className={styles['fifth-box-button-responsive']}>
                 <button

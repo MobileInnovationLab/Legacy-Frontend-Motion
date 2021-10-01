@@ -54,3 +54,8 @@ $background: #fcf6f6;
     padding: 0 100px 0 100px;
     margin: $mid-top 0 $mid-bottom 0;
 }
+
+@mixin variable-penengah-jati-diri-large($mid-top, $mid-bottom) {
+    padding: 0 200px 0 200px;
+    margin: $mid-top 0 $mid-bottom 0;
+}
