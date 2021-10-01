@@ -44,7 +44,7 @@ const IndexIllustration = () => {
         width="203.241"
         height="114.854"
         stroke="#E1E1E1"
-        stroke-width="2.74206"
+        strokeWidth="2.74206"
       />
       <ellipse
         cx="171.685"
@@ -66,7 +66,7 @@ const IndexIllustration = () => {
         width="46.8599"
         height="117.99"
         fill="#C0C0C0"
-        fill-opacity="0.1"
+        fillOpacity="0.1"
       />
       <rect
         x="68.5449"
@@ -261,14 +261,14 @@ const IndexIllustration = () => {
         />
       </g>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M235.089 0H283.936C289.191 0 293.452 4.30678 293.452 9.61945V129.382C293.452 134.694 289.191 139.001 283.936 139.001H235.089C229.834 139.001 225.574 134.694 225.574 129.382V9.61945C225.574 4.30678 229.834 0 235.089 0Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M235.247 0.801819H283.776C288.681 0.801819 292.658 4.82148 292.658 9.77997V129.221C292.658 134.18 288.681 138.2 283.776 138.2H235.247C230.342 138.2 226.366 134.18 226.366 129.221V9.77997C226.366 4.82148 230.342 0.801819 235.247 0.801819Z"
         fill="white"
       />
@@ -301,74 +301,74 @@ const IndexIllustration = () => {
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M252.534 6.41254C252.884 6.41254 253.168 6.12536 253.168 5.77109C253.168 5.41683 252.884 5.12964 252.534 5.12964C252.183 5.12964 251.899 5.41683 251.899 5.77109C251.899 6.12536 252.183 6.41254 252.534 6.41254Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M267.23 6.84048C267.814 6.84048 268.287 6.36195 268.287 5.77165C268.287 5.18135 267.814 4.70282 267.23 4.70282C266.646 4.70282 266.173 5.18135 266.173 5.77165C266.173 6.36195 266.646 6.84048 267.23 6.84048Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M256.023 5.3443H263.107C263.34 5.3443 263.53 5.53577 263.53 5.77193C263.53 6.0081 263.34 6.19957 263.107 6.19957H256.023C255.789 6.19957 255.6 6.0081 255.6 5.77193C255.6 5.53577 255.789 5.3443 256.023 5.3443Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M225.044 28.9647C225.044 28.8469 225.158 28.7514 225.299 28.7514H225.678V38.9053H225.299C225.158 38.9053 225.044 38.8096 225.044 38.692V28.9647Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M225.044 41.6304C225.044 41.5126 225.158 41.4172 225.299 41.4172H225.678V51.571H225.299C225.158 51.571 225.044 51.4754 225.044 51.3578V41.6304Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M225.044 19.025C225.044 18.907 225.158 18.8114 225.299 18.8114H225.678V24.3693H225.299C225.158 24.3693 225.044 24.274 225.044 24.1557V19.025Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M293.398 31.9579H293.715C293.89 31.9579 294.032 32.0771 294.032 32.2249V48.2578C294.032 48.4053 293.89 48.5248 293.715 48.5248H293.398V31.9579Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M235.617 4.32874C232.406 4.32874 229.802 6.95742 229.802 10.2001V128.48C229.802 131.723 232.406 134.352 235.617 134.352H283.46C286.671 134.352 289.275 131.723 289.275 128.48V10.2001C289.275 6.95722 286.671 4.32874 283.46 4.32874H235.617ZM242.701 5.02301V4.96983C242.701 4.61577 242.417 4.32875 242.067 4.32875H242.701H276.375H276.376H277.01C276.665 4.32875 276.385 4.60619 276.376 4.95201V5.28951C276.376 7.41197 274.669 9.13256 272.564 9.13256H246.513C244.408 9.13256 242.701 7.41243 242.701 5.28951V5.02301ZM277.01 4.32875H277.063V4.33094C277.045 4.32949 277.028 4.32875 277.01 4.32875ZM242.067 4.32875H242.014V4.33094C242.031 4.32949 242.049 4.32875 242.067 4.32875Z"
         fill="#DFE7EF"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M6.24131 117.421H142.756C146.203 117.421 148.997 120.246 148.997 123.73V215.504C148.997 218.988 146.203 221.813 142.756 221.813H6.24131C2.79433 221.813 0 218.988 0 215.504L0 123.73C0 120.246 2.79433 117.421 6.24131 117.421Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M6.24118 117.995H142.756C145.889 117.995 148.429 120.563 148.429 123.73V215.504C148.429 218.672 145.889 221.24 142.756 221.24H6.24118C3.10756 221.24 0.567261 218.672 0.567261 215.504V123.73C0.567261 120.563 3.10756 117.995 6.24118 117.995Z"
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M142.642 170.306C143.018 170.306 143.323 169.997 143.323 169.617C143.323 169.237 143.018 168.929 142.642 168.929C142.266 168.929 141.962 169.237 141.962 169.617C141.962 169.997 142.266 170.306 142.642 170.306Z"
         fill="#DEDEDE"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M9.07793 169.617C9.07793 171.391 7.65536 172.829 5.90054 172.829C4.14571 172.829 2.72314 171.391 2.72314 169.617C2.72314 167.843 4.14571 166.405 5.90054 166.405C7.65536 166.405 9.07793 167.843 9.07793 169.617ZM8.68055 169.616C8.68055 171.169 7.43581 172.427 5.90034 172.427C4.36486 172.427 3.12012 171.169 3.12012 169.616C3.12012 168.064 4.36486 166.806 5.90034 166.806C7.43581 166.806 8.68055 168.064 8.68055 169.616Z"
         fill="#DEDEDE"
       />
@@ -407,7 +407,7 @@ const IndexIllustration = () => {
         width="54.0578"
         height="41.7096"
         stroke="black"
-        stroke-dasharray="14 14"
+        strokeDasharray="14 14"
       />
       <rect
         x="31.8008"
@@ -417,8 +417,8 @@ const IndexIllustration = () => {
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M49.388 189.794H56.9295C59.8796 189.794 61.8609 187.797 61.8609 184.825V177.967C61.8609 174.995 59.8796 172.998 56.9303 172.998H49.388C46.4388 172.998 44.4575 174.995 44.4575 177.967V184.825C44.4575 187.797 46.4388 189.794 49.388 189.794ZM50.1127 180.556C48.913 180.556 47.9382 179.614 47.9382 178.456C47.9382 177.299 48.913 176.357 50.1127 176.357C51.3114 176.357 52.2871 177.299 52.2871 178.456C52.2871 179.614 51.3114 180.556 50.1127 180.556ZM59.9646 183.86C60.256 184.581 60.1046 185.447 59.7931 186.162C59.4238 187.011 58.7168 187.654 57.826 187.935C57.4305 188.06 57.0158 188.114 56.6019 188.114H49.2684C48.5386 188.114 47.8928 187.945 47.3634 187.631C47.0318 187.433 46.9732 186.977 47.2191 186.682C47.6303 186.188 48.0363 185.692 48.4458 185.192C49.2264 184.235 49.7522 183.958 50.3368 184.201C50.5739 184.302 50.8119 184.453 51.0569 184.612C51.7097 185.04 52.6171 185.629 53.8123 184.99C54.6303 184.548 55.1047 183.789 55.5178 183.129L55.5247 183.118C55.5539 183.072 55.5828 183.026 55.6116 182.98L55.612 182.979L55.612 182.979C55.7508 182.757 55.8878 182.539 56.0428 182.337C56.237 182.085 56.9572 181.296 57.8899 181.858C58.4841 182.211 58.9837 182.69 59.5183 183.202C59.7222 183.398 59.8675 183.621 59.9646 183.86Z"
         fill="#4EA2EF"
       />
@@ -614,8 +614,8 @@ const IndexIllustration = () => {
         d="M273.193 55.4846C274.499 53.2368 275.196 50.681 275.216 48.0742C275.235 45.4673 274.575 42.9013 273.303 40.634C272.03 38.3666 270.19 36.4779 267.967 35.1575C265.743 33.8372 263.216 33.1319 260.637 33.1123L260.582 40.5637C261.867 40.5734 263.126 40.9249 264.234 41.5827C265.342 42.2406 266.259 43.1816 266.893 44.3113C267.527 45.441 267.855 46.7196 267.846 48.0184C267.836 49.3172 267.488 50.5906 266.838 51.7106L273.193 55.4846Z"
         fill="url(#paint8_linear)"
         stroke="url(#paint9_linear)"
-        stroke-opacity="0.6"
-        stroke-width="0.846154"
+        strokeOpacity="0.6"
+        strokeWidth="0.846154"
         mask="url(#path-88-inside-1)"
       />
       <path
@@ -623,11 +623,11 @@ const IndexIllustration = () => {
         fill="url(#paint10_linear)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M273.12 55.206C274.343 53.0319 274.996 50.5762 275.014 48.0727C275.034 45.5015 274.383 42.9705 273.128 40.7341C271.873 38.4978 270.058 36.6349 267.865 35.3326C265.73 34.0646 263.31 33.3717 260.836 33.3183L260.784 40.3649C262.034 40.4081 263.255 40.7661 264.335 41.4077C265.473 42.0836 266.416 43.0504 267.067 44.2111C267.718 45.3718 268.056 46.6854 268.046 48.0199C268.037 49.2867 267.715 50.5298 267.11 51.637L273.12 55.206ZM273.293 55.3089C273.26 55.3676 273.226 55.4262 273.192 55.4846L266.838 51.7106C266.838 51.7106 266.838 51.7106 266.838 51.7106C267.488 50.5906 267.836 49.3172 267.845 48.0184C267.855 46.7195 267.526 45.441 266.892 44.3113C266.258 43.1816 265.341 42.2406 264.234 41.5827C263.127 40.9255 261.869 40.574 260.585 40.5637C260.584 40.5637 260.583 40.5637 260.582 40.5637L260.637 33.1123C260.639 33.1123 260.641 33.1124 260.644 33.1124C260.708 33.1129 260.773 33.1138 260.838 33.1152C263.346 33.1689 265.801 33.8715 267.966 35.1575C270.19 36.4778 272.03 38.3666 273.302 40.6339C274.575 42.9013 275.235 45.4673 275.215 48.0742C275.196 50.6133 274.534 53.104 273.293 55.3089Z"
         fill="url(#paint11_linear)"
-        fill-opacity="0.6"
+        fillOpacity="0.6"
       />
       <g opacity="0.06">
         <mask
@@ -747,7 +747,7 @@ const IndexIllustration = () => {
           rx="1.45749"
           transform="matrix(0.618851 0.785508 -0.253999 0.967204 282.718 79.6403)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.91498"
@@ -755,7 +755,7 @@ const IndexIllustration = () => {
           rx="1.45749"
           transform="matrix(0.618851 0.785508 -0.253999 0.967204 285.649 83.3606)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.91498"
@@ -763,7 +763,7 @@ const IndexIllustration = () => {
           rx="1.45749"
           transform="matrix(0.618851 0.785508 -0.253999 0.967204 288.581 87.0813)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.91498"
@@ -771,7 +771,7 @@ const IndexIllustration = () => {
           rx="1.45749"
           transform="matrix(0.618851 0.785508 -0.253999 0.967204 291.512 90.8022)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
       </g>
       <rect
@@ -806,7 +806,7 @@ const IndexIllustration = () => {
           rx="1.57895"
           transform="matrix(0.571246 0.820779 -0.225992 0.974129 273.568 73.7469)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="3.15791"
@@ -814,7 +814,7 @@ const IndexIllustration = () => {
           rx="1.57895"
           transform="matrix(0.571246 0.820779 -0.225992 0.974129 276.5 77.9588)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="3.15791"
@@ -822,7 +822,7 @@ const IndexIllustration = () => {
           rx="1.57895"
           transform="matrix(0.571246 0.820779 -0.225992 0.974129 279.431 82.1706)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="3.15791"
@@ -830,7 +830,7 @@ const IndexIllustration = () => {
           rx="1.57895"
           transform="matrix(0.571246 0.820779 -0.225992 0.974129 282.363 86.3826)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
       </g>
       <rect
@@ -865,7 +865,7 @@ const IndexIllustration = () => {
           rx="1.27064"
           transform="matrix(0.709854 0.704349 -0.31845 0.94794 264.419 89.3862)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.54128"
@@ -873,7 +873,7 @@ const IndexIllustration = () => {
           rx="1.27064"
           transform="matrix(0.709854 0.704349 -0.318449 0.94794 267.35 92.2944)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.54128"
@@ -881,7 +881,7 @@ const IndexIllustration = () => {
           rx="1.27064"
           transform="matrix(0.709854 0.704349 -0.318449 0.94794 270.282 95.203)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.54128"
@@ -889,7 +889,7 @@ const IndexIllustration = () => {
           rx="1.27064"
           transform="matrix(0.709854 0.704349 -0.318449 0.94794 273.214 98.1116)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
       </g>
       <g filter="url(#filter6_d)">
@@ -925,7 +925,7 @@ const IndexIllustration = () => {
             rx="1.34637"
             transform="matrix(0.669927 0.742427 -0.288035 0.95762 255.269 85.3076)"
             fill="#9ED1FF"
-            fill-opacity="0.08"
+            fillOpacity="0.08"
           />
           <rect
             width="2.69274"
@@ -933,7 +933,7 @@ const IndexIllustration = () => {
             rx="1.34637"
             transform="matrix(0.669927 0.742427 -0.288035 0.95762 258.201 88.5547)"
             fill="#9ED1FF"
-            fill-opacity="0.08"
+            fillOpacity="0.08"
           />
           <rect
             width="2.69274"
@@ -941,7 +941,7 @@ const IndexIllustration = () => {
             rx="1.34637"
             transform="matrix(0.669927 0.742427 -0.288035 0.95762 261.133 91.8032)"
             fill="#9ED1FF"
-            fill-opacity="0.08"
+            fillOpacity="0.08"
           />
           <rect
             width="2.69274"
@@ -949,7 +949,7 @@ const IndexIllustration = () => {
             rx="1.34637"
             transform="matrix(0.669927 0.742427 -0.288035 0.95762 264.064 95.0519)"
             fill="#9ED1FF"
-            fill-opacity="0.08"
+            fillOpacity="0.08"
           />
         </g>
       </g>
@@ -985,7 +985,7 @@ const IndexIllustration = () => {
           rx="1.12606"
           transform="matrix(0.800996 0.598669 -0.407315 0.913288 246.12 97.9995)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.25212"
@@ -993,7 +993,7 @@ const IndexIllustration = () => {
           rx="1.12606"
           transform="matrix(0.800996 0.598669 -0.407315 0.913288 249.052 100.189)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.25212"
@@ -1001,7 +1001,7 @@ const IndexIllustration = () => {
           rx="1.12606"
           transform="matrix(0.800996 0.598669 -0.407315 0.913288 251.983 102.38)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="2.25212"
@@ -1009,7 +1009,7 @@ const IndexIllustration = () => {
           rx="1.12606"
           transform="matrix(0.800996 0.598669 -0.407315 0.913288 254.915 104.571)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
       </g>
       <rect
@@ -1044,7 +1044,7 @@ const IndexIllustration = () => {
           rx="1.661"
           transform="matrix(0.543028 0.839715 -0.21072 0.977546 236.971 69.8936)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="3.322"
@@ -1052,7 +1052,7 @@ const IndexIllustration = () => {
           rx="1.661"
           transform="matrix(0.543028 0.839715 -0.21072 0.977546 239.902 74.4267)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="3.322"
@@ -1060,7 +1060,7 @@ const IndexIllustration = () => {
           rx="1.661"
           transform="matrix(0.543028 0.839715 -0.21072 0.977546 242.834 78.9598)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
         <rect
           width="3.322"
@@ -1068,7 +1068,7 @@ const IndexIllustration = () => {
           rx="1.661"
           transform="matrix(0.543028 0.839715 -0.21072 0.977546 245.765 83.4928)"
           fill="#535353"
-          fill-opacity="0.08"
+          fillOpacity="0.08"
         />
       </g>
       <g filter="url(#filter7_d)">
@@ -1100,9 +1100,9 @@ const IndexIllustration = () => {
           width="83.97"
           height="12.1542"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1134,9 +1134,9 @@ const IndexIllustration = () => {
           width="130.452"
           height="130.878"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1168,9 +1168,9 @@ const IndexIllustration = () => {
           width="130.452"
           height="130.878"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1202,9 +1202,9 @@ const IndexIllustration = () => {
           width="119.251"
           height="165.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1220,9 +1220,9 @@ const IndexIllustration = () => {
           width="165.229"
           height="147.84"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1238,9 +1238,9 @@ const IndexIllustration = () => {
           width="126.113"
           height="126.492"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1272,9 +1272,9 @@ const IndexIllustration = () => {
           width="22.8118"
           height="51.5587"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1306,9 +1306,9 @@ const IndexIllustration = () => {
           width="126.113"
           height="126.492"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1341,8 +1341,8 @@ const IndexIllustration = () => {
           y2="239.194"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.474551" stop-color="#D4D4D4" />
-          <stop offset="1" stop-color="#B4B4B4" />
+          <stop offset="0.474551" stopColor="#D4D4D4" />
+          <stop offset="1" stopColor="#B4B4B4" />
         </linearGradient>
         <radialGradient
           id="paint1_radial"
@@ -1352,8 +1352,8 @@ const IndexIllustration = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(171.649 231.737) rotate(90) scale(19.5037 127.86)"
         >
-          <stop stop-color="#DBDBDB" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="#DBDBDB" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint2_linear"
@@ -1363,9 +1363,9 @@ const IndexIllustration = () => {
           y2="237.979"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0" />
-          <stop offset="0.519858" stop-color="#D5D5D5" stop-opacity="0.8" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" stopOpacity="0" />
+          <stop offset="0.519858" stopColor="#D5D5D5" stopOpacity="0.8" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear"
@@ -1375,8 +1375,8 @@ const IndexIllustration = () => {
           y2="229.801"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E9E9E9" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="#E9E9E9" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint4_linear"
@@ -1386,8 +1386,8 @@ const IndexIllustration = () => {
           y2="188.668"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#555555" />
-          <stop offset="1" stop-color="#4B4B4B" />
+          <stop stopColor="#555555" />
+          <stop offset="1" stopColor="#4B4B4B" />
         </linearGradient>
         <linearGradient
           id="paint5_linear"
@@ -1397,8 +1397,8 @@ const IndexIllustration = () => {
           y2="33.0565"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF7168" />
-          <stop offset="1" stop-color="#FF9E68" />
+          <stop stopColor="#FF7168" />
+          <stop offset="1" stopColor="#FF9E68" />
         </linearGradient>
         <linearGradient
           id="paint6_linear"
@@ -1408,8 +1408,8 @@ const IndexIllustration = () => {
           y2="33.0565"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF7168" />
-          <stop offset="1" stop-color="#FF9E68" />
+          <stop stopColor="#FF7168" />
+          <stop offset="1" stopColor="#FF9E68" />
         </linearGradient>
         <linearGradient
           id="paint7_linear"
@@ -1419,8 +1419,8 @@ const IndexIllustration = () => {
           y2="196.2"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#548FE8" />
-          <stop offset="1" stop-color="#68E4FF" />
+          <stop stopColor="#548FE8" />
+          <stop offset="1" stopColor="#68E4FF" />
         </linearGradient>
         <linearGradient
           id="paint8_linear"
@@ -1430,8 +1430,8 @@ const IndexIllustration = () => {
           y2="47.5472"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF99BD" />
-          <stop offset="1" stop-color="#FF7AAA" />
+          <stop stopColor="#FF99BD" />
+          <stop offset="1" stopColor="#FF7AAA" />
         </linearGradient>
         <linearGradient
           id="paint9_linear"
@@ -1441,8 +1441,8 @@ const IndexIllustration = () => {
           y2="57.3923"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint10_linear"
@@ -1452,8 +1452,8 @@ const IndexIllustration = () => {
           y2="47.5472"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF99BD" />
-          <stop offset="1" stop-color="#FF7AAA" />
+          <stop stopColor="#FF99BD" />
+          <stop offset="1" stopColor="#FF7AAA" />
         </linearGradient>
         <linearGradient
           id="paint11_linear"
@@ -1463,8 +1463,8 @@ const IndexIllustration = () => {
           y2="57.3923"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint12_linear"
@@ -1474,8 +1474,8 @@ const IndexIllustration = () => {
           y2="47.4919"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF99BD" />
-          <stop offset="1" stop-color="#FF7AAA" />
+          <stop stopColor="#FF99BD" />
+          <stop offset="1" stopColor="#FF7AAA" />
         </linearGradient>
         <linearGradient
           id="paint13_linear"
@@ -1485,8 +1485,8 @@ const IndexIllustration = () => {
           y2="69.0312"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C668FF" />
-          <stop offset="1" stop-color="#FF689E" />
+          <stop stopColor="#C668FF" />
+          <stop offset="1" stopColor="#FF689E" />
         </linearGradient>
       </defs>
     </svg>
