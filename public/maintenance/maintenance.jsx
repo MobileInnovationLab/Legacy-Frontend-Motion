@@ -14,7 +14,7 @@ const Maintenance = () => {
         <title>Maintenance</title>
       </Head>
       <svg
-        style={{ width: '80vmin', margin: '8vmin auto' }}
+        style={{ width: '80vmin', margin: '6vmin auto' }}
         viewBox="0 0 752 620"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -631,7 +631,7 @@ const Maintenance = () => {
         }}
       >
         Sorry, <br />
-        This page is under maintenance
+        Your favorite laboratory website is under maintenance
       </h1>
     </div>
   )
