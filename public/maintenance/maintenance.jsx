@@ -1,4 +1,4 @@
-
+import Head from "next/head";
 
 const Maintenance = () => {
 
@@ -10,6 +10,9 @@ const Maintenance = () => {
       textAlign: 'center',
       flexDirection: "column",
     }}>
+      <Head>
+        <title>Maintenance</title>
+      </Head>
       <svg
         style={{ width: '80vmin', margin: '8vmin auto' }}
         viewBox="0 0 752 620"
