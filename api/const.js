@@ -1,1 +1,1 @@
-export const BASE_URL = "https://api.kurniadiwijaya.my.id/api/";
+export const BASE_URL = "https://api.motionlaboratory.com/api/";

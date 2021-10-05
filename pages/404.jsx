@@ -130,7 +130,7 @@ export default function Custom404() {
                     </defs>
                 </svg>
 
-                <h1>Sorry... We’re still repairing this page</h1>
+                <h1>Sorry... It seems like, <br /> you going to wrong direction</h1>
 
                 <Link href="/">
                     <a className={styles.a}>Go to Homepage</a>

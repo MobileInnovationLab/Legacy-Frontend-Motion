@@ -28,6 +28,11 @@
             font-size: 16px;
             line-height: 28px;
             color: $text-desc;
+
+            a {
+                text-decoration: none;
+                color: $main2;
+            }
         }
 
         .first-address {
@@ -66,6 +71,7 @@
         font-weight: bold;
         font-size: 18px;
         line-height: 36px;
+        color: $black;
     }
 
     .second-social {
@@ -227,6 +233,84 @@
     .map {
         iframe {
             height: 500px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .first {
+        .first-img {
+            width: 580px;
+            height: 400px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .first {
+        @include variable-penengah-jati-diri-large(80px, 30px);
+        text-align: left;
+        flex-direction: row-reverse;
+        padding-bottom: 50px;
+
+        .first-content {
+            margin-left: 50px;
+            width: 50%;
+
+            h3 {
+                font-size: 60px;
+                line-height: 74px;
+                margin-bottom: 0;
+            }
+
+            .sub {
+                font-size: 20px;
+                line-height: 32px;
+                margin-top: 15px;
+            }
+
+            .first-address {
+                display: flex;
+                align-items: center;
+                line-height: 28px;
+
+                p {
+                    margin-left: 15px;
+                    font-size: 20px;
+                    line-height: 32px;
+                }
+            }
+        }
+
+        .first-img {
+            width: 650px;
+            height: 450px;
+        }
+    }
+
+    .second {
+        @include variable-penengah-jati-diri-large(0, 0);
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        h3 {
+            font-size: 60px;
+            line-height: 74px;
+        }
+
+        .second-social {
+            margin-top: 80px;
+
+            .social {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    .map {
+        iframe {
+            height: 600px;
         }
     }
 }

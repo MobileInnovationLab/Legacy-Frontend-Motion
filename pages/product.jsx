@@ -59,19 +59,25 @@ function Product() {
 			</section>
 
 			<section className={styles.grid}>
-				{data?.data?.map((val) => (
-					<ProductContainer
-						key={val.id}
-						id={val.id}
-						image={{
-							src: `${BASE_URL}${val?.photo}`,
-							alt: val.title,
-						}}
-						title={val.name}
-						text={val.description}
-						writer={val.creator}
-					/>
-				))}
+				<div className={styles["grid-cards"]}>
+					{data?.data?.map((val) => (
+						<ProductContainer
+							key={val.id}
+							id={val.id}
+							image={{
+								src: `${BASE_URL}${val?.photo}`,
+								alt: val.title,
+							}}
+							title={val.name}
+							text={val.description}
+							writer={val.creator}
+						/>
+					))}
+					<ProductContainer {...container} />
+					<ProductContainer {...container} />
+					<ProductContainer {...container} />
+					<ProductContainer {...container} />
+				</div>
 			</section>
 
 			<TopButton />
