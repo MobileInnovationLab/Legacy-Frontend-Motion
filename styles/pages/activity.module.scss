@@ -1,20 +1,21 @@
 @import "../variable/var.scss";
 
 .main-body {
-    background-color: $background;
+	background-color: $background;
 
-    .first {
-        @include variable-penengah-jati-diri-small(20px, 20px);
-        display: grid;
-        gap: 20px;
-    }
+	.first {
+		@include variable-penengah-jati-diri-small(20px, 20px);
+		display: grid;
+		gap: 20px;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
-    .main-body {
-        .first {
-            grid-template-columns: 50% 50%;
-            @include variable-penengah-jati-diri(70px, 70px);
-        }
-    }
+	.main-body {
+		.first {
+			@include variable-penengah-jati-diri(70px, 70px);
+			grid-template-columns: auto;
+			gap: 40px;
+		}
+	}
 }

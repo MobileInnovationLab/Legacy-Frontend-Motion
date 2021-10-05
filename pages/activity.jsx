@@ -11,23 +11,23 @@ import styles from '../styles/pages/activity.module.scss';
 import TopButton from '../components/topButton';
 
 function activity() {
-    return (
-        <div className={styles['main-body']}>
-            <Head>
-                <title>Activity</title>
-            </Head>
+	return (
+		<div className={styles['main-body']}>
+			<Head>
+				<title>Activity</title>
+			</Head>
 
-            <Navbar />
+			<Navbar />
 
-            <BigTitle>Our Activity</BigTitle>
+			<BigTitle>Our Activity</BigTitle>
 
-            <section className={styles.first}>
-                <ActivityContainer />
-                <ActivityContainer />
-                <ActivityContainer />
-            </section>
+			<section className={styles.first}>
+				<ActivityContainer />
+				<ActivityContainer />
+				<ActivityContainer />
+			</section>
 
-            {/* <ReactPaginate
+			{/* <ReactPaginate
                 previousLabel={'previous'}
                 nextLabel={'next'}
                 breakLabel={'...'}
@@ -40,10 +40,10 @@ function activity() {
                 activeClassName={'active'}
             /> */}
 
-            <TopButton />
-            <Footer />
-        </div>
-    )
+			<TopButton />
+			<Footer />
+		</div>
+	)
 }
 
 export default activity;

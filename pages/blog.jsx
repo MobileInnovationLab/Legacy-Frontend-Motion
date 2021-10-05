@@ -40,8 +40,10 @@ function Blog() {
 			</section>
 
 			<div className={styles.grid}>
-				<BlogContainer {...container2} />
-				<BlogContainer {...container2} />
+				<div className={styles["grid-cards"]}>
+					<BlogContainer {...container2} />
+					<BlogContainer {...container2} />
+				</div>
 			</div>
 
 			<Footer />

@@ -9,6 +9,7 @@ const Maintenance = () => {
       justifyContent: 'center',
       textAlign: 'center',
       flexDirection: "column",
+      height: "100vh",
     }}>
       <Head>
         <title>Maintenance</title>
