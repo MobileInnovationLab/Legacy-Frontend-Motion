@@ -1,42 +1,46 @@
 @import "../variable/var.scss";
 
 .main {
-    background-color: $background;
+	background-color: $background;
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 50px;
+	.content {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 50px;
 
-        svg {
-            margin: auto;
-            margin-top: 150px;
-            width: 400px;
-        }
+		svg {
+			margin: auto;
+			margin-top: 150px;
+			width: 80vmin;
+		}
 
-        h1 {
-            font-family: $rubik;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 48px;
-            line-height: 57px;
-            color: $black;
-        }
+		h1 {
+			font-family: $rubik;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 8vmin;
+			color: $black;
+		}
 
-        .a {
-            margin: auto;
-            background-color: $main2;
-            padding: 25px 40px;
-            font-family: $inter;
-            width: 200px;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 24px;
-            color: white;
-            border-radius: 100px;
-            margin-bottom: 300px;
-        }
-    }
+		.a {
+			transition: 0.2s;
+			margin: auto;
+			background-color: $main2;
+			padding: 25px 40px;
+			font-family: $inter;
+			width: 200px;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 24px;
+			color: white;
+			border-radius: 100px;
+			margin-bottom: 300px;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
 }

@@ -1,12 +1,94 @@
 @import "../variable/var.scss";
 
 .main-body {
-    .flex {
-        @include variable-penengah-jati-diri(100px, 100px);
+	.flex {
+		@include variable-penengah-jati-diri-small(70px, 70px);
 
-        height: 140vh;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        row-gap: 30px;
-    }
+		min-height: 140vh;
+		.flex-cards {
+			width: 100%;
+			display: grid;
+			grid-template-columns: auto;
+			justify-content: center;
+			row-gap: 30px;
+		}
+	}
+}
+
+@media (min-width: 640px) {
+	.main-body {
+		.flex {
+			.flex-cards {
+				grid-template-columns: auto;
+				row-gap: 30px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.main-body {
+		.flex {
+			@include variable-penengah-jati-diri-medium(70px, 100px);
+			.flex-cards {
+				grid-template-columns: auto;
+				gap: 30px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.main-body {
+		.flex {
+			@include variable-penengah-jati-diri-medium(100px, 100px);
+
+			.flex-cards {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				gap: 50px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.main-body {
+		.flex {
+			@include variable-penengah-jati-diri(100px, 100px);
+
+			.flex-cards {
+				gap: 25px;
+				row-gap: 40px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1536px) {
+	.main-body {
+		.flex {
+			.flex-cards {
+				gap: 63px;
+				row-gap: 50px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+	.main-body {
+		.flex {
+			@include variable-penengah-jati-diri-large(100px, 100px);
+
+			.flex-cards {
+				width: 90%;
+				margin: auto;
+				justify-content: space-between;
+				row-gap: 60px;
+			}
+		}
+	}
 }

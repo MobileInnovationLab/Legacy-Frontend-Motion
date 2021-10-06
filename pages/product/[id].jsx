@@ -18,6 +18,7 @@ const DetailProduct = () => {
 	const router = useRouter();
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
+	const [modal, setModal] = useState(false);
 	const { id } = router.query;
 
 	useEffect(() => {
@@ -39,9 +40,50 @@ const DetailProduct = () => {
 				<title>{data?.name}</title>
 			</Head>
 
+			{modal ?
+				<div className={styles["whole-page"]}>
+					<div className={styles['modal-container']}>
+						<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => setModal(false)}>
+							<path d="M21 7L7 21" stroke="#332C2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M7 7L21 21" stroke="#332C2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+						</svg>
+
+						<div className={styles['img-modal']}>
+							<Image
+								src='/product/illu.png'
+								width='120'
+								height='120'
+								alt='illu'
+							/>
+						</div>
+
+						<p>Download this App on</p>
+
+						<div className={styles['flex-modal']}>
+							<a href="">
+								<Image
+									src='/product/gplaypng.png'
+									alt='gplay'
+									width='224'
+									height='67'
+								/>
+							</a>
+							<a href="">
+								<Image
+									src='/product/appstore.png'
+									alt='gplay'
+									width='224'
+									height='67'
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+				: ''
+			}
+
 			<NavbarWhite />
 			<div className={styles['main-bg']}>
-				{/* <BigTitle>{data?.name}</BigTitle> */}
 				<section className={styles.article}>
 					<IdBackButton />
 					<h3>{data?.name || <Skeleton />}</h3>

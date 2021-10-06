@@ -16,34 +16,34 @@ import styles from '../../styles/pages/product/idBlog.module.scss';
 import Skeleton from 'react-loading-skeleton';
 
 const DetailBlog = () => {
-    const router = useRouter();
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const { id } = router.query;
+	const router = useRouter();
+	const [data, setData] = useState(null);
+	const [loading, setLoading] = useState(true);
+	const { id } = router.query;
 
-    useEffect(() => {
-        id &&
-            API.getBlogById(id)
-                .then((data) => setData(data))
-                .finally(() => setLoading(false));
-    }, [id]);
+	useEffect(() => {
+		id &&
+			API.getBlogById(id)
+				.then((data) => setData(data))
+				.finally(() => setLoading(false));
+	}, [id]);
 
-    if (data?.status === 404 && !loading) {
-        router.push('/404')
-    }
+	if (data?.status === 404 && !loading) {
+		router.push('/404')
+	}
 
-    return (
-        <>
-            <Head>
-                <title>{data?.title}</title>
-            </Head>
+	return (
+		<>
+			<Head>
+				<title>{data?.title}</title>
+			</Head>
 
-            <NavbarWhite />
-            <div className={styles['main-bg']}>
-                <section className={styles.article}>
-                    <IdBackButton />
-                    <h3>{data?.title || <Skeleton />}</h3>
-                    {/* <div className={styles.img}>
+			<NavbarWhite />
+			<div className={styles['main-bg']}>
+				<section className={styles.article}>
+					<IdBackButton />
+					<h3>{data?.title || <Skeleton />}</h3>
+					{/* <div className={styles.img}>
                 <Image
                     src={data?.thumbnail}
                     layout='fill'
@@ -51,54 +51,54 @@ const DetailBlog = () => {
                 />
             </div> */}
 
-                    <hr />
+					<hr />
 
-                    <div className={styles.app}>
-                        <b>Share</b>
-                        <div className={styles.social}>
-                            <CopyToClipboard text={router.asPath}>
-                                <button className={styles.copy}></button>
-                            </CopyToClipboard>
-                            <WhatsappShareButton url={router.asPath}>
-                                <button className={styles.wa}></button>
-                            </WhatsappShareButton>
-                            <LinkedinShareButton url={router.asPath}>
-                                <button className={styles.li}></button>
-                            </LinkedinShareButton>
-                            <FacebookShareButton url={router.asPath}>
-                                <button className={styles.fb}></button>
-                            </FacebookShareButton>
-                        </div>
-                    </div>
+					<div className={styles.app}>
+						<b>Share</b>
+						<div className={styles.social}>
+							<CopyToClipboard text={router.asPath}>
+								<button className={styles.copy}></button>
+							</CopyToClipboard>
+							<WhatsappShareButton url={router.asPath}>
+								<button className={styles.wa}></button>
+							</WhatsappShareButton>
+							<LinkedinShareButton url={router.asPath}>
+								<button className={styles.li}></button>
+							</LinkedinShareButton>
+							<FacebookShareButton url={router.asPath}>
+								<button className={styles.fb}></button>
+							</FacebookShareButton>
+						</div>
+					</div>
 
-                    <hr />
+					<hr />
 
-                    <article>{data?.description || <Skeleton />}</article>
+					<article>{data?.description || <Skeleton />}</article>
 
-                </section>
+				</section>
 
-                <div className={styles['app-responsive']}>
-                    <b>Share</b>
-                    <div className={styles.social}>
-                        <CopyToClipboard text={router.asPath}>
-                            <button className={styles.copy}></button>
-                        </CopyToClipboard>
-                        <WhatsappShareButton url={router.asPath}>
-                            <button className={styles.wa}></button>
-                        </WhatsappShareButton>
-                        <LinkedinShareButton url={router.asPath}>
-                            <button className={styles.li}></button>
-                        </LinkedinShareButton>
-                        <FacebookShareButton url={router.asPath}>
-                            <button className={styles.fb}></button>
-                        </FacebookShareButton>
-                    </div>
-                </div>
+				<div className={styles['app-responsive']}>
+					<b>Share</b>
+					<div className={styles.social}>
+						<CopyToClipboard text={router.asPath}>
+							<button className={styles.copy}></button>
+						</CopyToClipboard>
+						<WhatsappShareButton url={router.asPath}>
+							<button className={styles.wa}></button>
+						</WhatsappShareButton>
+						<LinkedinShareButton url={router.asPath}>
+							<button className={styles.li}></button>
+						</LinkedinShareButton>
+						<FacebookShareButton url={router.asPath}>
+							<button className={styles.fb}></button>
+						</FacebookShareButton>
+					</div>
+				</div>
 
-            </div>
-            <Footer />
-        </>
-    );
+			</div>
+			<Footer />
+		</>
+	);
 };
 
 export default DetailBlog;

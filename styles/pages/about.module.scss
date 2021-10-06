@@ -24,6 +24,13 @@
 			}
 		}
 
+		.first-image {
+			position: relative;
+			width: 100%;
+			height: 250px;
+			margin: auto;
+		}
+
 		.first-flex {
 			margin-top: 50px;
 			display: grid;
@@ -120,10 +127,38 @@
 		}
 		.slider {
 			.containerRes {
-				display: grid;
+				display: grid !important;
 				grid-template-columns: auto auto;
 				justify-content: center;
 				gap: 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.main-body {
+		.first {
+			@include variable-penengah-jati-diri-medium(50px, 50px);
+		}
+	}
+	.about-member {
+		background-color: white;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 100px;
+
+		.title {
+			@include variable-penengah-jati-diri-medium(50px, 0);
+			text-align: center;
+		}
+		.grid {
+			display: none;
+
+			&:last-child {
+				@include variable-penengah-jati-diri-medium(50px, 0);
+				display: grid;
+				grid-template-columns: auto auto;
 			}
 		}
 	}
@@ -136,7 +171,7 @@
 		background-color: $background;
 
 		.first {
-			@include variable-penengah-jati-diri(50px, 100px);
+			@include variable-penengah-jati-diri-medium(50px, 100px);
 
 			.first-title {
 				text-align: left;
@@ -180,7 +215,7 @@
 		}
 
 		.division {
-			@include variable-penengah-jati-diri(20px, 0);
+			@include variable-penengah-jati-diri-medium(20px, 0);
 		}
 
 		.about-member {
@@ -190,7 +225,7 @@
 			padding-bottom: 100px;
 
 			.title {
-				@include variable-penengah-jati-diri(50px, 0);
+				@include variable-penengah-jati-diri-medium(50px, 0);
 				text-align: left;
 
 				.flex {
@@ -239,12 +274,227 @@
 				display: none;
 			}
 			.grid {
+				@include variable-penengah-jati-diri-medium(50px, 0);
+				display: flex;
+				flex-wrap: wrap;
+				gap: 37px;
+				row-gap: 40px;
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.main-body {
+		background: url("../../public/main-index/bg-main2.png") right 1450px no-repeat;
+		background-size: 60%;
+		background-color: $background;
+
+		.first {
+			@include variable-penengah-jati-diri(100px, 150px);
+
+			.first-title {
+				text-align: left;
+				display: flex;
+				align-items: center;
+				margin-bottom: 30px;
+
+				.title {
+					@include black-title;
+					margin-right: 50px;
+					width: 55%;
+				}
+
+				.subtitle {
+					line-height: 32px;
+					font-size: 18px;
+					width: 45%;
+				}
+			}
+
+			.first-image {
+				height: 400px;
+			}
+
+			.first-flex {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+
+				.item {
+					width: 25%;
+					text-align: center;
+
+					h4 {
+						color: $main2;
+						font-family: $rubik;
+						font-size: 48px;
+						margin: 0;
+					}
+
+					p {
+						color: $text-desc;
+					}
+				}
+			}
+		}
+
+		.division {
+			@include variable-penengah-jati-diri(150px, 100px);
+		}
+
+		.about-member {
+			background-color: white;
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 100px;
+
+			.title {
 				@include variable-penengah-jati-diri(50px, 0);
-				padding: 0 135px !important;
+				text-align: left;
+
+				.flex {
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					.form {
+						p {
+							font-family: $inter;
+							font-style: normal;
+							font-weight: normal;
+							font-size: 18px;
+							line-height: 22px;
+						}
+
+						select {
+							background-color: white;
+							border: 1px solid #858585;
+							box-sizing: border-box;
+							border-radius: 40px;
+							width: 200px;
+							height: 45px;
+							padding: 10px 20px;
+						}
+						display: flex;
+						align-items: center;
+						gap: 10px;
+					}
+				}
+			}
+			.grid {
+				@include variable-penengah-jati-diri(100px, 0);
 				display: grid;
 				grid-template-columns: auto auto auto auto;
-				row-gap: 40px;
 				justify-content: space-between;
+				row-gap: 40px;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1920px) {
+	.main-body {
+		background: url("../../public/main-index/bg-main2.png") right 1450px no-repeat;
+		background-size: 60%;
+		background-color: $background;
+
+		.first {
+			@include variable-penengah-jati-diri-large(100px, 150px);
+
+			.first-title {
+				text-align: left;
+				display: flex;
+				align-items: center;
+				margin-bottom: 30px;
+
+				.title {
+					@include black-title;
+					margin-right: 50px;
+					width: 55%;
+				}
+
+				.subtitle {
+					line-height: 32px;
+					font-size: 18px;
+					width: 45%;
+				}
+			}
+
+			.first-image {
+				height: 400px;
+			}
+
+			.first-flex {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+
+				.item {
+					width: 25%;
+					text-align: center;
+
+					h4 {
+						color: $main2;
+						font-family: $rubik;
+						font-size: 48px;
+						margin: 0;
+					}
+
+					p {
+						color: $text-desc;
+					}
+				}
+			}
+		}
+
+		.division {
+			@include variable-penengah-jati-diri-large(150px, 100px);
+		}
+
+		.about-member {
+			background-color: white;
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 100px;
+
+			.title {
+				@include variable-penengah-jati-diri-large(50px, 0);
+				text-align: left;
+
+				.flex {
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					.form {
+						p {
+							font-family: $inter;
+							font-style: normal;
+							font-weight: normal;
+							font-size: 18px;
+							line-height: 22px;
+						}
+
+						select {
+							background-color: white;
+							border: 1px solid #858585;
+							box-sizing: border-box;
+							border-radius: 40px;
+							width: 200px;
+							height: 45px;
+							padding: 10px 20px;
+						}
+						display: flex;
+						align-items: center;
+						gap: 10px;
+					}
+				}
+			}
+			.grid {
+				@include variable-penengah-jati-diri-large(100px, 0);
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				justify-content: space-between;
+				row-gap: 40px;
 			}
 		}
 	}

@@ -18,44 +18,44 @@ $background: #fcf6f6;
 // multiple variables
 
 @mixin red-small-title() {
-    font-family: $rubik;
-    color: $main2;
-    font-weight: 400;
-    font-size: 18px;
+	font-family: $rubik;
+	color: $main2;
+	font-weight: 400;
+	font-size: 18px;
 
-    @media only screen and (min-width: 1920px) {
-        font-size: 20px;
-    }
+	@media only screen and (min-width: 1920px) {
+		font-size: 20px;
+	}
 }
 
 @mixin black-title() {
-    font-family: $rubik;
-    color: $black;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 65px;
+	font-family: $rubik;
+	color: $black;
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 65px;
 
-    @media only screen and (min-width: 1920px) {
-        font-size: 55px;
-    }
+	@media only screen and (min-width: 1920px) {
+		font-size: 55px;
+	}
 }
 
 @mixin variable-penengah-jati-diri($mid-top, $mid-bottom) {
-    padding: 0 135px 0 135px;
-    margin: $mid-top 0 $mid-bottom 0;
+	padding: 0 135px 0 135px;
+	margin: $mid-top 0 $mid-bottom 0;
 }
 
 @mixin variable-penengah-jati-diri-small($mid-top, $mid-bottom) {
-    padding: 0 25px 0 25px;
-    margin: $mid-top 0 $mid-bottom 0;
+	padding: 0 25px 0 25px;
+	margin: $mid-top 0 $mid-bottom 0;
 }
 
 @mixin variable-penengah-jati-diri-medium($mid-top, $mid-bottom) {
-    padding: 0 100px 0 100px;
-    margin: $mid-top 0 $mid-bottom 0;
+	padding: 0 100px 0 100px;
+	margin: $mid-top 0 $mid-bottom 0;
 }
 
 @mixin variable-penengah-jati-diri-large($mid-top, $mid-bottom) {
-    padding: 0 200px 0 200px;
-    margin: $mid-top 0 $mid-bottom 0;
+	padding: 0 200px 0 200px;
+	margin: $mid-top 0 $mid-bottom 0;
 }

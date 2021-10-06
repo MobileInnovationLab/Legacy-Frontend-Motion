@@ -5,6 +5,10 @@
 	width: 300px;
 	position: relative;
 
+	&:hover {
+		cursor: pointer;
+	}
+
 	.img {
 		position: relative;
 		height: 100%;
@@ -54,7 +58,36 @@
 
 @media only screen and (min-width: 1024px) {
 	.container {
-		height: 320px;
-		width: 340px;
+		height: 240px;
+		width: 240px;
+
+		.text {
+			width: 200px;
+			height: 141px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.container {
+		height: 260px;
+		width: 320px;
+
+		.text {
+			width: 230px;
+			height: 141px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1536px) {
+	.container {
+		height: 360px;
+		width: 380px;
+
+		.text {
+			width: 280px;
+			height: 160px;
+		}
 	}
 }

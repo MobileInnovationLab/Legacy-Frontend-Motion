@@ -1,137 +1,435 @@
 @import "../../variable/var.scss";
 
 .main-bg {
-    .article {
-        @include variable-penengah-jati-diri-small(100px, 0);
-        text-align: center;
-        h3 {
-            color: $black;
-            font-family: $rubik;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 32px;
-        }
-        .img {
-            position: relative;
-            width: 100%;
-            height: 300px;
-        }
-        hr {
-            opacity: 0.2;
-        }
-        .app {
-            margin-top: 20px;
-            margin-bottom: 30px;
-            font-family: $inter;
-            color: $black;
+	@include variable-penengah-jati-diri-small(0, 0);
+	padding-top: 100px;
 
-            p {
-                margin-top: 20px;
-                color: $text-desc;
-                font-size: 16px;
+	.article {
+		text-align: center;
+		h3 {
+			color: $black;
+			font-family: $rubik;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 32px;
+		}
+		.img {
+			position: relative;
+			width: 100%;
+			height: 300px;
+		}
+		hr {
+			opacity: 0.2;
+		}
+		.app {
+			margin-top: 20px;
+			margin-bottom: 30px;
+			font-family: $inter;
+			color: $black;
+			display: flex;
+			flex-direction: column;
 
-                &:first-child {
-                    margin-top: 0;
-                }
-            }
-            b {
-                margin-top: 20px;
-                font-size: 18px;
-            }
-            button {
-                margin-top: 20px;
-                width: 160px;
-                height: 50px;
-                background-color: $main2;
-                text-decoration: none;
-                border: none;
-                color: white;
-                font-family: $inter;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 22px;
-                border-radius: 60px;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
+			p {
+				margin-top: 20px;
+				color: $text-desc;
+				font-size: 16px;
 
-        article {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: $inter;
-            color: $text-desc;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 32px;
-        }
-    }
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			b {
+				margin-top: 20px;
+				font-size: 18px;
+			}
+			button {
+				margin: auto;
+				margin-top: 20px;
+				width: 160px;
+				height: 50px;
+				background-color: $main2;
+				text-decoration: none;
+				border: none;
+				color: white;
+				font-family: $inter;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 22px;
+				border-radius: 60px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		article {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-family: $inter;
+			color: $text-desc;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 32px;
+		}
+	}
+	.app-responsive {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.main-bg {
+		@include variable-penengah-jati-diri-medium(0, 100px);
+		padding-top: 100px;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
-    .main-bg {
-        display: flex;
-        gap: 50px;
-        @include variable-penengah-jati-diri(60px, 50px);
+	.main-bg {
+		display: flex;
+		gap: 0px;
 
-        .article {
-            text-align: left;
-            width: 60%;
+		.article {
+			text-align: left;
+			width: 55%;
 
-            h3 {
-                font-size: 36px;
-            }
+			h3 {
+				font-size: 36px;
+			}
 
-            .app {
-                display: none;
-            }
+			.app {
+				display: none;
+			}
 
-            hr {
-                display: none;
-            }
-        }
+			hr {
+				display: none;
+			}
+		}
 
-        .app-responsive {
-            margin-top: 150px;
-            margin-bottom: 30px;
-            font-family: $inter;
-            color: $black;
+		.app-responsive {
+			display: flex;
+			flex-direction: column;
+			margin-top: 150px;
+			margin-bottom: 30px;
+			margin-left: 100px;
+			font-family: $inter;
+			color: $black;
 
-            p {
-                margin-top: 20px;
-                color: $text-desc;
-                font-size: 16px;
+			p {
+				margin-top: 20px;
+				color: $text-desc;
+				font-size: 16px;
 
-                &:first-child {
-                    margin-top: 0;
-                }
-            }
-            b {
-                margin-top: 20px;
-                font-size: 18px;
-            }
-            button {
-                margin-top: 20px;
-                width: 160px;
-                height: 50px;
-                background-color: $main2;
-                text-decoration: none;
-                border: none;
-                color: white;
-                font-family: $inter;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 22px;
-                border-radius: 60px;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-    }
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			b {
+				margin-top: 20px;
+				font-size: 18px;
+			}
+			button {
+				margin-top: 40px;
+				width: 160px;
+				height: 50px;
+				background-color: $main2;
+				text-decoration: none;
+				border: none;
+				color: white;
+				font-family: $inter;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 22px;
+				border-radius: 60px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.main-bg {
+		@include variable-penengah-jati-diri(0, 100px);
+		padding-top: 100px;
+		display: flex;
+		gap: 0px;
+
+		.article {
+			text-align: left;
+			width: 55%;
+
+			h3 {
+				font-size: 36px;
+			}
+
+			.app {
+				display: none;
+			}
+
+			hr {
+				display: none;
+			}
+		}
+
+		.app-responsive {
+			display: flex;
+			flex-direction: column;
+			margin-top: 150px;
+			margin-bottom: 30px;
+			font-family: $inter;
+			color: $black;
+
+			p {
+				margin-top: 20px;
+				color: $text-desc;
+				font-size: 16px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			b {
+				margin-top: 20px;
+				font-size: 18px;
+			}
+			button {
+				margin-top: 40px;
+				width: 160px;
+				height: 50px;
+				background-color: $main2;
+				text-decoration: none;
+				border: none;
+				color: white;
+				font-family: $inter;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 22px;
+				border-radius: 60px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1536px) {
+	.main-bg {
+		@include variable-penengah-jati-diri(0, 100px);
+		padding-top: 100px;
+		display: flex;
+		gap: 0px;
+
+		.article {
+			text-align: left;
+			width: 65%;
+
+			h3 {
+				font-size: 36px;
+			}
+
+			.img {
+				height: 450px;
+			}
+
+			.app {
+				display: none;
+			}
+
+			hr {
+				display: none;
+			}
+		}
+
+		.app-responsive {
+			display: flex;
+			flex-direction: column;
+			margin-top: 150px;
+			margin-bottom: 30px;
+			font-family: $inter;
+			color: $black;
+
+			p {
+				margin-top: 20px;
+				color: $text-desc;
+				font-size: 16px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			b {
+				margin-top: 20px;
+				font-size: 18px;
+			}
+			button {
+				margin-top: 40px;
+				width: 160px;
+				height: 50px;
+				background-color: $main2;
+				text-decoration: none;
+				border: none;
+				color: white;
+				font-family: $inter;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 22px;
+				border-radius: 60px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+	.main-bg {
+		@include variable-penengah-jati-diri-large(0, 100px);
+		padding-top: 100px;
+		display: flex;
+		gap: 0px;
+
+		.article {
+			text-align: left;
+			width: 55%;
+
+			h3 {
+				font-size: 36px;
+			}
+
+			.img {
+				height: 450px;
+			}
+
+			.app {
+				display: none;
+			}
+
+			hr {
+				display: none;
+			}
+		}
+
+		.app-responsive {
+			display: flex;
+			flex-direction: column;
+			margin-top: 150px;
+			margin-bottom: 30px;
+			font-family: $inter;
+			color: $black;
+
+			p {
+				margin-top: 20px;
+				color: $text-desc;
+				font-size: 16px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			b {
+				margin-top: 20px;
+				font-size: 18px;
+			}
+			button {
+				margin-top: 40px;
+				width: 160px;
+				height: 50px;
+				background-color: $main2;
+				text-decoration: none;
+				border: none;
+				color: white;
+				font-family: $inter;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 22px;
+				border-radius: 60px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.whole-page {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.3s;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-container {
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+	width: 85vw;
+	max-width: 400px;
+	height: 450px;
+	gap: 30px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	p {
+		font-family: $rubik;
+		font-size: 22px;
+		color: $black;
+		font-weight: 600;
+	}
+
+	.flex-modal {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	@media (min-width: 1024px) {
+		max-width: 700px;
+		gap: 40px;
+
+		.flex-modal {
+			flex-direction: row;
+		}
+	}
 }

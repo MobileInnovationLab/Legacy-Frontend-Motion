@@ -25,42 +25,48 @@ export default function About() {
 			division: 'Supervisor/Lecturer',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: '',
+			image: '/about/dummy.png'
 		},
 		second: {
 			name: 'Shinta Yulia P',
 			division: 'Supervisor/Lecturer',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: '',
+			image: '/about/dummy.png'
 		},
 		third: {
 			name: 'Mira Kania S',
 			division: 'Supervisor/Lecturer',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: '',
+			image: '/about/dummy.png'
 		},
 		fourth: {
 			name: 'Dana Sulistyo',
 			division: 'Supervisor/Lecturer',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: '',
+			image: '/about/dummy.png'
 		},
 		fifth: {
 			name: 'Monterico Adrian',
 			division: 'Supervisor/Lecturer',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: '',
+			image: '/about/dummy.png'
 		},
 		sixth: {
 			name: 'Aristyo',
 			division: 'Supervisor/Lecturer',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: '',
+			image: '/about/dummy.png'
 		}
 	}
 
@@ -70,56 +76,64 @@ export default function About() {
 			division: 'Laboratory Assistant',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: 'https://www.instagram.com/gusadiprntaa/',
+			image: '/about/member/kordas ganteng.png'
 		},
 		second: {
 			name: 'Aisyah Fitri',
 			division: 'Laboratory Assistant',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: 'https://www.instagram.com/pppyna/',
+			image: '/about/member/Fitri.jpg'
 		},
 		third: {
 			name: 'Nur Intan Sari',
 			division: 'Laboratory Assistant',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: 'https://www.instagram.com/nintann2/',
+			image: '/about/member/Nur Intan Sari.jpg'
 		},
 		fourth: {
 			name: 'Serly Setyani',
 			division: 'Laboratory Assistant',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: 'https://www.instagram.com/serlysetyani/',
+			image: '/about/member/Serly Setyani.jpg'
 		},
 		fifth: {
 			name: 'Salsabila Martono',
 			division: 'Laboratory Assistant',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: 'https://www.instagram.com/salsabilamaaa_/',
+			image: '/about/dummy.png'
 		},
 		sixth: {
 			name: 'Andrea Rahmadanisya',
 			division: 'Laboratory Assistant',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: 'https://www.instagram.com/andrearhmd/',
+			image: '/about/member/Andrea Rahmadanisya.jpg'
 		},
 		seventh: {
 			name: 'Dimas Imameza',
 			division: 'Laboratory Assistant',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: 'https://www.instagram.com/dimas_imameza/',
+			image: '/about/member/Dimas Imameza.jpeg'
 		},
 		eight: {
 			name: 'Antika Putri Permata Wardani',
 			division: 'Laboratory Assistant',
 			linkedin: '',
 			facebook: '',
-			insta: ''
+			insta: 'https://www.instagram.com/antikaputripew/',
+			image: '/about/member/Antika.jpg'
 		},
 	}
 
@@ -196,10 +210,10 @@ export default function About() {
 						Design, and Mobile Programming.
 					</p>
 				</div>
-				<section>
+				<section className={styles['first-image']}>
 					<Image
 						src='/about/first-meet.png'
-						alt='Image of meeting'
+						alt='About Image'
 						layout='fill'
 						objectFit='cover'
 					/>
@@ -230,7 +244,7 @@ export default function About() {
 
 			<section className={styles['about-member']}>
 				<div className={styles.title}>
-					<h1>Some People Who Innovated You</h1>
+					<h1>People Who Might Innovate You</h1>
 					<h4>LECTURER</h4>
 				</div>
 
@@ -243,6 +257,7 @@ export default function About() {
 								linkedin={dosen.first.linkedin}
 								facebook={dosen.first.facebook}
 								insta={dosen.first.insta}
+								image={dosen.first.image}
 							/>
 							<MemberContainer
 								name={dosen.second.name}
@@ -250,6 +265,7 @@ export default function About() {
 								linkedin={dosen.second.linkedin}
 								facebook={dosen.second.facebook}
 								insta={dosen.second.insta}
+								image={dosen.second.image}
 							/>
 							<MemberContainer
 								name={dosen.third.name}
@@ -257,6 +273,7 @@ export default function About() {
 								linkedin={dosen.third.linkedin}
 								facebook={dosen.third.facebook}
 								insta={dosen.third.insta}
+								image={dosen.third.image}
 							/>
 							<MemberContainer
 								name={dosen.fourth.name}
@@ -264,6 +281,7 @@ export default function About() {
 								linkedin={dosen.fourth.linkedin}
 								facebook={dosen.fourth.facebook}
 								insta={dosen.fourth.insta}
+								image={dosen.fourth.image}
 							/>
 						</div>
 						<div className={styles.containerRes}>
@@ -273,6 +291,7 @@ export default function About() {
 								linkedin={dosen.fifth.linkedin}
 								facebook={dosen.fifth.facebook}
 								insta={dosen.fifth.insta}
+								image={dosen.fifth.image}
 							/>
 							<MemberContainer
 								name={dosen.sixth.name}
@@ -280,6 +299,7 @@ export default function About() {
 								linkedin={dosen.sixth.linkedin}
 								facebook={dosen.sixth.facebook}
 								insta={dosen.sixth.insta}
+								image={dosen.sixth.image}
 							/>
 						</div>
 					</Slider>
@@ -291,6 +311,7 @@ export default function About() {
 						linkedin={dosen.first.linkedin}
 						facebook={dosen.first.facebook}
 						insta={dosen.first.insta}
+						image={dosen.first.image}
 					/>
 					<MemberContainer
 						name={dosen.second.name}
@@ -298,6 +319,7 @@ export default function About() {
 						linkedin={dosen.second.linkedin}
 						facebook={dosen.second.facebook}
 						insta={dosen.second.insta}
+						image={dosen.second.image}
 					/>
 					<MemberContainer
 						name={dosen.third.name}
@@ -305,6 +327,7 @@ export default function About() {
 						linkedin={dosen.third.linkedin}
 						facebook={dosen.third.facebook}
 						insta={dosen.third.insta}
+						image={dosen.third.image}
 					/>
 					<MemberContainer
 						name={dosen.fourth.name}
@@ -312,6 +335,7 @@ export default function About() {
 						linkedin={dosen.fourth.linkedin}
 						facebook={dosen.fourth.facebook}
 						insta={dosen.fourth.insta}
+						image={dosen.fourth.image}
 					/>
 					<MemberContainer
 						name={dosen.fifth.name}
@@ -319,6 +343,7 @@ export default function About() {
 						linkedin={dosen.fifth.linkedin}
 						facebook={dosen.fifth.facebook}
 						insta={dosen.fifth.insta}
+						image={dosen.fifth.image}
 					/>
 					<MemberContainer
 						name={dosen.sixth.name}
@@ -326,6 +351,7 @@ export default function About() {
 						linkedin={dosen.sixth.linkedin}
 						facebook={dosen.sixth.facebook}
 						insta={dosen.sixth.insta}
+						image={dosen.sixth.image}
 					/>
 				</div>
 
@@ -351,6 +377,7 @@ export default function About() {
 								linkedin={labAssist.first.linkedin}
 								facebook={labAssist.first.facebook}
 								insta={labAssist.first.insta}
+								image={labAssist.first.image}
 							/>
 							<MemberContainer
 								name={labAssist.second.name}
@@ -358,6 +385,7 @@ export default function About() {
 								linkedin={labAssist.second.linkedin}
 								facebook={labAssist.second.facebook}
 								insta={labAssist.second.insta}
+								image={labAssist.second.image}
 							/>
 							<MemberContainer
 								name={labAssist.third.name}
@@ -365,6 +393,7 @@ export default function About() {
 								linkedin={labAssist.third.linkedin}
 								facebook={labAssist.third.facebook}
 								insta={labAssist.third.insta}
+								image={labAssist.third.image}
 							/>
 							<MemberContainer
 								name={labAssist.fourth.name}
@@ -372,6 +401,7 @@ export default function About() {
 								linkedin={labAssist.fourth.linkedin}
 								facebook={labAssist.fourth.facebook}
 								insta={labAssist.fourth.insta}
+								image={labAssist.fourth.image}
 							/>
 						</div>
 						<div className={styles.containerRes}>
@@ -381,6 +411,7 @@ export default function About() {
 								linkedin={labAssist.fifth.linkedin}
 								facebook={labAssist.fifth.facebook}
 								insta={labAssist.fifth.insta}
+								image={labAssist.fifth.image}
 							/>
 							<MemberContainer
 								name={labAssist.sixth.name}
@@ -388,6 +419,7 @@ export default function About() {
 								linkedin={labAssist.sixth.linkedin}
 								facebook={labAssist.sixth.facebook}
 								insta={labAssist.sixth.insta}
+								image={labAssist.sixth.image}
 							/>
 							<MemberContainer
 								name={labAssist.seventh.name}
@@ -395,6 +427,7 @@ export default function About() {
 								linkedin={labAssist.seventh.linkedin}
 								facebook={labAssist.seventh.facebook}
 								insta={labAssist.seventh.insta}
+								image={labAssist.seventh.image}
 							/>
 							<MemberContainer
 								name={labAssist.eight.name}
@@ -402,6 +435,7 @@ export default function About() {
 								linkedin={labAssist.eight.linkedin}
 								facebook={labAssist.eight.facebook}
 								insta={labAssist.eight.insta}
+								image={labAssist.eight.image}
 							/>
 						</div>
 					</Slider>
@@ -413,6 +447,7 @@ export default function About() {
 						linkedin={labAssist.first.linkedin}
 						facebook={labAssist.first.facebook}
 						insta={labAssist.first.insta}
+						image={labAssist.first.image}
 					/>
 					<MemberContainer
 						name={labAssist.second.name}
@@ -420,6 +455,7 @@ export default function About() {
 						linkedin={labAssist.second.linkedin}
 						facebook={labAssist.second.facebook}
 						insta={labAssist.second.insta}
+						image={labAssist.second.image}
 					/>
 					<MemberContainer
 						name={labAssist.third.name}
@@ -427,6 +463,7 @@ export default function About() {
 						linkedin={labAssist.third.linkedin}
 						facebook={labAssist.third.facebook}
 						insta={labAssist.third.insta}
+						image={labAssist.third.image}
 					/>
 					<MemberContainer
 						name={labAssist.fourth.name}
@@ -434,6 +471,7 @@ export default function About() {
 						linkedin={labAssist.fourth.linkedin}
 						facebook={labAssist.fourth.facebook}
 						insta={labAssist.fourth.insta}
+						image={labAssist.fourth.image}
 					/>
 					<MemberContainer
 						name={labAssist.fifth.name}
@@ -441,6 +479,7 @@ export default function About() {
 						linkedin={labAssist.fifth.linkedin}
 						facebook={labAssist.fifth.facebook}
 						insta={labAssist.fifth.insta}
+						image={labAssist.fifth.image}
 					/>
 					<MemberContainer
 						name={labAssist.sixth.name}
@@ -448,6 +487,7 @@ export default function About() {
 						linkedin={labAssist.sixth.linkedin}
 						facebook={labAssist.sixth.facebook}
 						insta={labAssist.sixth.insta}
+						image={labAssist.sixth.image}
 					/>
 					<MemberContainer
 						name={labAssist.seventh.name}
@@ -455,6 +495,7 @@ export default function About() {
 						linkedin={labAssist.seventh.linkedin}
 						facebook={labAssist.seventh.facebook}
 						insta={labAssist.seventh.insta}
+						image={labAssist.seventh.image}
 					/>
 					<MemberContainer
 						name={labAssist.eight.name}
@@ -462,6 +503,7 @@ export default function About() {
 						linkedin={labAssist.eight.linkedin}
 						facebook={labAssist.eight.facebook}
 						insta={labAssist.eight.insta}
+						image={labAssist.eight.image}
 					/>
 				</div>
 
