@@ -12,6 +12,7 @@ import DivisionBox from '../components/divisionBox';
 import Footer from '../components/footer';
 import TopButton from '../components/topButton';
 import ProductContainer from '../components/productContainer';
+import BlogContainer from '../components/blogContainer';
 import AchievementContainer from '../components/achievementContainer';
 import IndexAchievementContainer from '../components/indexAchievementContainer';
 
@@ -151,7 +152,7 @@ export default class Home extends Component {
   }
 
   render() {
-    const { products, achievements, blogs } = this.state;
+    const { achievements, blogs } = this.state;
 
     const responsiveSlider = {
       customPaging: function () {
@@ -186,27 +187,6 @@ export default class Home extends Component {
       writer: 'Zara Adisty',
     };
 
-    let container2 = {
-      id: '1',
-      title: 'Sendal Lempar',
-      image: {
-        src: '/coba/sandal.jpg',
-        alt: 'ini foto',
-      },
-      text: 'Lorem ipsum dolor sit amet, elite consectetur adipiscing, sed do eiusmod adsdsadasdsad sdasfdfsd dsadasdas',
-      writer: 'Zara Adisty',
-    };
-
-    let container3 = {
-      title: 'Ngoruptor',
-      image: {
-        src: '/coba/juliari.jpg',
-        alt: 'ini foto',
-      },
-      text: 'Lorem ipsum dolor sit amet, elite consectetur adipiscing, sed do eiusmod adsdsadasdsad sdasfdfsd dsadasdas',
-      writer: 'Juliari Batubara',
-    };
-
     return (
       <div className={styles['main-bg']}>
         <Head>
@@ -230,6 +210,7 @@ export default class Home extends Component {
           </div>
           : ''
         }
+
         <Navbar />
 
         <div className={styles['main-body']}>
@@ -307,6 +288,9 @@ export default class Home extends Component {
             <div className={styles['third-section-right']}>
               <Slider ref={(c) => (this.slider = c)} {...firstSlider}>
                 {this.sliders()}
+                {this.sliders()}
+                {this.sliders()}
+                {this.sliders()}
               </Slider>
               <div className={styles['third-box-button-responsive']}>
                 <button
@@ -348,32 +332,55 @@ export default class Home extends Component {
             </h1>
 
             <div className={styles['fourth-gallery']}>
+              {achievements?.map((ach) => (
+                <div key={ach.id} className={styles['fifth-slider-item']}>
+                  <IndexAchievementContainer
+                    id={ach.id}
+                    title={ach.name}
+                    team={ach.team_name}
+                    image={`${BASE_URL}${ach?.photo}`}
+                  />
+                </div>
+              ))}
               <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
+                <IndexAchievementContainer
+                  image='/coba/ical.png'
+                />
               </div>
               <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
+                <IndexAchievementContainer
+                  image='/coba/ical.png'
+                />
               </div>
               <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
+                <IndexAchievementContainer
+                  image='/coba/ical.png'
+                />
               </div>
               <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
+                <IndexAchievementContainer
+                  image='/coba/ical.png'
+                />
               </div>
               <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
+                <IndexAchievementContainer
+                  image='/coba/ical.png'
+                />
               </div>
               <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
+                <IndexAchievementContainer
+                  image='/coba/ical.png'
+                />
               </div>
               <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
+                <IndexAchievementContainer
+                  image='/coba/ical.png'
+                />
               </div>
               <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
-              </div>
-              <div className={styles['fourth-content']}>
-                <IndexAchievementContainer />
+                <IndexAchievementContainer
+                  image='/coba/ical.png'
+                />
               </div>
             </div>
 
@@ -382,9 +389,16 @@ export default class Home extends Component {
                 } ${'slider-mobile'}`}
             >
               <Slider {...responsiveSlider}>
-                <div className={styles['fourth-responsive-slider']}>
-                  <AchievementContainer image={`${BASE_URL}${achievements?.photo}`} />
-                </div>
+                {achievements?.map((ach) => (
+                  <div key={ach.id} className={styles['fifth-slider-item']}>
+                    <IndexAchievementContainer
+                      id={ach.id}
+                      title={ach.name}
+                      team={ach.team_name}
+                      image={`${BASE_URL}${ach?.photo}`}
+                    />
+                  </div>
+                ))}
                 <div className={styles['fourth-responsive-slider']}>
                   <AchievementContainer image={`${BASE_URL}${achievements?.photo}`} />
                 </div>
@@ -444,12 +458,54 @@ export default class Home extends Component {
                 {blogs?.map((blog) => (
                   <div key={blog.id} className={styles['fifth-slider-item']}>
                     {console.log(blog)}
-                    <ProductContainer
+                    <BlogContainer
+                      id={blog.id}
                       image={{
-                        src: '/coba/ical.png',
-                        alt: blog.title,
+                        src: `${BASE_URL}${blog?.thumbnail}`
                       }}
-                      title={blog.name}
+                      title={blog.title}
+                      text={blog.description}
+                      writer={blog.author}
+                    />
+                  </div>
+                ))}
+                {blogs?.map((blog) => (
+                  <div key={blog.id} className={styles['fifth-slider-item']}>
+                    {console.log(blog)}
+                    <BlogContainer
+                      id={blog.id}
+                      image={{
+                        src: `${BASE_URL}${blog?.thumbnail}`
+                      }}
+                      title={blog.title}
+                      text={blog.description}
+                      writer={blog.author}
+                    />
+                  </div>
+                ))}
+                {blogs?.map((blog) => (
+                  <div key={blog.id} className={styles['fifth-slider-item']}>
+                    {console.log(blog)}
+                    <BlogContainer
+                      id={blog.id}
+                      image={{
+                        src: `${BASE_URL}${blog?.thumbnail}`
+                      }}
+                      title={blog.title}
+                      text={blog.description}
+                      writer={blog.author}
+                    />
+                  </div>
+                ))}
+                {blogs?.map((blog) => (
+                  <div key={blog.id} className={styles['fifth-slider-item']}>
+                    {console.log(blog)}
+                    <BlogContainer
+                      id={blog.id}
+                      image={{
+                        src: `${BASE_URL}${blog?.thumbnail}`
+                      }}
+                      title={blog.title}
                       text={blog.description}
                       writer={blog.author}
                     />

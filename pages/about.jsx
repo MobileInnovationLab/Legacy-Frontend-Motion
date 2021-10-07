@@ -14,6 +14,7 @@ import Slider from 'react-slick';
 import styles from '../styles/pages/about.module.scss';
 import { useEffect, useState } from 'react';
 import API from '../api';
+import CountUp from 'react-countup';
 
 const titleUtama = 'About Us';
 
@@ -220,19 +221,29 @@ export default function About() {
 				</section>
 				<div className={styles['first-flex']}>
 					<div className={styles.item}>
-						<h4>6</h4>
+						<h4>
+							<CountUp start={0} delay={2} end={6} duration={2} />
+						</h4>
 						<p>Years of operation</p>
 					</div>
 					<div className={styles.item}>
-						<h4>100+</h4>
+						<h4>
+							<CountUp start={0} delay={2} end={100} duration={4} />
+							+
+						</h4>
 						<p>Members</p>
 					</div>
 					<div className={styles.item}>
-						<h4>50+</h4>
+						<h4>
+							<CountUp start={0} delay={2} end={50} duration={3} />
+							+
+						</h4>
 						<p>Products</p>
 					</div>
 					<div className={styles.item}>
-						<h4>48</h4>
+						<h4>
+							<CountUp start={0} delay={2} end={48} duration={3} />
+						</h4>
 						<p>Awards</p>
 					</div>
 				</div>

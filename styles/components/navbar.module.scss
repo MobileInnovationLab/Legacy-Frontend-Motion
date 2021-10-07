@@ -50,9 +50,9 @@
   }
 
   .flex-container {
+    @include variable-penengah-jati-diri-small(0, 0);
     padding-top: 10px;
     padding-bottom: 10px;
-    margin: 0 25px;
     display: flex;
     justify-content: space-between;
 
@@ -203,6 +203,15 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .navbar-main {
+    .flex-container {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
   .navbar-main {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -366,6 +375,9 @@
 
 @media only screen and (min-width: 1536px) {
   .navbar-main {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
     .flex-container {
       .container {
         .nav-links {

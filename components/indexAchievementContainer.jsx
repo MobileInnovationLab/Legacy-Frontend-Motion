@@ -6,14 +6,15 @@ import Image from 'next/image'
 export default function IndexAchievementContainer({
 	title,
 	id,
-	team
+	team,
+	image
 }) {
 
 	return (
 		<Link href={`/achievement/${id}`} passHref>
 			<section className={styles.container}>
 				<div className={styles.img}>
-					<Image src='/coba/sandal.jpg'
+					<Image src={image}
 						layout='fill'
 						objectFit='cover'
 						alt='Achievement'

@@ -1,4 +1,4 @@
-@import '../variable/var.scss';
+@import "../variable/var.scss";
 
 .container {
     height: 370px;
@@ -17,6 +17,9 @@
         font-size: 22px;
         margin: 15px 0 10px 0;
         color: $black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .description-text {
@@ -30,7 +33,7 @@
         color: $text-desc;
         margin: 5px 0 10px 0;
     }
-    
+
     .divider {
         opacity: 0.1;
         height: 1px;
@@ -46,7 +49,6 @@
         color: $text-desc;
         margin-top: 30px;
     }
-
 
     &:hover {
         cursor: pointer;
