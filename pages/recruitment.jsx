@@ -6,9 +6,9 @@ import Head from 'next/head';
 import { useFormik } from "formik";
 
 export default function recruitment() {
-  const formik = useFormik({
-    initialValues: {},
-  });
+  // const formik = useFormik({
+  //   initialValues: {},
+  // });
 
   return (
     <div className={styles.main}>
