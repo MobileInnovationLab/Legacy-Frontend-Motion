@@ -426,7 +426,6 @@ export default class Home extends Component {
               <Slider ref={(c) => (this.slider2 = c)} {...secondSlider}>
                 {blogs?.map((blog) => (
                   <div key={blog.id} className={styles["fifth-slider-item"]}>
-                    {console.log(blog)}
                     <BlogContainer
                       id={blog.id}
                       image={{

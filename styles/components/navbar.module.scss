@@ -384,6 +384,32 @@
           .about-dropdown {
             left: 18%;
           }
+
+          .nav-item {
+            &.active {
+              &:after {
+                bottom: -25px;
+                height: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .navbar-main {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .flex-container {
+      .container {
+        .nav-links {
+          .about-dropdown {
+            left: 14%;
+          }
         }
       }
     }

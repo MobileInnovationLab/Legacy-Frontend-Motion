@@ -27,63 +27,82 @@ function Product() {
 	const [search, setSearch] = useState('')
 
 	useEffect(() => {
-		// API.getProducts()
-		// 	.then((products) => setData(products))
-		// 	.finally(() => setLoading(false))
-		// API.getProductByName(search)
-		// 	.then((product) => {
-		// 		console.log(product)
-		// 		setData(product)
-		// 	})
-	}, []);
+    API.getProducts()
+      .then((products) => setData(products))
+      .finally(() => setLoading(false));
+    API.getProductByName(search).then((product) => {
+      console.log(product);
+      setData(product);
+    });
+  }, [search]);
 
-	return (
-		<div className={styles['main-body']}>
-			<Head>
-				<title>Product</title>
-			</Head>
-			<Navbar />
+  return (
+    <div className={styles["main-body"]}>
+      <Head>
+        <title>Product</title>
+      </Head>
+      <Navbar />
 
-			<BigTitle>Our Product</BigTitle>
+      <BigTitle>Our Product</BigTitle>
 
-			<section className={styles.search}>
-				<form className={styles['search-bar']}>
-					<input type="text" placeholder='Search..' onChange={e => setSearch(e.target.value)} />
-					<button type="submit">
-						<svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' >
-							<circle cx='9.80565' cy='9.80547' r='7.49047' stroke='#F82F1E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-							<path d='M15.0154 15.4042L17.9521 18.3333' stroke='#F82F1E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-						</svg>
-					</button>
-				</form>
-			</section>
+      <section className={styles.search}>
+        {/* <form className={styles["search-bar"]}>
+          <input
+            type="text"
+            placeholder="Search.."
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button type="submit">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="9.80565"
+                cy="9.80547"
+                r="7.49047"
+                stroke="#F82F1E"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M15.0154 15.4042L17.9521 18.3333"
+                stroke="#F82F1E"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </form> */}
+      </section>
 
-			<section className={styles.grid}>
-				<div className={styles["grid-cards"]}>
-					{data?.data?.map((val) => (
-						<ProductContainer
-							key={val.id}
-							id={val.id}
-							image={{
-								src: `${BASE_URL}${val?.photo}`,
-								alt: val.title,
-							}}
-							title={val.name}
-							text={val.description}
-							writer={val.creator}
-						/>
-					))}
-					<ProductContainer {...container} />
-					<ProductContainer {...container} />
-					<ProductContainer {...container} />
-					<ProductContainer {...container} />
-				</div>
-			</section>
+      <section className={styles.grid}>
+        <div className={styles["grid-cards"]}>
+          {data?.data?.map((val) => (
+            <ProductContainer
+              key={val.id}
+              id={val.id}
+              image={{
+                src: `${BASE_URL}${val?.photo}`,
+                alt: val.title,
+              }}
+              title={val.name}
+              text={val.description}
+              writer={val.creator}
+            />
+          ))}
+        </div>
+      </section>
 
-			<TopButton />
-			<Footer />
-		</div>
-	);
+      <TopButton />
+      <Footer />
+    </div>
+  );
 }
 
 export default Product;
