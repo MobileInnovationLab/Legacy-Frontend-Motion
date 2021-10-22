@@ -1,33 +1,48 @@
-import Image from 'next/image'
-import Head from 'next/head';
-import ReactPaginate from 'react-paginate';
+import Head from "next/head";
+import ReactPaginate from "react-paginate";
 
 import Navbar from "../components/navbar";
-import BigTitle from '../components/bigTitle';
+import BigTitle from "../components/bigTitle";
 import Footer from "../components/footer";
-import ActivityContainer from '../components/activityContainer';
+import ActivityContainer from "../components/activityContainer";
 
-import styles from '../styles/pages/activity.module.scss';
-import TopButton from '../components/topButton';
+import styles from "../styles/pages/activity.module.scss";
+import TopButton from "../components/topButton";
+import React, { useState, useEffect } from "react";
+import API from "../api";
+import { BASE_URL } from "../api/const";
 
-function activity() {
-	return (
-		<div className={styles['main-body']}>
-			<Head>
-				<title>Activity</title>
-			</Head>
+function Activity() {
+  const [data, setData] = useState(null);
 
-			<Navbar />
+  useEffect(() => {
+    API.getActivity().then((resp) => setData(resp.data));
+    console.log(data);
+  }, [data]);
 
-			<BigTitle>Our Activity</BigTitle>
+  return (
+    <div className={styles["main-body"]}>
+      <Head>
+        <title>Activity</title>
+      </Head>
 
-			<section className={styles.first}>
-				<ActivityContainer />
-				<ActivityContainer />
-				<ActivityContainer />
-			</section>
+      <Navbar />
 
-			{/* <ReactPaginate
+      <BigTitle>Our Activity</BigTitle>
+
+      {/* <section className={styles.first}>
+        {data?.map((activity) => (
+          <React.Fragment key={activity.id}>
+            <ActivityContainer
+              photo={`${BASE_URL}${activity?.thumbnail}`}
+              title={activity.name}
+              date={activity.updated_at}
+            />
+          </React.Fragment>
+        ))}
+      </section> */}
+
+      {/* <ReactPaginate
                 previousLabel={'previous'}
                 nextLabel={'next'}
                 breakLabel={'...'}
@@ -40,10 +55,10 @@ function activity() {
                 activeClassName={'active'}
             /> */}
 
-			<TopButton />
-			<Footer />
-		</div>
-	)
+      <TopButton />
+      <Footer />
+    </div>
+  );
 }
 
-export default activity;
+export default Activity;
