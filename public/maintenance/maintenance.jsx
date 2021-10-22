@@ -3,19 +3,21 @@ import Head from "next/head";
 const Maintenance = () => {
 
   return (
-    <div style={{
-      backgroundColor: "#fcf6f6",
-      display: 'flex',
-      justifyContent: 'center',
-      textAlign: 'center',
-      flexDirection: "column",
-      height: "100vh",
-    }}>
+    <div
+      style={{
+        backgroundColor: "#fcf6f6",
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
+        flexDirection: "column",
+        height: "100vh",
+      }}
+    >
       <Head>
         <title>Maintenance</title>
       </Head>
       <svg
-        style={{ width: '80vmin', margin: '6vmin auto' }}
+        style={{ width: "80vmin", margin: "6vmin auto" }}
         viewBox="0 0 752 620"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -626,16 +628,17 @@ const Maintenance = () => {
       </svg>
       <h1
         style={{
-          fontSize: '5vmin',
-          fontFamily: 'Rubik, sans-serif',
-          color: '#332c2b'
+          fontSize: "5vmin",
+          fontFamily: "Rubik, sans-serif",
+          color: "#332c2b",
         }}
       >
         Sorry, <br />
-        Your favorite laboratory website is under maintenance
+        {/* Your favorite laboratory website is under maintenance */}
+        We will back in couple hours with something special 😉
       </h1>
     </div>
-  )
+  );
 }
 
 export default Maintenance;
