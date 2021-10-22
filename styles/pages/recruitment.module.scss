@@ -18,72 +18,97 @@
 		font-size: 48px;
 		line-height: 57px;
 		text-align: center;
+		color: $black;
 	}
 
-    form {
-			background-color: white;
-			width: 60%;
-			margin: auto;
-			font-family: $inter;
-			display: flex;
-			flex-direction: column;
-			padding: 50px;
+	.form {
+		background-color: white;
+		width: 60%;
+		margin: auto;
+		font-family: $inter;
+		display: flex;
+		flex-direction: column;
+		padding: 50px;
 
-			label {
-				h5 {
-					display: flex;
-					p {
-						color: $main2;
-					}
-				}
-
-			}
-
-			input {
-				background-color: #f6fafd;
-				border: 1px solid #b9c0cd;
-				box-sizing: border-box;
-				border-radius: 60px;
-				width: 100%;
-				height: 45px;
-				padding: 10px 20px;
-
-				&:focus {
-						outline: none;
-				}
-			}
-
-			select {
-				background-color: #f6fafd;
-				border: 1px solid #b9c0cd;
-				box-sizing: border-box;
-				border-radius: 60px;
-				width: 100%;
-				height: 45px;
-				padding: 10px 20px;
-			}
-
-			.flex {
+		label {
+			h5 {
 				display: flex;
-				flex-direction: row;
-				gap: 40px;
-				width: 100%;
+				p {
+					color: $main2;
+				}
 			}
 
-        .half {
-					width: 50%;
-        }
+		}
 
-        button {
-					width: 100%;
-					height: 50px;
-					background-color: $text-desc;
-					border-radius: 60px;
-					margin-top: 50px;
-					color: white;
-					&:hover {
-						cursor: not-allowed;
-					}
-        }
-    }
+		input {
+			background-color: #f6fafd;
+			border: 1px solid #b9c0cd;
+			box-sizing: border-box;
+			border-radius: 60px;
+			width: 100%;
+			height: 45px;
+			padding: 10px 20px;
+			margin-bottom: 20px;
+
+			&:focus {
+				outline-color: $main2;
+			}
+		}
+
+		select {
+			background-color: #f6fafd;
+			border: 1px solid #b9c0cd;
+			box-sizing: border-box;
+			border-radius: 60px;
+			width: 100%;
+			height: 45px;
+			padding: 10px 20px;
+			margin-bottom: 20px;
+
+			&:focus {
+				outline-color: $main2;
+			}
+		}
+
+		.flex {
+			display: flex;
+			flex-direction: row;
+			gap: 40px;
+			width: 100%;
+		}
+
+		.half {
+			width: 50%;
+		}
+
+		button {
+			width: 100%;
+			height: 50px;
+			background-color: $text-desc;
+			border-radius: 60px;
+			margin-top: 50px;
+			color: white;
+			&:hover {
+				cursor: not-allowed;
+			}
+		}
+	}
+}
+
+.errors {
+	height: 0;
+	position: relative;
+	font-family: $inter;
+	
+	p {
+		top: -15px;
+		left: 20px;
+		position: absolute;
+		color: $main2;
+	}
+	&.half {
+		p {
+			top: -36px;
+		}
+	}
 }
