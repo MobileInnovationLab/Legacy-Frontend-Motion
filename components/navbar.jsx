@@ -121,9 +121,9 @@ function Navbar({ router }, props) {
             </ul>
           </div>
 
-          <Link href="/recruitment">
+          {/* <Link href="/recruitment">
             <a className={styles["nav-side"]}>Recruitment</a>
-          </Link>
+          </Link> */}
 
           <button
             className={`${styles["button-change"]} ${

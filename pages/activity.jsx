@@ -11,6 +11,7 @@ import TopButton from "../components/topButton";
 import React, { useState, useEffect } from "react";
 import API from "../api";
 import { BASE_URL } from "../api/const";
+import GeneralSeo from "../components/seo/generalSeo";
 
 function Activity() {
   const [data, setData] = useState(null);
@@ -22,9 +23,7 @@ function Activity() {
 
   return (
     <div className={styles["main-body"]}>
-      <Head>
-        <title>Activity</title>
-      </Head>
+      <GeneralSeo title="Activity" />
 
       <Navbar />
 

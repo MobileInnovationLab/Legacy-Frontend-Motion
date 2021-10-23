@@ -1,25 +1,27 @@
-import { Component } from 'react';
+import React, { Component } from "react";
 
-import Head from 'next/head'
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import GeneralSeo from "../components/seo/generalSeo";
 
-import Navbar from '../components/navbar';
-import styles from '../styles/pages/index.module.scss';
-import Slider from 'react-slick';
+import Navbar from "../components/navbar";
+import styles from "../styles/pages/index.module.scss";
+import Slider from "react-slick";
 
-import DivisionBox from '../components/divisionBox';
-import Footer from '../components/footer';
-import TopButton from '../components/topButton';
-import ProductContainer from '../components/productContainer';
-import BlogContainer from '../components/blogContainer';
-import AchievementContainer from '../components/achievementContainer';
-import IndexAchievementContainer from '../components/indexAchievementContainer';
+import DivisionBox from "../components/divisionBox";
+import Footer from "../components/footer";
+import TopButton from "../components/topButton";
+import ProductContainer from "../components/productContainer";
+import BlogContainer from "../components/blogContainer";
+import AchievementContainer from "../components/achievementContainer";
+import IndexAchievementContainer from "../components/indexAchievementContainer";
 
-import { BASE_URL } from '../api/const';
-import API from '../api';
-import IndexModal from '../components/indexModal';
-import IndexIllustration from '../components/illustration/indexIllustration';
+import { BASE_URL } from "../api/const";
+import API from "../api";
+import IndexModal from "../components/indexModal";
+import IndexIllustration from "../components/illustration/indexIllustration";
+
+import * as Sentry from "@sentry/nextjs";
 
 const firstSlider = {
   arrows: false,
@@ -72,7 +74,7 @@ const secondSlider = {
   ],
 };
 
-export default class Home extends Component {
+class Home extends Component {
   state = {
     products: null,
     achievements: null,
@@ -86,8 +88,8 @@ export default class Home extends Component {
     this.next2 = this.next2.bind(this);
     this.previous2 = this.previous2.bind(this);
     this.state = {
-      ytModal: false
-    }
+      ytModal: false,
+    };
   }
 
   async componentDidMount() {
@@ -104,17 +106,17 @@ export default class Home extends Component {
         blogs: blogs.data,
       });
     } catch (error) {
-      console.log(error);
+      Sentry.captureException(error);
     }
   }
 
   closeYtModals = () => {
-    this.setState({ ytModal: false })
-  }
+    this.setState({ ytModal: false });
+  };
 
   openYtModals = () => {
-    this.setState({ ytModal: true })
-  }
+    this.setState({ ytModal: true });
+  };
 
   next() {
     this.slider.slickNext();
@@ -133,7 +135,7 @@ export default class Home extends Component {
   }
 
   sliders() {
-    const { products } = this.state
+    const { products } = this.state;
 
     return products?.map((product) => (
       <div key={product.name} className={styles["third-slider"]}>
@@ -148,7 +150,7 @@ export default class Home extends Component {
           writer={product.creator}
         />
       </div>
-    ))
+    ));
   }
 
   render() {
@@ -158,13 +160,13 @@ export default class Home extends Component {
       customPaging: function () {
         return (
           <svg
-            width='12'
-            height='12'
-            viewBox='0 0 12 12'
-            fill='#858585'
-            xmlns='http://www.w3.org/2000/svg'
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="#858585"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx='6' cy='6' r='6' />
+            <circle cx="6" cy="6" r="6" />
           </svg>
         );
       },
@@ -178,20 +180,18 @@ export default class Home extends Component {
     };
 
     let container = {
-      title: 'Sendal Lempar',
+      title: "Sendal Lempar",
       image: {
-        src: '/coba/sandal.jpg',
-        alt: 'ini foto',
+        src: "/coba/sandal.jpg",
+        alt: "ini foto",
       },
-      text: 'Lorem ipsum dolor sit amet, elite consectetur adipiscing, sed do eiusmod adsdsadasdsad sdasfdfsd dsadasdas',
-      writer: 'Zara Adisty',
+      text: "Lorem ipsum dolor sit amet, elite consectetur adipiscing, sed do eiusmod adsdsadasdsad sdasfdfsd dsadasdas",
+      writer: "Zara Adisty",
     };
 
     return (
       <div className={styles["main-bg"]}>
-        <Head>
-          <title>Mobile Innovation Lab</title>
-        </Head>
+        <GeneralSeo />
 
         {this.state.ytModal ? (
           <div className={styles["whole-page"]} onClick={this.closeYtModals}>
@@ -479,3 +479,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default Home;

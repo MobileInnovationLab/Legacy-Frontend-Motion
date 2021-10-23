@@ -7,6 +7,7 @@ import Head from 'next/head'
 import API from "../api";
 import { BASE_URL } from "../api/const";
 import React, { useState, useEffect } from "react";
+import GeneralSeo from "../components/seo/generalSeo";
 
 function Blog() {
   const [data, setData] = useState(null);
@@ -17,9 +18,7 @@ function Blog() {
 
   return (
     <div className={styles["main-body"]}>
-      <Head>
-        <title>Blog</title>
-      </Head>
+      <GeneralSeo title="Blog" />
 
       <Navbar />
 
