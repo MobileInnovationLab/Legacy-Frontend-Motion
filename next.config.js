@@ -3,4 +3,5 @@ module.exports = {
   images: {
     domains: ["api.motionlaboratory.com"],
   },
+  compress: true,
 };

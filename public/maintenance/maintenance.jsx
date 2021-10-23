@@ -632,7 +632,7 @@ const Maintenance = () => {
       >
         Sorry, <br />
         {/* Your favorite laboratory website is under maintenance */}
-        We will back in couple hours with something special 😉
+        The developer&#39;s head has exploded due to overthink 🤯
       </h1>
     </div>
   );
