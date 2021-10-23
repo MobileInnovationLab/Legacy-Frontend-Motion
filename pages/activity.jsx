@@ -17,7 +17,10 @@ function Activity() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    API.getActivity().then((resp) => setData(resp.data));
+    API.getActivity().then((res) => {
+      console.log(res.data);
+      setData(res.data);
+    });
     console.log(data);
   }, [data]);
 
@@ -29,7 +32,7 @@ function Activity() {
 
       <BigTitle>Our Activity</BigTitle>
 
-      {/* <section className={styles.first}>
+      <section className={styles.first}>
         {data?.map((activity) => (
           <React.Fragment key={activity.id}>
             <ActivityContainer
@@ -39,7 +42,7 @@ function Activity() {
             />
           </React.Fragment>
         ))}
-      </section> */}
+      </section>
 
       {/* <ReactPaginate
                 previousLabel={'previous'}

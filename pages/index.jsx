@@ -18,7 +18,6 @@ import IndexAchievementContainer from "../components/indexAchievementContainer";
 
 import { BASE_URL } from "../api/const";
 import API from "../api";
-import IndexModal from "../components/indexModal";
 import IndexIllustration from "../components/illustration/indexIllustration";
 
 import * as Sentry from "@sentry/nextjs";
