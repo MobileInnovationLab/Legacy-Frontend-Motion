@@ -12,14 +12,16 @@ import {useRouter} from 'next/router'
 
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { useEffect } from "react";
+import API from "../api";
+
+import React, { useEffect } from "react";
 
 export default function Recruitment() {
-  const router = useRouter()
+  const router = useRouter();
 
-  useEffect(() => {
-    router.push('/404')
-  });
+  // useEffect(() => {
+  //   router.push('/404')
+  // });
 
   return (
     <>
@@ -43,16 +45,19 @@ export default function Recruitment() {
             name: "",
             email: "",
             nim: "",
-            cv: "",
-            portofolio: "",
-            motivation_letter: "",
-            ksm: "",
+            cv: null,
+            portofolio: null,
+            motivation_letter: null,
+            ksm: null,
             major: "S1 TEKNIK TELEKOMUNIKASI",
             generation: "2021",
             division: "Business Analyst",
           }}
           onSubmit={(data, { setSubmitting }) => {
             setTimeout(() => {
+              API.postRecruitment(data)
+                .then((resp) => console.log(resp))
+                .catch((err) => console.log(err));
               console.log(data);
               setSubmitting(false);
             }, 500);
@@ -66,11 +71,14 @@ export default function Recruitment() {
                 /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@student.telkomuniversity.ac.id$/,
                 "Telkom University Student's Email Required."
               ),
-            nim: Yup.string().required("Required").min(5, "Input proper NIM"),
-            // cv: Yup.required("Required"),
-            // portofolio: Yup.required("Required"),
-            // motivation_letter: Yup.required("Required"),
-            // ksm: Yup.required("Required"),
+            nim: Yup.string()
+              .required("Required")
+              .min(10, "Input proper NIM")
+              .max(10, "Input proper NIM"),
+            cv: Yup.mixed().required("Required"),
+            portofolio: Yup.mixed().required("Required"),
+            motivation_letter: Yup.mixed().required("Required"),
+            ksm: Yup.mixed().required("Required"),
             major: Yup.string().required("Required"),
             generation: Yup.string().required("Required"),
             division: Yup.string().required("Required"),
@@ -141,6 +149,7 @@ export default function Recruitment() {
                   <select
                     name="major"
                     id="major"
+                    touched={touched["major"]}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   >
@@ -246,6 +255,11 @@ export default function Recruitment() {
                       S1 Terapan Digital Creative Multimedia (DCM)
                     </option>
                   </select>
+                  <div className={`${styles.errors} ${styles.half}`}>
+                    <h5>
+                      {errors.major && touched.major && <p>*{errors.major}</p>}
+                    </h5>
+                  </div>
                 </div>
               </div>
               <div className={styles.flex}>
@@ -258,6 +272,7 @@ export default function Recruitment() {
                   <select
                     name="generation"
                     id="generation"
+                    touched={touched["generation"]}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   >
@@ -267,6 +282,13 @@ export default function Recruitment() {
                     <option value="2018">2018</option>
                     <option value="2017">2017</option>
                   </select>
+                  <div className={`${styles.errors} ${styles.half}`}>
+                    <h5>
+                      {errors.generation && touched.generation && (
+                        <p>*{errors.generation}</p>
+                      )}
+                    </h5>
+                  </div>
                 </div>
                 <div className={styles.half}>
                   <label htmlFor="">
@@ -277,6 +299,7 @@ export default function Recruitment() {
                   <select
                     name="division"
                     id="division"
+                    touched={touched["division"]}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   >
@@ -286,46 +309,113 @@ export default function Recruitment() {
                       Mobile Programming
                     </option>
                   </select>
+                  <div className={`${styles.errors} ${styles.half}`}>
+                    <h5>
+                      {errors.division && touched.division && (
+                        <p>*{errors.division}</p>
+                      )}
+                    </h5>
+                  </div>
                 </div>
               </div>
               <div className={styles.flex}>
                 <div className={styles.half}>
                   <label>
                     <h5>
-                      Upload CV<p>*</p>
+                      Curiculum Vitae (CV)<p>*</p>
                     </h5>
                   </label>
-                  <input type="file" name="" id="" />
+                  <input
+                    type="file"
+                    name="cv"
+                    id="cv"
+                    onChange={(e) => {
+                      setFieldValue("cv", e.currentTarget.files[0]);
+                    }}
+                    onBlur={handleBlur}
+                    touched={touched["cv"]}
+                  />
+                  <div className={`${styles.errors} ${styles.half}`}>
+                    <h5>{errors.cv && touched.cv && <p>*{errors.cv}</p>}</h5>
+                  </div>
                 </div>
                 <div className={styles.half}>
                   <label htmlFor="">
                     <h5>
-                      Upload Portofolio<p>*</p>
+                      Portofolio<p>*</p>
                     </h5>
                   </label>
-                  <input type="file" name="" id="" />
+                  <input
+                    type="file"
+                    name="portofolio"
+                    id="portofolio"
+                    onChange={(e) => {
+                      setFieldValue("portofolio", e.currentTarget.files[0]);
+                    }}
+                    onBlur={handleBlur}
+                    touched={touched["portofolio"]}
+                  />
+                  <div className={`${styles.errors} ${styles.half}`}>
+                    <h5>
+                      {errors.portofolio && touched.portofolio && (
+                        <p>*{errors.portofolio}</p>
+                      )}
+                    </h5>
+                  </div>
                 </div>
               </div>
               <div className={styles.flex}>
                 <div className={styles.half}>
                   <label htmlFor="">
                     <h5>
-                      Upload Motivation Letter<p>*</p>
+                      Motivation Letter<p>*</p>
                     </h5>
                   </label>
-                  <input type="file" name="" id="" />
+                  <input
+                    type="file"
+                    name="motivation_letter"
+                    id="motivation_letter"
+                    onChange={(e) => {
+                      setFieldValue(
+                        "motivation_letter",
+                        e.currentTarget.files[0]
+                      );
+                    }}
+                    onBlur={handleBlur}
+                    touched={touched["motivation_letter"]}
+                  />
+                  <div className={`${styles.errors} ${styles.half}`}>
+                    <h5>
+                      {errors.motivation_letter &&
+                        touched.motivation_letter && (
+                          <p>*{errors.motivation_letter}</p>
+                        )}
+                    </h5>
+                  </div>
                 </div>
                 <div className={styles.half}>
                   <label htmlFor="">
                     <h5>
-                      Upload KSM<p>*</p>
+                      KSM<p>*</p>
                     </h5>
                   </label>
-                  <input type="file" name="" id="" />
+                  <input
+                    type="file"
+                    name="ksm"
+                    id="ksm"
+                    onChange={(e) => {
+                      setFieldValue("ksm", e.currentTarget.files[0]);
+                    }}
+                    onBlur={handleBlur}
+                    touched={touched["ksm"]}
+                  />
+                  <div className={`${styles.errors} ${styles.half}`}>
+                    <h5>{errors.ksm && touched.ksm && <p>*{errors.ksm}</p>}</h5>
+                  </div>
                 </div>
               </div>
               <button type="submit">Submit</button>
-              {/* <pre>{JSON.stringify(values, null, 2)}</pre> */}
+              <pre>{JSON.stringify(values, null, 2)}</pre>
             </Form>
           )}
         </Formik>

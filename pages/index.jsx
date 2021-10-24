@@ -21,6 +21,7 @@ import API from "../api";
 import IndexIllustration from "../components/illustration/indexIllustration";
 
 import * as Sentry from "@sentry/nextjs";
+import { motion } from "framer-motion";
 
 const firstSlider = {
   arrows: false,
@@ -224,9 +225,10 @@ class Home extends Component {
                 is one of the latest laboratories at the Faculty of Informatics,
                 Telkom University under the auspices of K-Side.
               </p>
-              <a
+              <motion.a
                 className={styles["first-section-button"]}
                 onClick={this.openYtModals}
+                whileHover={{ scale: 1.05 }}
               >
                 <svg
                   width="24"
@@ -242,7 +244,7 @@ class Home extends Component {
                   />
                 </svg>
                 Watch Video
-              </a>
+              </motion.a>
             </article>
 
             <div className={styles["first-section-img"]}>
