@@ -21,6 +21,7 @@ export default function Recruitment() {
   const router = useRouter();
   const [modals, setModals] = useState(false);
   const [modalsError, setModalsError] = useState(false);
+  const [submit, setSubmit] = useState(false);
 
   // useEffect(() => {
   //   router.push('/404')
@@ -33,7 +34,7 @@ export default function Recruitment() {
           className={styles["whole-page"]}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ type: "spring", duration: 2, bounce: 0 }}
+          transition={{ type: "spring", duration: 1, bounce: 0 }}
         >
           <div className={styles["main-container"]}>
             <div className={styles.container}>
@@ -56,7 +57,12 @@ export default function Recruitment() {
         ""
       )}
       {modalsError ? (
-        <div className={styles["whole-page"]}>
+        <motion.div
+          className={styles["whole-page"]}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "spring", duration: 1, bounce: 0 }}
+        >
           <div className={styles["main-container"]}>
             <div className={styles.container}>
               <Image
@@ -69,7 +75,7 @@ export default function Recruitment() {
               <p>You can try to refresh the page and re-submit</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       ) : (
         ""
       )}
@@ -103,6 +109,7 @@ export default function Recruitment() {
             division: "Business Analyst",
           }}
           onSubmit={(data, { setSubmitting }) => {
+            setSubmit(true);
             setTimeout(() => {
               const payload = new FormData();
               payload.append("name", data.name);
@@ -122,7 +129,6 @@ export default function Recruitment() {
                 .catch((err) => {
                   setModalsError(true);
                 });
-              console.log(payload);
               setSubmitting(false);
             }, 500);
           }}
@@ -479,7 +485,12 @@ export default function Recruitment() {
                   </div>
                 </div>
               </div>
-              <button type="submit">Submit</button>
+              <button
+                className={submit ? styles["button-submitted"] : ""}
+                type="submit"
+              >
+                Submit
+              </button>
             </Form>
           )}
         </Formik>

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { withRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import styles from '../styles/components/navbar.module.scss'
+import { motion } from "framer-motion";
 
 function Navbar({ router }, props) {
   const [navbar, setNavbar] = useState(false);
@@ -10,17 +11,19 @@ function Navbar({ router }, props) {
   const [aboutExpand, setAboutExpand] = useState(false);
 
   const navs = [
-    { text: 'Home', href: '/' },
+    { text: "Home", href: "/" },
     {
-      text: 'About', href: '', dropDown: [
-        { text: 'About Us', href: '/about' },
-        { text: 'Our Activity', href: '/activity' },
-        { text: 'Contact Us', href: '/contact' },
-      ]
+      text: "About",
+      href: "",
+      dropDown: [
+        { text: "About Us", href: "/about" },
+        { text: "Our Activity", href: "/activity" },
+        { text: "Contact Us", href: "/contact" },
+      ],
     },
-    { text: 'Product', href: '/product' },
-    { text: 'Achievement', href: '/achievement' },
-    { text: 'Blog', href: '/blog' },
+    { text: "Product", href: "/product" },
+    { text: "Achievement", href: "/achievement" },
+    { text: "Blog", href: "/blog" },
     // { text: '', href: '' },
   ];
 
@@ -30,7 +33,7 @@ function Navbar({ router }, props) {
     } else {
       setNavbar(false);
     }
-  }
+  };
 
   const expandAboutItem = () => {
     if (aboutExpand === true) {
@@ -38,14 +41,14 @@ function Navbar({ router }, props) {
     } else {
       setAboutExpand(true);
     }
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollDown);
+    window.addEventListener("scroll", scrollDown);
     return () => {
-      window.removeEventListener('scroll', scrollDown);
-    }
-  }, [])
+      window.removeEventListener("scroll", scrollDown);
+    };
+  }, []);
 
   return (
     <>
@@ -121,9 +124,14 @@ function Navbar({ router }, props) {
             </ul>
           </div>
 
-          {/* <Link href="/recruitment">
-            <a className={styles["nav-side"]}>Recruitment</a>
-          </Link> */}
+          <Link href="/recruitment" passHref>
+            <motion.a
+              className={styles["nav-side"]}
+              whileHover={{ scale: 1.05 }}
+            >
+              Recruitment
+            </motion.a>
+          </Link>
 
           <button
             className={`${styles["button-change"]} ${

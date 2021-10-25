@@ -12,17 +12,20 @@ import React, { useState, useEffect } from "react";
 import API from "../api";
 import { BASE_URL } from "../api/const";
 import GeneralSeo from "../components/seo/generalSeo";
+import { useRouter } from "next/router";
 
 function Activity() {
   const [data, setData] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
-    API.getActivity().then((res) => {
-      console.log(res.data);
-      setData(res.data);
-    });
-    console.log(data);
-  }, [data]);
+    // API.getActivity().then((res) => {
+    //   console.log(res.data);
+    //   setData(res.data);
+    // });
+    // console.log(data);
+    router.push("/404");
+  }, [router]);
 
   return (
     <div className={styles["main-body"]}>
