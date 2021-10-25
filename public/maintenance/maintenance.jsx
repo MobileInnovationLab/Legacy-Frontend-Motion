@@ -655,7 +655,7 @@ const Maintenance = () => {
       >
         Sorry, <br />
         {/* Your favorite laboratory website is under maintenance */}
-        The developer&#39;s head has exploded due to overthink 🤯
+        Umm, I think, it is not the time yet 😳
       </h1>
     </div>
   );

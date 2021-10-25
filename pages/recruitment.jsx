@@ -14,10 +14,13 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import API from "../api";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Recruitment() {
   const router = useRouter();
+  const [modals, setModals] = useState(false);
+  const [modalsError, setModalsError] = useState(false);
 
   // useEffect(() => {
   //   router.push('/404')
@@ -25,6 +28,52 @@ export default function Recruitment() {
 
   return (
     <>
+      {modals ? (
+        <motion.div
+          className={styles["whole-page"]}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "spring", duration: 2, bounce: 0 }}
+        >
+          <div className={styles["main-container"]}>
+            <div className={styles.container}>
+              <Image
+                src="/modals/congratulation.png"
+                width={250}
+                height={250}
+                alt="Submitted Illustration"
+              />
+              <h3>Submitted!</h3>
+              <p>
+                Thank you for submitting! <br />
+                Please kindly wait until we finish checking yours
+              </p>
+              <button onClick={() => router.push("/")}>Back to Home</button>
+            </div>
+          </div>
+        </motion.div>
+      ) : (
+        ""
+      )}
+      {modalsError ? (
+        <div className={styles["whole-page"]}>
+          <div className={styles["main-container"]}>
+            <div className={styles.container}>
+              <Image
+                src="/modals/notcongratulation.png"
+                width={250}
+                height={250}
+                alt="Submitted Illustration"
+              />
+              <h3>Sorry, There is something wrong</h3>
+              <p>You can try to refresh the page and re-submit</p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+
       <RecruitmentSeo />
       <Navbar />
       <BigTitle>Recruitment</BigTitle>
@@ -55,10 +104,25 @@ export default function Recruitment() {
           }}
           onSubmit={(data, { setSubmitting }) => {
             setTimeout(() => {
-              API.postRecruitment(data)
-                .then((resp) => console.log(resp))
-                .catch((err) => console.log(err));
-              console.log(data);
+              const payload = new FormData();
+              payload.append("name", data.name);
+              payload.append("email", data.email);
+              payload.append("nim", data.nim);
+              payload.append("cv", data.cv);
+              payload.append("portofolio", data.portofolio);
+              payload.append("motivation_letter", data.motivation_letter);
+              payload.append("ksm", data.ksm);
+              payload.append("major", data.major);
+              payload.append("generation", data.generation);
+              payload.append("division", data.division);
+              API.postRecruitment(payload)
+                .then((resp) => {
+                  setModals(true);
+                })
+                .catch((err) => {
+                  setModalsError(true);
+                });
+              console.log(payload);
               setSubmitting(false);
             }, 500);
           }}
@@ -71,10 +135,12 @@ export default function Recruitment() {
                 /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@student.telkomuniversity.ac.id$/,
                 "Telkom University Student's Email Required."
               ),
-            nim: Yup.string()
+            nim: Yup.number()
+              .typeError("NIM must be a number")
               .required("Required")
-              .min(10, "Input proper NIM")
-              .max(10, "Input proper NIM"),
+              .test("len", "NIM must be 10 digits", (val) => {
+                if (val) return val.toString().length === 10;
+              }),
             cv: Yup.mixed().required("Required"),
             portofolio: Yup.mixed().required("Required"),
             motivation_letter: Yup.mixed().required("Required"),
@@ -116,7 +182,7 @@ export default function Recruitment() {
                 id="email"
                 type="email"
                 name="email"
-                placeholder="example@gmail.com"
+                placeholder="example@student.telkomuniversity.ac.id"
               />
               <div className={styles.errors}>
                 <h5>
@@ -280,7 +346,6 @@ export default function Recruitment() {
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
-                    <option value="2017">2017</option>
                   </select>
                   <div className={`${styles.errors} ${styles.half}`}>
                     <h5>
@@ -415,7 +480,6 @@ export default function Recruitment() {
                 </div>
               </div>
               <button type="submit">Submit</button>
-              <pre>{JSON.stringify(values, null, 2)}</pre>
             </Form>
           )}
         </Formik>

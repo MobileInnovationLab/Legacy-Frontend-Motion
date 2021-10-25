@@ -22,6 +22,7 @@ import IndexIllustration from "../components/illustration/indexIllustration";
 
 import * as Sentry from "@sentry/nextjs";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const firstSlider = {
   arrows: false,
@@ -134,27 +135,8 @@ class Home extends Component {
     this.slider2.slickPrev();
   }
 
-  sliders() {
-    const { products } = this.state;
-
-    return products?.map((product) => (
-      <div key={product.name} className={styles["third-slider"]}>
-        <ProductContainer
-          id={product.id}
-          image={{
-            src: `${BASE_URL}${product?.photo}`,
-            alt: product.title,
-          }}
-          title={product.name}
-          text={product.description}
-          writer={product.creator}
-        />
-      </div>
-    ));
-  }
-
   render() {
-    const { achievements, blogs } = this.state;
+    const { achievements, blogs, products } = this.state;
 
     const responsiveSlider = {
       customPaging: function () {
@@ -194,7 +176,13 @@ class Home extends Component {
         <GeneralSeo />
 
         {this.state.ytModal ? (
-          <div className={styles["whole-page"]} onClick={this.closeYtModals}>
+          <motion.div
+            className={styles["whole-page"]}
+            onClick={this.closeYtModals}
+            initial={this.state.ytModal ? { opacity: 0 } : { opacity: 1 }}
+            animate={this.state.ytModal ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ type: "spring", duration: 2, bounce: 0 }}
+          >
             <div className={styles["main-container"]}>
               <div className={styles.container}>
                 <iframe
@@ -207,7 +195,7 @@ class Home extends Component {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         ) : (
           ""
         )}
@@ -216,7 +204,12 @@ class Home extends Component {
 
         <div className={styles["main-body"]}>
           <main className={styles["box-first-section"]}>
-            <article className={styles["first-section-article"]}>
+            <motion.article
+              className={styles["first-section-article"]}
+              initial={{ y: "10px", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ type: "spring", duration: 2, bounce: 0 }}
+            >
               <h1 className={styles["first-section-title"]}>
                 Mobile Innovation Laboratory
               </h1>
@@ -245,11 +238,16 @@ class Home extends Component {
                 </svg>
                 Watch Video
               </motion.a>
-            </article>
+            </motion.article>
 
-            <div className={styles["first-section-img"]}>
+            <motion.div
+              className={styles["first-section-img"]}
+              initial={{ y: "10px", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ type: "spring", duration: 2, bounce: 0 }}
+            >
               <IndexIllustration />
-            </div>
+            </motion.div>
           </main>
 
           <section className={styles["box-second-section"]}>
@@ -302,7 +300,20 @@ class Home extends Component {
             </div>
             <div className={styles["third-section-right"]}>
               <Slider ref={(c) => (this.slider = c)} {...firstSlider}>
-                {this.sliders()}
+                {products?.map((product) => (
+                  <div key={product.name} className={styles["third-slider"]}>
+                    <ProductContainer
+                      id={product.id}
+                      image={{
+                        src: `${BASE_URL}${product?.photo}`,
+                        alt: product.title,
+                      }}
+                      title={product.name}
+                      text={product.description}
+                      writer={product.creator}
+                    />
+                  </div>
+                ))}
               </Slider>
               <div className={styles["third-box-button-responsive"]}>
                 <button
