@@ -35,11 +35,16 @@
 		label {
 			h5 {
 				display: flex;
+				margin-bottom: 10px;
 				p {
 					color: $main2;
 				}
 			}
-
+			.explaination {
+				font-size: 12px;
+				margin: -8px 0 10px;
+				color: $text-desc;
+			}
 		}
 
 		input {
@@ -257,7 +262,7 @@
 			}
 	
 			.half {
-				width: 50%;
+				width: 100%;
 			}
 	
 			button {

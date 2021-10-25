@@ -17,6 +17,8 @@ import API from "../api";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+//import DummyPdf from "../public/dummy/Dummy Document.pdf";
+
 export default function Recruitment() {
   const router = useRouter();
   const [modals, setModals] = useState(false);
@@ -72,7 +74,12 @@ export default function Recruitment() {
                 alt="Submitted Illustration"
               />
               <h3>Sorry, There is something wrong</h3>
-              <p>You can try to refresh the page and re-submit</p>
+              <p>
+                It seems like there is something wrong with your connection
+                or... <br />
+                Try to upload the proper file (in pdf format),
+                <br /> or just try to refresh the page and re-submit
+              </p>
             </div>
           </div>
         </motion.div>
@@ -107,6 +114,7 @@ export default function Recruitment() {
             major: "S1 TEKNIK TELEKOMUNIKASI",
             generation: "2021",
             division: "Business Analyst",
+            topic_proposal: "",
           }}
           onSubmit={(data, { setSubmitting }) => {
             setSubmit(true);
@@ -122,6 +130,9 @@ export default function Recruitment() {
               payload.append("major", data.major);
               payload.append("generation", data.generation);
               payload.append("division", data.division);
+              payload.append("topic_proposal", data.topic_proposal);
+              console.log(data);
+              console.log(payload);
               API.postRecruitment(payload)
                 .then((resp) => {
                   setModals(true);
@@ -147,10 +158,21 @@ export default function Recruitment() {
               .test("len", "NIM must be 10 digits", (val) => {
                 if (val) return val.toString().length === 10;
               }),
-            cv: Yup.mixed().required("Required"),
-            portofolio: Yup.mixed().required("Required"),
-            motivation_letter: Yup.mixed().required("Required"),
-            ksm: Yup.mixed().required("Required"),
+            cv: Yup.mixed()
+              .required("Required")
+              .test("fileFormat", "PDF only", (value) => {
+                return value && ["application/pdf"].includes(value.type);
+              }),
+            portofolio: Yup.mixed().required("Required")
+            .test("fileFormat", "PDF only", (value) => {
+              return value && ["application/pdf"].includes(value.type);
+            }),
+            motivation_letter: Yup.mixed().required("Required").test("fileFormat", "PDF only", (value) => {
+              return value && ["application/pdf"].includes(value.type);
+            }),
+            ksm: Yup.mixed().required("Required").test("fileFormat", "PDF only", (value) => {
+              return value && ["application/pdf"].includes(value.type);
+            }),
             major: Yup.string().required("Required"),
             generation: Yup.string().required("Required"),
             division: Yup.string().required("Required"),
@@ -389,6 +411,21 @@ export default function Recruitment() {
                   </div>
                 </div>
               </div>
+              <label>
+                <h5>Topic Proposal</h5>
+                <p className={styles.explaination}>
+                  The following form is only intended for 2018's student
+                </p>
+              </label>
+              <Field
+                id="topic_proposal"
+                type="text"
+                name="topic_proposal"
+                placeholder="Topic Proposal (ex: Perancangan...)"
+              />
+              <div className={styles.errors}>
+                <h5>{errors.name && touched.name && <p>*{errors.name}</p>}</h5>
+              </div>
               <div className={styles.flex}>
                 <div className={styles.half}>
                   <label>
@@ -429,7 +466,7 @@ export default function Recruitment() {
                   <div className={`${styles.errors} ${styles.half}`}>
                     <h5>
                       {errors.portofolio && touched.portofolio && (
-                        <p>*{errors.portofolio}</p>
+                        <p>*{`${errors.portofolio} or if you don't want upload any portofolio, you can just upload blank file in pdf format`}</p>
                       )}
                     </h5>
                   </div>
