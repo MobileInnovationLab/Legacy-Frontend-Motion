@@ -163,11 +163,7 @@ export default function Recruitment() {
               .test("fileFormat", "PDF only", (value) => {
                 return value && ["application/pdf"].includes(value.type);
               }),
-            portofolio: Yup.mixed()
-              .required("Required")
-              .test("fileFormat", "PDF only", (value) => {
-                return value && ["application/pdf"].includes(value.type);
-              }),
+            portofolio: Yup.mixed(),
             motivation_letter: Yup.mixed()
               .required("Required")
               .test("fileFormat", "PDF only", (value) => {
@@ -454,9 +450,7 @@ export default function Recruitment() {
                 </div>
                 <div className={styles.half}>
                   <label htmlFor="">
-                    <h5>
-                      Portofolio<p>*</p>
-                    </h5>
+                    <h5>Portofolio</h5>
                   </label>
                   <input
                     type="file"
