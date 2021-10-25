@@ -163,16 +163,21 @@ export default function Recruitment() {
               .test("fileFormat", "PDF only", (value) => {
                 return value && ["application/pdf"].includes(value.type);
               }),
-            portofolio: Yup.mixed().required("Required")
-            .test("fileFormat", "PDF only", (value) => {
-              return value && ["application/pdf"].includes(value.type);
-            }),
-            motivation_letter: Yup.mixed().required("Required").test("fileFormat", "PDF only", (value) => {
-              return value && ["application/pdf"].includes(value.type);
-            }),
-            ksm: Yup.mixed().required("Required").test("fileFormat", "PDF only", (value) => {
-              return value && ["application/pdf"].includes(value.type);
-            }),
+            portofolio: Yup.mixed()
+              .required("Required")
+              .test("fileFormat", "PDF only", (value) => {
+                return value && ["application/pdf"].includes(value.type);
+              }),
+            motivation_letter: Yup.mixed()
+              .required("Required")
+              .test("fileFormat", "PDF only", (value) => {
+                return value && ["application/pdf"].includes(value.type);
+              }),
+            ksm: Yup.mixed()
+              .required("Required")
+              .test("fileFormat", "PDF only", (value) => {
+                return value && ["application/pdf"].includes(value.type);
+              }),
             major: Yup.string().required("Required"),
             generation: Yup.string().required("Required"),
             division: Yup.string().required("Required"),
@@ -414,7 +419,7 @@ export default function Recruitment() {
               <label>
                 <h5>Topic Proposal</h5>
                 <p className={styles.explaination}>
-                  The following form is only intended for 2018's student
+                  The following form is only intended for 2018&#39;s student
                 </p>
               </label>
               <Field
@@ -466,7 +471,10 @@ export default function Recruitment() {
                   <div className={`${styles.errors} ${styles.half}`}>
                     <h5>
                       {errors.portofolio && touched.portofolio && (
-                        <p>*{`${errors.portofolio} or if you don't want upload any portofolio, you can just upload blank file in pdf format`}</p>
+                        <p>
+                          *
+                          {`${errors.portofolio} or if you don't want upload any portofolio, you can just upload blank file in pdf format`}
+                        </p>
                       )}
                     </h5>
                   </div>
