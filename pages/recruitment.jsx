@@ -122,7 +122,9 @@ export default function Recruitment() {
               payload.append("email", data.email);
               payload.append("nim", data.nim);
               payload.append("cv", data.cv);
-              payload.append("portofolio", data.portofolio);
+              data.portofolio
+                ? payload.append("portofolio", data.portofolio)
+                : "";
               payload.append("motivation_letter", data.motivation_letter);
               payload.append("ksm", data.ksm);
               payload.append("major", data.major);
@@ -133,7 +135,14 @@ export default function Recruitment() {
               console.log(payload);
               API.postRecruitment(payload)
                 .then((resp) => {
-                  setModals(true);
+                  console.log(resp);
+                  if (resp == 400) {
+                    setModalsError(true);
+                  } else if (resp == 200) {
+                    setModals(true);
+                  } else {
+                    setModalsError(true);
+                  }
                 })
                 .catch((err) => {
                   setModalsError(true);
