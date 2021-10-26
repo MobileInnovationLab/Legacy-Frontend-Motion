@@ -17,8 +17,6 @@ import API from "../api";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-//import DummyPdf from "../public/dummy/Dummy Document.pdf";
-
 export default function Recruitment() {
   const router = useRouter();
   const [modals, setModals] = useState(false);

@@ -25,12 +25,12 @@
 
 	.form {
 		background-color: white;
-		width: 60%;
+		width: 90%;
 		margin: auto;
 		font-family: $inter;
 		display: flex;
 		flex-direction: column;
-		padding: 50px;
+		padding: 15px;
 
 		label {
 			h5 {
@@ -150,8 +150,8 @@
 		justify-content: center;
 		text-align: center;
 		background-color: white;
-    min-width: 700px;
-		min-height: 552px;
+    width: 300px;
+		min-height: 500px;
 		
 		h3 {
 			margin-top: -50px;
@@ -180,6 +180,31 @@
 			}
 		}
   }
+}
+
+@media only screen and (min-width: 700px) {
+	.whole-page {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		z-index: 100;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background-color: white;
+			width: 500px;
+			min-height: 500px;
+			
+		}
+	}
 }
 
 @media only screen and (min-width: 1024px) {

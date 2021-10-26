@@ -8,9 +8,6 @@ const IndexIllustration = () => {
       viewBox="0 0 335 317"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      drag
-      dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-      dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
       whileTap={{ cursor: "default" }}
       whileHover={{ cursor: "default" }}
     >

@@ -213,6 +213,11 @@ function Navbar({ router }, props) {
               </Link>
             </li>
           </ul>
+          <div className={styles.recruitment}>
+            <Link href="/recruitment" passHref>
+              <a>Recruitment</a>
+            </Link>
+          </div>
         </nav>
       </div>
       <div

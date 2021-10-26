@@ -124,7 +124,7 @@
     height: 0;
   }
   100% {
-    height: 300px;
+    height: 400px;
   }
 }
 
@@ -142,8 +142,8 @@
       background-color: white;
       padding-top: 10px;
       padding-bottom: 40px;
-      height: 300px;
-      animation: expand 0.2s;
+      height: 400px;
+      animation: expand 0.3s;
 
       hr {
         opacity: 10%;
@@ -182,6 +182,22 @@
               }
             }
           }
+        }
+
+      }
+      .recruitment {
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+
+        a {
+          display: block;
+          background-color: $black;
+          color: white;
+          margin: 0 25px;
+          padding: 15px;
+          border-radius: 30px;
+          font-family: $rubik;
         }
       }
     }
