@@ -75,7 +75,7 @@ export default function Recruitment() {
               <p>
                 It seems like there is something wrong with your connection
                 or... <br />
-                Try to upload the proper file (in pdf format),
+                Try to upload the proper file (in pdf format with 8mb max size),
                 <br /> or just try to refresh the page and re-submit
               </p>
             </div>
@@ -169,17 +169,26 @@ export default function Recruitment() {
               .required("Required")
               .test("fileFormat", "PDF only", (value) => {
                 return value && ["application/pdf"].includes(value.type);
+              })
+              .test("fileSize", "Your file is too big", (value) => {
+                return value && value.size <= 8144000;
               }),
             portofolio: Yup.mixed(),
             motivation_letter: Yup.mixed()
               .required("Required")
               .test("fileFormat", "PDF only", (value) => {
                 return value && ["application/pdf"].includes(value.type);
+              })
+              .test("fileSize", "Your file is too big", (value) => {
+                return value && value.size <= 8144000;
               }),
             ksm: Yup.mixed()
               .required("Required")
               .test("fileFormat", "PDF only", (value) => {
                 return value && ["application/pdf"].includes(value.type);
+              })
+              .test("fileSize", "Your file is too big", (value) => {
+                return value && value.size <= 8144000;
               }),
             major: Yup.string().required("Required"),
             generation: Yup.string().required("Required"),
@@ -440,6 +449,9 @@ export default function Recruitment() {
                     <h5>
                       Curiculum Vitae (CV)<p>*</p>
                     </h5>
+                    <p className={styles.explaination}>
+                      Must be pdf file, with 8MB of maximum size
+                    </p>
                   </label>
                   <input
                     type="file"
@@ -458,6 +470,9 @@ export default function Recruitment() {
                 <div className={styles.half}>
                   <label htmlFor="">
                     <h5>Portofolio</h5>
+                    <p className={styles.explaination}>
+                      Must be pdf file, with 8MB of maximum size
+                    </p>
                   </label>
                   <input
                     type="file"
@@ -487,6 +502,9 @@ export default function Recruitment() {
                     <h5>
                       Motivation Letter<p>*</p>
                     </h5>
+                    <p className={styles.explaination}>
+                      Must be pdf file, with 8MB of maximum size
+                    </p>
                   </label>
                   <input
                     type="file"
@@ -515,6 +533,9 @@ export default function Recruitment() {
                     <h5>
                       KSM<p>*</p>
                     </h5>
+                    <p className={styles.explaination}>
+                      Must be pdf file, with 8MB of maximum size
+                    </p>
                   </label>
                   <input
                     type="file"
