@@ -29,7 +29,8 @@ const firstSlider = {
   dots: false,
   autoplay: true,
   infinite: true,
-  slidesToShow: 2,
+  // slidesToShow: 2, harusnya ini
+  slidesToShow: 1,
   slidesToScroll: -1,
   autoplaySpeed: 5000,
   responsive: [
