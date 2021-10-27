@@ -9,8 +9,8 @@ const TRACKING_ID = "G-GHYHBVVWV8";
 ReactGa.initialize(TRACKING_ID);
 
 function MyApp({ Component, pageProps }) {
-  //return <Component {...pageProps} />;
-  return <Maintenance />;
+  return <Component {...pageProps} />;
+  //return <Maintenance />;
 }
 
 export default MyApp;
