@@ -30,7 +30,7 @@ const firstSlider = {
   autoplay: true,
   infinite: true,
   // slidesToShow: 2, harusnya ini
-  slidesToShow: 1,
+  slidesToShow: 2,
   slidesToScroll: -1,
   autoplaySpeed: 5000,
   responsive: [
