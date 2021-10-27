@@ -135,7 +135,7 @@ export default function Recruitment() {
               console.log(payload);
               API.postRecruitment(payload)
                 .then((resp) => {
-                  console.log(resp);
+                  // console.log(resp);
                   if (resp == 400) {
                     setModalsError(true);
                   } else if (resp == 200) {
