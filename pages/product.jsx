@@ -33,7 +33,7 @@ function Product() {
       .then((products) => setData(products))
       .finally(() => setLoading(false));
     API.getProductByName(search).then((product) => {
-      console.log(product);
+      // console.log(product);
       setData(product);
     });
   }, [search]);

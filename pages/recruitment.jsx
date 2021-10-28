@@ -131,8 +131,8 @@ export default function Recruitment() {
               payload.append("generation", data.generation);
               payload.append("division", data.division);
               payload.append("topic_proposal", data.topic_proposal);
-              console.log(data);
-              console.log(payload);
+              // console.log(data);
+              // console.log(payload);
               API.postRecruitment(payload)
                 .then((resp) => {
                   // console.log(resp);

@@ -29,7 +29,7 @@ const DetailProduct = () => {
         .finally(() => setLoading(false));
   }, [id]);
 
-  console.log(data?.photo);
+  // console.log(data?.photo);
 
   if (data?.status === 404 && !loading) {
     router.push("/404");
