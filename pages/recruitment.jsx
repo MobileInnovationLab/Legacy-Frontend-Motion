@@ -171,7 +171,7 @@ export default function Recruitment() {
                 return value && ["application/pdf"].includes(value.type);
               })
               .test("fileSize", "Your file is too big", (value) => {
-                return value && value.size <= 1000000;
+                return value && value.size <= 3000000;
               }),
             portofolio: Yup.mixed(),
             motivation_letter: Yup.mixed()
@@ -180,7 +180,7 @@ export default function Recruitment() {
                 return value && ["application/pdf"].includes(value.type);
               })
               .test("fileSize", "Your file is too big", (value) => {
-                return value && value.size <= 1000000;
+                return value && value.size <= 3000000;
               }),
             ksm: Yup.mixed()
               .required("Required")
@@ -188,7 +188,7 @@ export default function Recruitment() {
                 return value && ["application/pdf"].includes(value.type);
               })
               .test("fileSize", "Your file is too big", (value) => {
-                return value && value.size <= 1000000;
+                return value && value.size <= 3000000;
               }),
             major: Yup.string().required("Required"),
             generation: Yup.string().required("Required"),
@@ -450,7 +450,7 @@ export default function Recruitment() {
                       Curiculum Vitae (CV)<p>*</p>
                     </h5>
                     <p className={styles.explaination}>
-                      Must be pdf file, with 1MB of maximum size
+                      Must be pdf file, with 3mb of maximum size
                     </p>
                   </label>
                   <input
@@ -471,7 +471,7 @@ export default function Recruitment() {
                   <label htmlFor="">
                     <h5>Portofolio</h5>
                     <p className={styles.explaination}>
-                      Must be pdf file, with 1MB of maximum size
+                      Must be pdf file, with 3mb of maximum size
                     </p>
                   </label>
                   <input
@@ -503,7 +503,7 @@ export default function Recruitment() {
                       Motivation Letter<p>*</p>
                     </h5>
                     <p className={styles.explaination}>
-                      Must be pdf file, with 1MB of maximum size
+                      Must be pdf file, with 3mb of maximum size
                     </p>
                   </label>
                   <input
@@ -534,7 +534,7 @@ export default function Recruitment() {
                       KSM<p>*</p>
                     </h5>
                     <p className={styles.explaination}>
-                      Must be pdf file, with 1MB of maximum size
+                      Must be pdf file, with 3mb of maximum size
                     </p>
                   </label>
                   <input
