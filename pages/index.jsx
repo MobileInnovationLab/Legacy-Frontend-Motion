@@ -162,16 +162,6 @@ class Home extends Component {
       autoplaySpeed: 5000,
     };
 
-    let container = {
-      title: "Sendal Lempar",
-      image: {
-        src: "/coba/sandal.jpg",
-        alt: "ini foto",
-      },
-      text: "Lorem ipsum dolor sit amet, elite consectetur adipiscing, sed do eiusmod adsdsadasdsad sdasfdfsd dsadasdas",
-      writer: "Zara Adisty",
-    };
-
     return (
       <div className={styles["main-bg"]}>
         <GeneralSeo />

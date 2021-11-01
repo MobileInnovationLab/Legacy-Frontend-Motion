@@ -25,7 +25,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.webp",
+      image: "/about/dosen/Veronikha-Effendy.jpg",
     },
     second: {
       name: "Shinta Yulia P",
@@ -33,7 +33,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.webp",
+      image: "/about/dosen/Shinta-Puspitasari-.jpg",
     },
     third: {
       name: "Mira Kania S",
@@ -41,7 +41,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.webp",
+      image: "/about/dosen/mira kania.png",
     },
     fourth: {
       name: "Dana Sulistyo",
@@ -49,7 +49,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.webp",
+      image: "/about/dosen/Dana-Sulistyo-Kusumo.jpg",
     },
     fifth: {
       name: "Monterico Adrian",
@@ -57,7 +57,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.webp",
+      image: "/about/dosen/Monterico.webp",
     },
     sixth: {
       name: "Aristyo",
@@ -65,7 +65,15 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.webp",
+      image: "/about/dosen/Lecturer-Aristyo.jpg",
+    },
+    seventh: {
+      name: "Danang Junaedi",
+      division: "Supervisor/Lecturer",
+      linkedin: "",
+      facebook: "",
+      insta: "",
+      image: "/about/dosen/danang junaedi.webp",
     },
   };
 
@@ -307,6 +315,14 @@ export default function About() {
                 insta={dosen.sixth.insta}
                 image={dosen.sixth.image}
               />
+              <MemberContainer
+                name={dosen.seventh.name}
+                division={dosen.seventh.division}
+                linkedin={dosen.seventh.linkedin}
+                facebook={dosen.seventh.facebook}
+                insta={dosen.seventh.insta}
+                image={dosen.seventh.image}
+              />
             </div>
           </Slider>
         </div>
@@ -358,6 +374,14 @@ export default function About() {
             facebook={dosen.sixth.facebook}
             insta={dosen.sixth.insta}
             image={dosen.sixth.image}
+          />
+          <MemberContainer
+            name={dosen.seventh.name}
+            division={dosen.seventh.division}
+            linkedin={dosen.seventh.linkedin}
+            facebook={dosen.seventh.facebook}
+            insta={dosen.seventh.insta}
+            image={dosen.seventh.image}
           />
         </div>
 

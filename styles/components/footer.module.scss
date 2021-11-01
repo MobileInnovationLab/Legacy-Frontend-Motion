@@ -1,7 +1,7 @@
 @import "../variable/var.scss";
 
 .footer-container {
-    background-image: url("../../public/footer/bg-1.png");
+    background-image: url("../../public/footer/bg-1.webp");
     background-size: cover;
     background-repeat: no-repeat;
     color: $text-header;
@@ -93,7 +93,7 @@
 
 @media only screen and (min-width: 1024px) {
     .footer-container {
-        background-image: url("../../public/footer/bg-1.png");
+        background-image: url("../../public/footer/bg-1.webp");
         background-size: cover;
         background-repeat: no-repeat;
         color: $text-header;

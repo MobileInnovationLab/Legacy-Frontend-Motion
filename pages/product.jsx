@@ -14,16 +14,6 @@ import API from '../api';
 import GeneralSeo from "../components/seo/generalSeo";
 
 function Product() {
-  let container = {
-    title: "Sendal Lempar",
-    image: {
-      src: "/coba/sandal.jpg",
-      alt: "ini foto",
-    },
-    text: "Lorem ipsum dolor sit amet, elite consectetur adipiscing, sed do eiusmod adsdsadasdsad sdasfdfsd dsadasdas",
-    writer: "Zara Adisty",
-  };
-
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
