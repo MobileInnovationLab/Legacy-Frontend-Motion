@@ -17,8 +17,6 @@ import API from '../api';
 import CountUp from 'react-countup';
 import GeneralSeo from "../components/seo/generalSeo";
 
-const titleUtama = "About Us";
-
 export default function About() {
   let dosen = {
     first: {
@@ -27,7 +25,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.png",
+      image: "/about/dummy.webp",
     },
     second: {
       name: "Shinta Yulia P",
@@ -35,7 +33,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.png",
+      image: "/about/dummy.webp",
     },
     third: {
       name: "Mira Kania S",
@@ -43,7 +41,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.png",
+      image: "/about/dummy.webp",
     },
     fourth: {
       name: "Dana Sulistyo",
@@ -51,7 +49,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.png",
+      image: "/about/dummy.webp",
     },
     fifth: {
       name: "Monterico Adrian",
@@ -59,7 +57,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.png",
+      image: "/about/dummy.webp",
     },
     sixth: {
       name: "Aristyo",
@@ -67,7 +65,7 @@ export default function About() {
       linkedin: "",
       facebook: "",
       insta: "",
-      image: "/about/dummy.png",
+      image: "/about/dummy.webp",
     },
   };
 
@@ -75,31 +73,31 @@ export default function About() {
     first: {
       name: "Agus Adi Pranata",
       division: "Laboratory Assistant",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/agus-adi-pranata/",
       facebook: "",
       insta: "https://www.instagram.com/gusadiprntaa/",
-      image: "/about/member/kordas ganteng.png",
+      image: "/about/member/kordas ganteng.webp",
     },
     second: {
       name: "Aisyah Fitri",
       division: "Laboratory Assistant",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/aisyahfit/",
       facebook: "",
       insta: "https://www.instagram.com/pppyna/",
-      image: "/about/member/Fitri.jpg",
+      image: "/about/member/Fitri.webp",
     },
     third: {
       name: "Nur Intan Sari",
       division: "Laboratory Assistant",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/nurintansari012/",
       facebook: "",
       insta: "https://www.instagram.com/nintann2/",
-      image: "/about/member/Nur Intan Sari.jpg",
+      image: "/about/member/Nur Intan Sari.webp",
     },
     fourth: {
       name: "Serly Setyani",
       division: "Laboratory Assistant",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/serlysetyani/",
       facebook: "",
       insta: "https://www.instagram.com/serlysetyani/",
       image: "/about/member/Serly Setyani.jpg",
@@ -107,34 +105,35 @@ export default function About() {
     fifth: {
       name: "Salsabila Martono",
       division: "Laboratory Assistant",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/salsabilamartono/",
       facebook: "",
       insta: "https://www.instagram.com/salsabilamaaa_/",
-      image: "/about/dummy.png",
+      image: "/about/dummy.webp",
     },
     sixth: {
       name: "Andrea Rahmadanisya",
       division: "Laboratory Assistant",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/andrearahmadanisya/",
       facebook: "",
       insta: "https://www.instagram.com/andrearhmd/",
-      image: "/about/member/Andrea Rahmadanisya.jpg",
+      image: "/about/member/Andrea Rahmadanisya.webp",
     },
     seventh: {
       name: "Dimas Imameza",
       division: "Laboratory Assistant",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/dimaseza/",
       facebook: "",
       insta: "https://www.instagram.com/dimas_imameza/",
-      image: "/about/member/Dimas Imameza.jpeg",
+      image: "/about/member/Dimas Imameza.webp",
     },
     eight: {
       name: "Antika Putri Permata Wardani",
       division: "Laboratory Assistant",
-      linkedin: "",
+      linkedin:
+        "https://www.linkedin.com/in/antika-putri-permata-wardani-71a03a196/",
       facebook: "",
       insta: "https://www.instagram.com/antikaputripew/",
-      image: "/about/member/Antika.jpg",
+      image: "/about/member/Antika.webp",
     },
   };
 
@@ -211,7 +210,7 @@ export default function About() {
         </div>
         <section className={styles["first-image"]}>
           <Image
-            src="/about/first-meet.png"
+            src="/about/first-meet.webp"
             alt="About Image"
             layout="fill"
             objectFit="cover"
