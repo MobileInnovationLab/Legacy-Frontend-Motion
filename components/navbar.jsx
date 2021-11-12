@@ -124,14 +124,14 @@ function Navbar({ router }, props) {
             </ul>
           </div>
 
-          <Link href="/recruitment" passHref>
+          {/* <Link href="/recruitment" passHref>
             <motion.a
               className={styles["nav-side"]}
               whileHover={{ scale: 1.05 }}
             >
               Recruitment
             </motion.a>
-          </Link>
+          </Link> */}
 
           <button
             className={`${styles["button-change"]} ${
@@ -213,11 +213,11 @@ function Navbar({ router }, props) {
               </Link>
             </li>
           </ul>
-          <div className={styles.recruitment}>
+          {/* <div className={styles.recruitment}>
             <Link href="/recruitment" passHref>
               <a>Recruitment</a>
             </Link>
-          </div>
+          </div> */}
         </nav>
       </div>
       <div

@@ -23,13 +23,13 @@ export default function Recruitment() {
   const [modalsError, setModalsError] = useState(false);
   const [submit, setSubmit] = useState(false);
 
-  // useEffect(() => {
-  //   router.push('/404')
-  // });
+  useEffect(() => {
+    router.push("/404");
+  });
 
   return (
     <>
-      {modals ? (
+      {/* {modals ? (
         <motion.div
           className={styles["whole-page"]}
           initial={{ opacity: 0 }}
@@ -562,7 +562,7 @@ export default function Recruitment() {
           )}
         </Formik>
       </section>
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

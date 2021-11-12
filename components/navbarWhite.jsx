@@ -114,14 +114,14 @@ function NavbarWhite({ router }, props) {
             </ul>
           </div>
 
-          <Link href="/recruitment" passHref>
+          {/* <Link href="/recruitment" passHref>
             <motion.a
               className={styles["nav-side"]}
               whileHover={{ scale: 1.05 }}
             >
               Recruitment
             </motion.a>
-          </Link>
+          </Link> */}
 
           <button
             className={`${styles["button-change"]} ${
