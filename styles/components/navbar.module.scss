@@ -67,6 +67,22 @@
         font-family: $inter;
 
         display: none;
+
+        .style-hover {
+          position: relative;
+          display: inline-block;
+
+          .about-dropdown {
+            display: none;
+            position: absolute;
+            z-index: 1;
+          }
+        }
+
+        .nav-item {
+          position: relative;
+          display: inline-block;
+        }
       }
 
       .about-dropdown {
@@ -264,7 +280,7 @@
         align-items: center;
 
         .nav-links {
-          margin-left: 100px;
+          // margin-left: 100px;
           display: flex;
           align-items: center;
           list-style: none;
@@ -275,7 +291,7 @@
             width: 150px;
             display: none;
             padding: 20px;
-            margin-left: 100px;
+            // margin-left: 100px;
             list-style: none;
             font-family: $inter;
             text-decoration: none;

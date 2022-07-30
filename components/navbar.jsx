@@ -35,14 +35,6 @@ function Navbar({ router }, props) {
     }
   };
 
-  const expandAboutItem = () => {
-    if (aboutExpand === true) {
-      setAboutExpand(false);
-    } else {
-      setAboutExpand(true);
-    }
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", scrollDown);
     return () => {
@@ -83,6 +75,7 @@ function Navbar({ router }, props) {
             <ul className={styles["nav-links"]}>
               {navs.map((nav) => (
                 <li className={styles["style-hover"]} key={nav.text}>
+                  {/* dropdown button */}
                   <Link href={nav.href}>
                     <a
                       className={`${styles["nav-item"]} ${
@@ -101,6 +94,7 @@ function Navbar({ router }, props) {
                       {nav.text}
                     </a>
                   </Link>
+                  {/* dropdown */}
                   {"dropDown" in nav && (
                     <ul
                       className={`${styles["about-dropdown"]} ${
@@ -109,12 +103,12 @@ function Navbar({ router }, props) {
                     >
                       {nav.dropDown.map((navHover) => (
                         <>
-                          <li>
+                          <li key={`${navHover.text}-li`}>
                             <Link href={navHover.href}>
                               <a>{navHover.text}</a>
                             </Link>
                           </li>
-                          <hr />
+                          <hr key={`${navHover.text}-hr`}/>
                         </>
                       ))}
                     </ul>
@@ -124,14 +118,14 @@ function Navbar({ router }, props) {
             </ul>
           </div>
 
-          {/* <Link href="/recruitment" passHref>
+          <Link href="/recruitment" passHref>
             <motion.a
               className={styles["nav-side"]}
               whileHover={{ scale: 1.05 }}
             >
               Recruitment
             </motion.a>
-          </Link> */}
+          </Link>
 
           <button
             className={`${styles["button-change"]} ${
@@ -164,6 +158,7 @@ function Navbar({ router }, props) {
           </button>
         </div>
       </nav>
+
       <div className={styles["nav-under-inactive"]}>
         <nav
           className={`${styles["nav-modals-inactive"]} ${
@@ -213,11 +208,11 @@ function Navbar({ router }, props) {
               </Link>
             </li>
           </ul>
-          {/* <div className={styles.recruitment}>
+          <div className={styles.recruitment}>
             <Link href="/recruitment" passHref>
               <a>Recruitment</a>
             </Link>
-          </div> */}
+          </div>
         </nav>
       </div>
       <div

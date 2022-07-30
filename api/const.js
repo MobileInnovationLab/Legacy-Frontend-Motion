@@ -1,1 +1,1 @@
-export const BASE_URL = "https://api.motionlaboratory.com/api/";
+export const BASE_URL = 'http://api.motionlaboratory.web.id/api';

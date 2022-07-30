@@ -15,17 +15,20 @@ import GeneralSeo from "../components/seo/generalSeo";
 import { useRouter } from "next/router";
 
 function Activity() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const router = useRouter();
 
   useEffect(() => {
-    // API.getActivity().then((res) => {
-    //   console.log(res.data);
-    //   setData(res.data);
-    // });
-    // console.log(data);
-    router.push("/404");
-  }, [router]);
+    API.getActivity().then((res) => {
+      console.log(res.data);
+      setData(res.data);
+    });
+    console.log(data);
+    // router.push("/404");
+  }, 
+    // [router]
+    []
+  );
 
   return (
     <div className={styles["main-body"]}>
