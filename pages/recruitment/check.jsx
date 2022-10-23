@@ -65,6 +65,7 @@ export default function Recruitment() {
       ) : (
         ""
       )}
+
       {modalsError ? (
         <motion.div
           className={styles["whole-page"]}
