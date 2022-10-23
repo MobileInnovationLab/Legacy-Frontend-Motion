@@ -9,23 +9,27 @@ import { BASE_URL } from '../api/const';
 import styles from '../styles/pages/product.module.scss';
 import TopButton from '../components/topButton';
 import { useEffect, useState } from 'react';
+import {useRouter} from 'next/router'
 import API from '../api';
 
 import GeneralSeo from "../components/seo/generalSeo";
 
 function Product() {
+  const router = useRouter();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    API.getProducts()
-      .then((products) => setData(products))
-      .finally(() => setLoading(false));
-    API.getProductByName(search).then((product) => {
-      // console.log(product);
-      setData(product);
-    });
+    router.push("/maintenance");
+
+    // API.getProducts()
+    //   .then((products) => setData(products))
+    //   .finally(() => setLoading(false));
+    // API.getProductByName(search).then((product) => {
+    //   // console.log(product);
+    //   setData(product);
+    // });
   }, [search]);
 
   return (

@@ -8,12 +8,15 @@ import API from "../api";
 import { BASE_URL } from "../api/const";
 import React, { useState, useEffect } from "react";
 import GeneralSeo from "../components/seo/generalSeo";
+import { useRouter } from "next/router";
 
 function Blog() {
+  const router = useRouter();
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    API.getBlogs().then((resp) => setData(resp.data));
+    router.push("/maintenance");
+    // API.getBlogs().then((resp) => setData(resp.data));
   }, []);
 
   return (

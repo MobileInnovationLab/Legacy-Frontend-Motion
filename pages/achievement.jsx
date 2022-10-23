@@ -12,12 +12,16 @@ import Head from 'next/head';
 import API from '../api';
 import IndexAchievementContainer from '../components/indexAchievementContainer';
 import GeneralSeo from "../components/seo/generalSeo";
+import {useRouter} from 'next/router'
 
 function Achievement() {
+  const router = useRouter();
+
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    API.getAchievements().then((resp) => setData(resp.data));
+    router.push("/maintenance");
+    // API.getAchievements().then((resp) => setData(resp.data));
   }, []);
 
   return (

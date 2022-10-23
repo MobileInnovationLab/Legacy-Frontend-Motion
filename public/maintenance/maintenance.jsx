@@ -11,6 +11,7 @@ const Maintenance = () => {
         textAlign: "center",
         flexDirection: "column",
         height: "100vh",
+        padding: "120px 0",
       }}
     >
       <MaintenanceSeo />

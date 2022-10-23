@@ -537,7 +537,8 @@ export default function About() {
           />
         </div>
 
-        <div className={styles.title}>
+        {/* generation filter */}
+        {/* <div className={styles.title}>
           <hr />
           <div className={styles.flex}>
             <h4>LABORATORY MEMBER</h4>
@@ -558,7 +559,8 @@ export default function About() {
               </select>
             </div>
           </div>
-        </div>
+        </div> */}
+        
         {/* <div className={`${styles.slider} ${'slider-mobile'}`}>
 					<Slider {...responsiveLecturerSlider}>
 						<div>

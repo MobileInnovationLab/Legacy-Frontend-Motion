@@ -19,11 +19,12 @@ function Activity() {
   const router = useRouter();
 
   useEffect(() => {
-    API.getActivity().then((res) => {
-      console.log(res.data);
-      setData(res.data);
-    });
-    console.log(data);
+    router.push("/maintenance");
+    // API.getActivity().then((res) => {
+    //   console.log(res.data);
+    //   setData(res.data);
+    // });
+    // console.log(data);
     // router.push("/404");
   }, 
     // [router]
