@@ -47,7 +47,7 @@ export default function Footer() {
 				</section>
 				<section className={styles['footer-column']}>
 					<h1 className={styles['footer-titles']}>Expertise</h1>
-					<p className={styles['footer-item']}>Business Analyst</p>
+					<p className={styles['footer-item']}>DIgital Business</p>
 					<p className={styles['footer-item']}>UI/UX Design</p>
 					<p className={styles['footer-item']}>Mobile Programming</p>
 				</section>

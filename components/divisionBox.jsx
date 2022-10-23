@@ -7,13 +7,13 @@ export default function divisionBox() {
       <div className={styles['second-box-div-inside']}>
         <Image
           src='/main-index/role/role-ba.png'
-          alt='Business Analyst Logo'
+          alt='DIgital Business Logo'
           width={180}
           height={180}
         />
         <article className={styles['second-box-article']}>
-          <h1 className={styles['second-box-article-title']}>Business Analyst</h1>
-          <p className={styles['second-box-article-p']}>The business analyst division mainly focused on the field of business, product, and management.</p>
+          <h1 className={styles['second-box-article-title']}>DIgital Business</h1>
+          <p className={styles['second-box-article-p']}>The digital business division mainly focused on the field of business, product, and management.</p>
         </article>
       </div>
       <div className={styles['second-box-div-inside']}>

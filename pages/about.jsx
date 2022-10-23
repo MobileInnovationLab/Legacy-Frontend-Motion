@@ -79,71 +79,161 @@ export default function About() {
 
   let labAssist = {
     first: {
-      name: "Agus Adi Pranata",
+      name: "Irham Naufal",
       division: "Laboratory Assistant",
-      linkedin: "https://www.linkedin.com/in/agus-adi-pranata/",
+      linkedin: "https://www.linkedin.com/in/irhamnaufal8/",
       facebook: "",
-      insta: "https://www.instagram.com/gusadiprntaa/",
-      image: "/about/member/kordas ganteng.webp",
+      insta: "https://www.instagram.com/irhamnaufal8/",
+      image: "/about/member/Irham.webp",
     },
     second: {
-      name: "Aisyah Fitri",
+      name: "Rizal Gradianto",
       division: "Laboratory Assistant",
-      linkedin: "https://www.linkedin.com/in/aisyahfit/",
+      linkedin: "https://www.linkedin.com/in/rizal-gradianto/",
       facebook: "",
-      insta: "https://www.instagram.com/pppyna/",
-      image: "/about/member/Fitri.webp",
+      insta: "https://www.instagram.com/gradiannn/",
+      image: "/about/member/Rizal.webp",
     },
     third: {
-      name: "Nur Intan Sari",
+      name: "Thea Anugrah",
       division: "Laboratory Assistant",
-      linkedin: "https://www.linkedin.com/in/nurintansari012/",
+      linkedin: "https://www.linkedin.com/in/thea-anugrah-felicia/",
       facebook: "",
-      insta: "https://www.instagram.com/nintann2/",
-      image: "/about/member/Nur Intan Sari.webp",
+      insta: "https://www.instagram.com/theafeliciaaa/",
+      image: "/about/member/Thea.webp",
     },
     fourth: {
-      name: "Serly Setyani",
+      name: "Jaatsiyah M. A.",
       division: "Laboratory Assistant",
-      linkedin: "https://www.linkedin.com/in/serlysetyani/",
+      linkedin: "",
       facebook: "",
-      insta: "https://www.instagram.com/serlysetyani/",
-      image: "/about/member/Serly Setyani.jpg",
+      insta: "https://www.instagram.com/jaatsiyah_m/",
+      image: "/about/member/Jaatsiyah.jpeg",
     },
     fifth: {
-      name: "Salsabila Martono",
+      name: "Hilman Taris M.",
       division: "Laboratory Assistant",
-      linkedin: "https://www.linkedin.com/in/salsabilamartono/",
+      linkedin: "https://www.linkedin.com/in/hilman-taris-muttaqin-93136b169/",
       facebook: "",
-      insta: "https://www.instagram.com/salsabilamaaa_/",
-      image: "/about/dummy.webp",
+      insta: "https://www.instagram.com/hilmantm/",
+      image: "/about/member/Hilman.webp",
     },
     sixth: {
-      name: "Andrea Rahmadanisya",
+      name: "M. Zulistiyan",
       division: "Laboratory Assistant",
-      linkedin: "https://www.linkedin.com/in/andrearahmadanisya/",
+      linkedin: "https://www.linkedin.com/in/mohamad-zulistiyan-aa28491a0/",
       facebook: "",
-      insta: "https://www.instagram.com/andrearhmd/",
-      image: "/about/member/Andrea Rahmadanisya.webp",
+      insta: "https://www.instagram.com/zulistiyan/",
+      image: "/about/member/Zulistiyan.webp",
     },
     seventh: {
-      name: "Dimas Imameza",
+      name: "Kelvyn Lukito",
       division: "Laboratory Assistant",
-      linkedin: "https://www.linkedin.com/in/dimaseza/",
+      linkedin: "https://www.linkedin.com/in/kelvynlukito/",
       facebook: "",
-      insta: "https://www.instagram.com/dimas_imameza/",
-      image: "/about/member/Dimas Imameza.webp",
+      insta: "https://www.instagram.com/iamkelpyn/",
+      image: "/about/member/Kelvyn.webp",
     },
     eight: {
-      name: "Antika Putri Permata Wardani",
+      name: "Galih Akbar N.",
       division: "Laboratory Assistant",
       linkedin:
-        "https://www.linkedin.com/in/antika-putri-permata-wardani-71a03a196/",
+        "https://www.linkedin.com/in/galih-nugraha-b49174173/",
       facebook: "",
-      insta: "https://www.instagram.com/antikaputripew/",
-      image: "/about/member/Antika.webp",
-    },
-  };
+      insta: "https://www.instagram.com/whoisgalih/",
+      image: "/about/member/Galih.webp",
+    },
+    nine: {
+      name: "M. Fauzan A.",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/muhammad-fauzan-avidiansyah/",
+      facebook: "",
+      insta: "https://www.instagram.com/fauzan_avidian/",
+      image: "/about/member/Fauzan.webp",
+    },
+    ten: {
+      name: "Affifudin Mawardi",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/afifuddin-mawardi-229022195/",
+      facebook: "",
+      insta: "https://www.instagram.com/afifmawardii/",
+      image: "/about/member/Afif.webp",
+    },
+    eleven: {
+      name: "Ikhsan Assidique",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/ikhsansdq/",
+      facebook: "",
+      insta: "https://www.instagram.com/ikhsansdq/",
+      image: "/about/member/Ikhsan.webp",
+    },
+    twelve: {
+      name: "Razita Amalia",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/razita-amalina/",
+      facebook: "",
+      insta: "https://www.instagram.com/rrzta/",
+      image: "/about/member/Razita.webp",
+    },
+    thirteen: {
+      name: "Dewa Made Wijaya",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/dewamadewijaya/",
+      facebook: "",
+      insta: "https://www.instagram.com/madewijayya/",
+      image: "/about/member/Jaya.webp",
+    },
+    fourteen: {
+      name: "M. Zacky Faqia R.",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/zackyfaqia/",
+      facebook: "",
+      insta: "https://www.instagram.com/zackyfaqia/",
+      image: "/about/member/Zacky.webp",
+    },
+    fifteen: {
+      name: "M. Pascal D.",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/muhammad-pascal-dewantara-15901815b/",
+      facebook: "",
+      insta: "https://www.instagram.com/mpascaldewantara/",
+      image: "/about/member/Pascal.webp",
+    },
+    sixteen: {
+      name: "Achmad Jihad",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/achmadjihad/",
+      facebook: "",
+      insta: "https://www.instagram.com/jxjadd/",
+      image: "/about/member/Achmad.webp",
+    },
+    seventeen: {
+      name: "Annisa Bulan M.",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/anissabulan/",
+      facebook: "",
+      insta: "https://www.instagram.com/anissa.bulan/",
+      image: "/about/member/Bulan.webp",
+    },
+    eighteen: {
+      name: "Adinda Dwi M.",
+      division: "Laboratory Assistant",
+      linkedin:
+        "https://www.linkedin.com/in/adinda-dwi-maharani-b9ab9621a/",
+      facebook: "",
+      insta: "https://www.instagram.com/adinrani_/",
+      image: "/about/member/Ading.webp",
+    },
+  };
 
   const logoIni = () => {
     return (
@@ -535,6 +625,86 @@ export default function About() {
             insta={labAssist.eight.insta}
             image={labAssist.eight.image}
           />
+          <MemberContainer
+            name={labAssist.nine.name}
+            division={labAssist.nine.division}
+            linkedin={labAssist.nine.linkedin}
+            facebook={labAssist.nine.facebook}
+            insta={labAssist.nine.insta}
+            image={labAssist.nine.image}
+          />
+          <MemberContainer
+            name={labAssist.ten.name}
+            division={labAssist.ten.division}
+            linkedin={labAssist.ten.linkedin}
+            facebook={labAssist.ten.facebook}
+            insta={labAssist.ten.insta}
+            image={labAssist.ten.image}
+          />
+          <MemberContainer
+            name={labAssist.eleven.name}
+            division={labAssist.eleven.division}
+            linkedin={labAssist.eleven.linkedin}
+            facebook={labAssist.eleven.facebook}
+            insta={labAssist.eleven.insta}
+            image={labAssist.eleven.image}
+          />
+          <MemberContainer
+            name={labAssist.twelve.name}
+            division={labAssist.twelve.division}
+            linkedin={labAssist.twelve.linkedin}
+            facebook={labAssist.twelve.facebook}
+            insta={labAssist.twelve.insta}
+            image={labAssist.twelve.image}
+          />
+          <MemberContainer
+            name={labAssist.thirteen.name}
+            division={labAssist.thirteen.division}
+            linkedin={labAssist.thirteen.linkedin}
+            facebook={labAssist.thirteen.facebook}
+            insta={labAssist.thirteen.insta}
+            image={labAssist.thirteen.image}
+          />
+          <MemberContainer
+            name={labAssist.fourteen.name}
+            division={labAssist.fourteen.division}
+            linkedin={labAssist.fourteen.linkedin}
+            facebook={labAssist.fourteen.facebook}
+            insta={labAssist.fourteen.insta}
+            image={labAssist.fourteen.image}
+          />
+          <MemberContainer
+            name={labAssist.fifteen.name}
+            division={labAssist.fifteen.division}
+            linkedin={labAssist.fifteen.linkedin}
+            facebook={labAssist.fifteen.facebook}
+            insta={labAssist.fifteen.insta}
+            image={labAssist.fifteen.image}
+          />
+          <MemberContainer
+            name={labAssist.sixteen.name}
+            division={labAssist.sixteen.division}
+            linkedin={labAssist.sixteen.linkedin}
+            facebook={labAssist.sixteen.facebook}
+            insta={labAssist.sixteen.insta}
+            image={labAssist.sixteen.image}
+          />
+          <MemberContainer
+            name={labAssist.seventeen.name}
+            division={labAssist.seventeen.division}
+            linkedin={labAssist.seventeen.linkedin}
+            facebook={labAssist.seventeen.facebook}
+            insta={labAssist.seventeen.insta}
+            image={labAssist.seventeen.image}
+          />
+          <MemberContainer
+            name={labAssist.eighteen.name}
+            division={labAssist.eighteen.division}
+            linkedin={labAssist.eighteen.linkedin}
+            facebook={labAssist.eighteen.facebook}
+            insta={labAssist.eighteen.insta}
+            image={labAssist.eighteen.image}
+          />
         </div>
 
         {/* generation filter */}
@@ -560,7 +730,7 @@ export default function About() {
             </div>
           </div>
         </div> */}
-        
+
         {/* <div className={`${styles.slider} ${'slider-mobile'}`}>
 					<Slider {...responsiveLecturerSlider}>
 						<div>

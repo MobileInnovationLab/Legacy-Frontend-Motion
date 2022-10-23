@@ -111,7 +111,7 @@ export default function Recruitment() {
             ksm: null,
             major: "S1 TEKNIK TELEKOMUNIKASI",
             generation: "2021",
-            division: "Business Analyst",
+            division: "DIgital Business",
             topic_proposal: "",
           }}
           onSubmit={(data, { setSubmitting }) => {
@@ -387,10 +387,10 @@ export default function Recruitment() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   >
+                    <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
-                    <option value="2018">2018</option>
                   </select>
                   <div className={`${styles.errors} ${styles.half}`}>
                     <h5>
@@ -413,7 +413,7 @@ export default function Recruitment() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   >
-                    <option value="Business Analyst">Business Analyst</option>
+                    <option value="DIgital Business">DIgital Business</option>
                     <option value="UI/UX">UI/UX Design</option>
                     <option value="Mobile Programming">
                       Mobile Programming

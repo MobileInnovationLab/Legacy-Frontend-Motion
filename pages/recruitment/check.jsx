@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 export default function Recruitment() {
   const router = useRouter();
   const [modalsAccepted, setModalsAccepted] = useState(false);
+  const [modalsRejected, setModalsRejected] = useState(false);
   const [modalsError, setModalsError] = useState(false);
   const [submit, setSubmit] = useState(false);
 
@@ -59,6 +60,44 @@ export default function Recruitment() {
                 You have choosen as new member of Mobile Innovation Laboratory Fortune Cookie 6.0. Please check your email for more information
               </p>
               <button onClick={() => {}}>Join Group</button>
+            </div>
+          </div>
+        </motion.div>
+      ) : (
+        ""
+      )}
+
+      {modalsRejected ? (
+        <motion.div
+          className={styles["whole-page"]}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "spring", duration: 1, bounce: 0 }}
+        >
+          <div className={styles["main-container"]}>
+            <div className={styles.container}>
+              <div 
+                className={styles.xicon} 
+                onClick={() => {
+                  setSubmit(false);
+                  setModalsRejected(false);
+                }}
+              >
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 7L7 21" stroke="#332C2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M7 7L21 21" stroke="#332C2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <Image
+                src="/modals/notcongratulation.png"
+                width={250}
+                height={250}
+                alt="Submitted Illustration"
+              />
+              <h3>Ooops... Sorry</h3>
+              <p>
+                Unfortunately You can not be accepted as member of Mobile Innovation Laboratory. Keep spirit and don&apos;t give up!
+              </p>
             </div>
           </div>
         </motion.div>
@@ -138,6 +177,8 @@ export default function Recruitment() {
 
               if (data.nim == "1234567890") {
                 setModalsAccepted(true);
+              } else {
+                setModalsRejected(true);
               }
 
               // display accptence or rejection
