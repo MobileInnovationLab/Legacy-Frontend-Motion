@@ -126,19 +126,20 @@ export default function Recruitment() {
               data.portofolio
                 ? payload.append("portofolio", data.portofolio)
                 : "";
-              payload.append("motivation_video", data.motivation_video);
+              payload.append("motivation_letter", data.motivation_video);
               payload.append("ksm", data.ksm);
               payload.append("major", data.major);
               payload.append("generation", data.generation);
               payload.append("division", data.division);
               payload.append("share_poster", data.share_poster);
               // payload.append("topic_proposal", data.topic_proposal);
-              // console.log(data);
-              // console.log(payload);
+              console.log("data", data);
+              console.log("payload", payload);
               API.postRecruitment(payload)
                 .then((resp) => {
                   // console.log(resp);
                   if (resp == 400) {
+                    console.log("resp 400", resp);
                     setModalsError(true);
                   } else if (resp == 200) {
                     setModals(true);
@@ -147,6 +148,7 @@ export default function Recruitment() {
                   }
                 })
                 .catch((err) => {
+                  console.log("err", err);
                   setModalsError(true);
                 });
               setSubmitting(false);
