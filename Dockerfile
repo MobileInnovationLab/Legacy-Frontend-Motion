@@ -7,3 +7,5 @@ COPY . /app
 WORKDIR /app
 
 RUN npm install --ignore-scripts=false --verbose sharp
+
+CMD npm start
