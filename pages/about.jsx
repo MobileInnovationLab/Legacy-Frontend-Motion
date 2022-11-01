@@ -302,8 +302,8 @@ export default function About() {
             The Motion (Mobile Innovation) Laboratory is one of the research
             laboratories under the Faculty of Informatics, Telkom University.
             Motion Lab focuses on the creation and development of mobile
-            software. Now Motion Lab comes with 3 division options, Business
-            Analyst, UI/UX Design, and Mobile Programming.
+            software. Now Motion Lab comes with 3 division options, Digital 
+            Business, UI/UX Design, and Mobile Programming.
           </p>
         </div>
         <section className={styles["first-image"]}>

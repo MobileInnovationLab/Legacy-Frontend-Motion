@@ -107,12 +107,13 @@ export default function Recruitment() {
             nim: "",
             cv: null,
             portofolio: null,
-            motivation_letter: null,
+            motivation_video: "",
+            share_poster: "",
             ksm: null,
             major: "S1 TEKNIK TELEKOMUNIKASI",
-            generation: "2021",
-            division: "DIgital Business",
-            topic_proposal: "",
+            generation: "2022",
+            division: "Digital Business",
+            // topic_proposal: "",
           }}
           onSubmit={(data, { setSubmitting }) => {
             setSubmit(true);
@@ -125,12 +126,13 @@ export default function Recruitment() {
               data.portofolio
                 ? payload.append("portofolio", data.portofolio)
                 : "";
-              payload.append("motivation_letter", data.motivation_letter);
+              payload.append("motivation_video", data.motivation_video);
               payload.append("ksm", data.ksm);
               payload.append("major", data.major);
               payload.append("generation", data.generation);
               payload.append("division", data.division);
-              payload.append("topic_proposal", data.topic_proposal);
+              payload.append("share_poster", data.share_poster);
+              // payload.append("topic_proposal", data.topic_proposal);
               // console.log(data);
               // console.log(payload);
               API.postRecruitment(payload)
@@ -174,14 +176,24 @@ export default function Recruitment() {
                 return value && value.size <= 3000000;
               }),
             portofolio: Yup.mixed(),
-            motivation_letter: Yup.mixed()
+            motivation_video: Yup.string()
               .required("Required")
-              .test("fileFormat", "PDF only", (value) => {
-                return value && ["application/pdf"].includes(value.type);
-              })
-              .test("fileSize", "Your file is too big", (value) => {
-                return value && value.size <= 3000000;
-              }),
+              .matches(
+                /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+                'Enter correct url!'
+              ),
+              // .test("fileFormat", "PDF only", (value) => {
+              //   return value && ["application/pdf"].includes(value.type);
+              // })
+              // .test("fileSize", "Your file is too big", (value) => {
+              //   return value && value.size <= 3000000;
+              // })
+            share_poster: Yup.string()
+              .required("Required")
+              .matches(
+                /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
+                'Enter correct url!'
+              ),
             ksm: Yup.mixed()
               .required("Required")
               .test("fileFormat", "PDF only", (value) => {
@@ -413,7 +425,7 @@ export default function Recruitment() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                   >
-                    <option value="DIgital Business">DIgital Business</option>
+                    <option value="Digital Business">Digital Business</option>
                     <option value="UI/UX">UI/UX Design</option>
                     <option value="Mobile Programming">
                       Mobile Programming
@@ -428,13 +440,13 @@ export default function Recruitment() {
                   </div>
                 </div>
               </div>
-              <label>
+              {/* <label>
                 <h5>Topic Proposal</h5>
                 <p className={styles.explaination}>
                   The following form is only intended for 2018&#39;s student
                 </p>
-              </label>
-              <Field
+              </label> */}
+              {/* <Field
                 id="topic_proposal"
                 type="text"
                 name="topic_proposal"
@@ -442,7 +454,7 @@ export default function Recruitment() {
               />
               <div className={styles.errors}>
                 <h5>{errors.name && touched.name && <p>*{errors.name}</p>}</h5>
-              </div>
+              </div> */}
               <div className={styles.flex}>
                 <div className={styles.half}>
                   <label>
@@ -498,34 +510,22 @@ export default function Recruitment() {
               </div>
               <div className={styles.flex}>
                 <div className={styles.half}>
-                  <label htmlFor="">
+                  <label>
                     <h5>
-                      Motivation Letter<p>*</p>
+                    Motivation Video<p>*</p>
                     </h5>
                     <p className={styles.explaination}>
-                      Must be pdf file, with 3mb of maximum size
+                      URL must be valid
                     </p>
                   </label>
-                  <input
-                    type="file"
-                    name="motivation_letter"
-                    id="motivation_letter"
-                    onChange={(e) => {
-                      setFieldValue(
-                        "motivation_letter",
-                        e.currentTarget.files[0]
-                      );
-                    }}
-                    onBlur={handleBlur}
-                    touched={touched["motivation_letter"]}
+                  <Field
+                    id="motivation_video"
+                    type="text"
+                    name="motivation_video"
+                    placeholder="Input URL of your motivation video"
                   />
                   <div className={`${styles.errors} ${styles.half}`}>
-                    <h5>
-                      {errors.motivation_letter &&
-                        touched.motivation_letter && (
-                          <p>*{errors.motivation_letter}</p>
-                        )}
-                    </h5>
+                    <h5>{errors.motivation_video && touched.motivation_video && <p>*{errors.motivation_video}</p>}</h5>
                   </div>
                 </div>
                 <div className={styles.half}>
@@ -551,6 +551,18 @@ export default function Recruitment() {
                     <h5>{errors.ksm && touched.ksm && <p>*{errors.ksm}</p>}</h5>
                   </div>
                 </div>
+              </div>
+              <label>
+                <h5>Share Poster</h5>
+              </label>
+              <Field
+                id="share_poster"
+                type="text"
+                name="share_poster"
+                placeholder="URL of your evidence of sharing poster"
+              />
+              <div className={styles.errors}>
+                <h5>{errors.share_poster && touched.share_poster && <p>*{errors.share_poster}</p>}</h5>
               </div>
               <button
                 className={submit ? styles["button-submitted"] : ""}
