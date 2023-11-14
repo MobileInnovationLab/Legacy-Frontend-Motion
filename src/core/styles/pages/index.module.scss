@@ -1,0 +1,1122 @@
+@import "../variable/var.scss";
+
+.main-bg {
+  background: url("/main-index/bg-main.webp") center top no-repeat;
+  background-size: 320%, 60%;
+  background-color: $background;
+
+  .main-body {
+    padding: 60px 0 0 0;
+
+    .box-first-section {
+      text-align: center;
+      @include variable-penengah-jati-diri-small(0, 0);
+
+      .first-section-article {
+        .first-section-title {
+          font-family: $rubik;
+          color: $text-header;
+          font-size: 30px;
+          line-height: 42px;
+        }
+
+        .first-section-p {
+          font-family: $inter;
+          color: $text-header;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 28px;
+          margin-bottom: 40px;
+        }
+
+        .first-section-button {
+          display: flex;
+          align-items: center;
+          width: 150px;
+          font-family: $rubik;
+          font-weight: 600;
+          color: $sub-text-header;
+          background-color: $black;
+          padding: 20px 20px 20px 20px;
+          border-radius: 100px;
+          text-decoration: none;
+          margin: auto;
+
+          svg {
+            margin-right: 20px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .first-section-img {
+        width: 310px;
+        height: 240px;
+        position: relative;
+        margin: auto;
+        margin-top: 60px;
+      }
+    }
+
+    .box-second-section {
+      text-align: center;
+      margin-top: 40px;
+
+      .second-small-title {
+        @include red-small-title;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+
+      .second-big-title {
+        @include black-title;
+        font-size: 28px;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    .box-third-section {
+      @include variable-penengah-jati-diri-small(50px, 0);
+
+      .third-section-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .third-small-title {
+          @include red-small-title;
+          font-size: 14px;
+          line-height: 42px;
+          margin-bottom: 0;
+        }
+
+        .third-big-title {
+          @include black-title;
+          font-size: 28px;
+          line-height: 36px;
+          margin-top: 0;
+        }
+
+        .third-p-left {
+          font-family: $inter;
+          font-style: normal;
+          font-size: 16px;
+          line-height: 28px;
+          color: $text-desc;
+        }
+
+        .third-round-button {
+          display: none;
+        }
+      }
+
+      .third-section-right {
+        margin-top: 30px;
+
+        .third-box-button-responsive {
+          display: flex;
+          gap: 50px;
+          justify-content: center;
+          margin-top: 20px;
+
+          .third-round-button-responsive {
+            width: 40px;
+            height: 40px;
+
+            border: 1px solid $button-outline;
+            box-sizing: border-box;
+            border-radius: 50%;
+            position: relative;
+
+            &:hover {
+              border: transparent;
+              background: #f82f1e;
+              box-shadow: 0px 34px 50px rgba(109, 194, 255, 0.1);
+              cursor: pointer;
+              .third-svg {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .box-fourth-section {
+      @include variable-penengah-jati-diri-small(70px, 100px);
+      text-align: center;
+
+      .fourth-small-title {
+        @include red-small-title;
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      .fourth-big-title {
+        @include black-title;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .fourth-gallery {
+        display: none;
+      }
+
+      .fourth-button-see {
+        margin-top: 50px;
+        font-family: $rubik;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: $text-desc;
+
+        border: 1px solid #858585;
+        box-sizing: border-box;
+        border-radius: 60px;
+        background-color: transparent;
+
+        width: 160px;
+        height: 50px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .box-fifth-section {
+      @include variable-penengah-jati-diri-small(20px, 50px);
+
+      .fifth-top {
+        text-align: center;
+
+        .fifth-top-left {
+          .fifth-small-title {
+            @include red-small-title;
+            font-size: 14px;
+            line-height: 17px;
+          }
+
+          .fifth-big-title {
+            @include black-title;
+            font-size: 28px;
+            line-height: 36px;
+          }
+        }
+
+        .fifth-top-right {
+          display: none;
+        }
+      }
+
+      .fifth-bottom {
+        .fifth-box-button-responsive {
+          display: flex;
+          gap: 50px;
+          justify-content: center;
+          margin-top: 20px;
+
+          .fifth-round-button-responsive {
+            width: 40px;
+            height: 40px;
+
+            border: 1px solid $button-outline;
+            box-sizing: border-box;
+            border-radius: 50%;
+            position: relative;
+
+            &:hover {
+              border: transparent;
+              background: #f82f1e;
+              box-shadow: 0px 34px 50px rgba(109, 194, 255, 0.1);
+              cursor: pointer;
+              .fifth-svg {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .main-bg {
+    background-size: 200%;
+
+    .main-body {
+      .box-first-section {
+        .first-section-img {
+          width: 450px;
+          height: 360px;
+        }
+      }
+
+      .box-third-section {
+        .third-section-right {
+          margin-top: 20px;
+
+          .third-slider {
+            padding-left: 25%;
+          }
+        }
+      }
+      .box-fourth-section {
+        .fourth-gallery-responsive {
+          margin-top: 20px;
+          .fourth-responsive-slider {
+            padding-left: 25%;
+          }
+        }
+      }
+      .box-fifth-section {
+        .fifth-bottom {
+          .fifth-slider-item {
+            padding-left: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main-bg {
+    .main-body {
+      .box-first-section {
+        @include variable-penengah-jati-diri-medium(60px, 0);
+
+        .first-section-img {
+          height: 400px;
+        }
+      }
+      .box-second-section {
+        @include variable-penengah-jati-diri-medium(20px, 0);
+      }
+      .box-third-section {
+        @include variable-penengah-jati-diri-medium(50px, 0);
+
+        .third-section-right {
+          .third-slider {
+            padding-left: 23%;
+          }
+        }
+      }
+      .box-fourth-section {
+        @include variable-penengah-jati-diri-medium(70px, 100px);
+        .fourth-gallery-responsive {
+          margin-top: 20px;
+          .fourth-responsive-slider {
+            padding-left: 24%;
+          }
+        }
+      }
+      .box-fifth-section {
+        @include variable-penengah-jati-diri-medium(20px, 50px);
+        .fifth-bottom {
+          .fifth-slider-item {
+            padding-left: 23%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-bg {
+    background: url("/main-index/bg-main.webp") left top no-repeat, url("/main-index/bg-main2.png") right 2100px no-repeat;
+    background-size: 100%, 60%;
+    background-color: $background;
+
+    .main-body {
+      padding: 40px 0 0 0;
+
+      //content
+
+      .box-first-section {
+        @include variable-penengah-jati-diri-medium(70px, 92px);
+        text-align: left;
+        display: flex;
+
+        .first-section-article {
+          width: 750px;
+          margin-right: 50px;
+
+          .first-section-title {
+            font-family: $rubik;
+            color: $text-header;
+            font-size: 40px;
+            margin-bottom: 20px;
+            line-height: 44px;
+          }
+
+          .first-section-p {
+            font-family: $inter;
+            color: $text-header;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 60px;
+          }
+
+          .first-section-button {
+            font-family: $rubik;
+            font-weight: 600;
+            color: $sub-text-header;
+            background-color: $black;
+            padding: 20px 42px 20px 42px;
+            border-radius: 100px;
+            text-decoration: none;
+            margin: 0;
+          }
+        }
+
+        .first-section-img {
+          margin-top: 40px;
+          width: 654px;
+        }
+      }
+
+      .box-second-section {
+        @include variable-penengah-jati-diri-medium(100px, 0);
+        text-align: center;
+
+        .second-small-title {
+          @include red-small-title();
+        }
+        .second-big-title {
+          margin-top: 5px;
+          @include black-title();
+        }
+      }
+
+      .box-third-section {
+        padding: 0 0 0 100px;
+        margin-top: 100px;
+        margin-bottom: 35px;
+        display: flex;
+        height: 470px;
+
+        .third-section-left {
+          max-width: 40%;
+          text-align: left;
+          align-items: flex-start;
+
+          .third-small-title {
+            @include red-small-title();
+          }
+          .third-big-title {
+            @include black-title();
+            margin-top: 0;
+          }
+          .third-p-left {
+            font-family: $inter;
+            font-size: 18px;
+            color: $text-desc;
+          }
+
+          .third-box-button {
+            display: flex;
+
+            .third-round-button {
+              display: block;
+              transition: 0.1s;
+              width: 70px;
+              height: 70px;
+              border: 1px solid #858585;
+              box-sizing: border-box;
+              border-radius: 50%;
+              position: relative;
+              margin-top: 50px;
+              margin-right: 10px;
+
+              .third-svg {
+                fill: #6a6a6a;
+                position: absolute;
+                top: 38%;
+                left: 38%;
+              }
+
+              &:hover {
+                background-color: $main2;
+                border: 0;
+                cursor: pointer;
+
+                .third-svg {
+                  fill: white;
+                }
+              }
+            }
+          }
+        }
+
+        .third-section-right {
+          margin-top: 20px;
+          width: 60%;
+
+          .third-slider {
+            padding-left: 15%;
+          }
+
+          .third-box-button-responsive {
+            display: none;
+          }
+        }
+      }
+
+      .box-fourth-section {
+        @include variable-penengah-jati-diri(0, 20px);
+        padding-bottom: 80px;
+        padding-top: 80px;
+        background-color: white;
+        text-align: center;
+
+        .fourth-small-title {
+          @include red-small-title;
+        }
+
+        .fourth-big-title {
+          @include black-title;
+          margin-top: 0;
+        }
+
+        .fourth-gallery {
+          margin-top: 50px;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          justify-content: space-between;
+          row-gap: 20px;
+
+          .fourth-content {
+            position: relative;
+            height: 240px;
+            width: 240px;
+
+            &:nth-child(2) {
+              margin-top: 20px;
+            }
+
+            &:nth-child(3) {
+              margin-top: 40px;
+            }
+
+            &:nth-child(4) {
+              margin-top: -40px;
+            }
+
+            &:nth-child(5) {
+              margin-top: -20px;
+            }
+
+            &:nth-child(7) {
+              margin-top: -40px;
+            }
+
+            &:nth-child(8) {
+              margin-top: -20px;
+            }
+          }
+        }
+
+        .fourth-gallery-responsive {
+          display: none;
+        }
+
+        .fourth-button-see {
+          margin: 0;
+          margin-top: 50px;
+          font-family: $rubik;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          color: $text-desc;
+
+          border: 1px solid #858585;
+          box-sizing: border-box;
+          border-radius: 60px;
+          background-color: transparent;
+
+          width: 160px;
+          height: 50px;
+        }
+      }
+
+      .box-fifth-section {
+        @include variable-penengah-jati-diri(50px, 0);
+
+        .fifth-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .fifth-top-left {
+            width: 50%;
+            text-align: left;
+
+            .fifth-small-title {
+              @include red-small-title;
+            }
+
+            .fifth-big-title {
+              @include black-title;
+              margin-top: 25px;
+            }
+          }
+
+          .fifth-top-right {
+            display: block;
+
+            .fifth-round-button {
+              transition: 0.1s;
+              width: 70px;
+              height: 70px;
+              border: 1px solid #858585;
+              box-sizing: border-box;
+              border-radius: 50%;
+              position: relative;
+              margin-right: 10px;
+
+              .fifth-svg {
+                fill: #6a6a6a;
+                position: absolute;
+                top: 38%;
+                left: 38%;
+              }
+
+              &:hover {
+                background-color: $main2;
+                border: 0;
+                cursor: pointer;
+
+                .fifth-svg {
+                  fill: white;
+                }
+              }
+            }
+          }
+        }
+
+        .fifth-bottom {
+          margin-bottom: 80px;
+
+          .fifth-box-button-responsive {
+            display: none;
+          }
+
+          .fifth-slider-item {
+            padding-left: 5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .main-bg {
+    background: url("/main-index/bg-main.webp") left top no-repeat, url("/main-index/bg-main2.png") right 1350px no-repeat, url("/main-index/bg-main3.png") left 3600px no-repeat;
+    background-size: 100%, 70%, 70%;
+    background-color: $background;
+
+    .main-body {
+      .box-first-section {
+        @include variable-penengah-jati-diri(80px, 80px);
+
+        .first-section-article {
+          width: 750px;
+          margin-right: 50px;
+
+          .first-section-title {
+            font-family: $rubik;
+            color: $text-header;
+            font-size: 54px;
+            margin-bottom: 20px;
+            line-height: 55px;
+          }
+
+          .first-section-p {
+            font-family: $inter;
+            color: $text-header;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 60px;
+          }
+
+          .first-section-button {
+            font-family: $rubik;
+            font-weight: 600;
+            color: $sub-text-header;
+            background-color: $black;
+            padding: 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            width: 150px;
+          }
+        }
+
+        .first-section-img {
+          margin-top: 40;
+          margin-right: -40px;
+        }
+      }
+
+      .box-second-section {
+        @include variable-penengah-jati-diri(180px, 0);
+      }
+
+      .box-third-section {
+        padding-left: 135px;
+
+        .third-section-right {
+          .third-slider {
+            padding-left: 0;
+          }
+        }
+      }
+
+      .box-fourth-section {
+        @include variable-penengah-jati-diri(0, 0);
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .fourth-gallery {
+          margin-top: 50px;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          justify-content: space-between;
+          row-gap: 30px;
+
+          .fourth-content {
+            position: relative;
+            height: 260px;
+            width: 320px;
+
+            &:nth-child(2) {
+              margin-top: 40px;
+            }
+
+            &:nth-child(3) {
+              margin-top: 80px;
+            }
+
+            &:nth-child(4) {
+              margin-top: -80px;
+            }
+
+            &:nth-child(5) {
+              margin-top: -40px;
+            }
+
+            &:nth-child(7) {
+              margin-top: -80px;
+            }
+
+            &:nth-child(8) {
+              margin-top: -40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .main-bg {
+    background: url("/main-index/bg-main.webp") left top no-repeat, url("/main-index/bg-main2.png") right 1400px no-repeat, url("/main-index/bg-main3.png") left 3600px no-repeat;
+    background-size: 100%, 70%, 70%;
+    background-color: $background;
+
+    .main-body {
+      .box-first-section {
+        .first-section-article {
+          .first-section-title {
+            font-size: 60px;
+            line-height: 74px;
+            margin-bottom: 20px;
+          }
+
+          .first-section-p {
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 60px;
+          }
+
+          .first-section-button {
+            font-family: $rubik;
+            font-weight: 600;
+            color: $sub-text-header;
+            background-color: $black;
+            padding: 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            width: 150px;
+          }
+        }
+      }
+
+      .box-second-section {
+        @include variable-penengah-jati-diri(260px, 0);
+      }
+
+      .box-third-section {
+        .third-section-left {
+          margin-right: 50px;
+          width: 35%;
+        }
+      }
+
+      .box-fourth-section {
+        .fourth-gallery {
+          .fourth-content {
+            width: 380px;
+            height: 360px;
+          }
+        }
+        .fourth-button-see {
+          margin-top: 60px;
+          font-size: 18px;
+          border-radius: 60px;
+
+          width: 200px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .main-bg {
+    background: url("/main-index/bg-main.webp") left -200px no-repeat, url("/main-index/bg-main2.png") right 1350px no-repeat, url("/main-index/bg-main3.png") left 3600px no-repeat;
+    background-size: 100%, 70%, 70%;
+    background-color: $background;
+
+    .main-body {
+      padding: 70px 0 0 0;
+
+      //content
+
+      .box-first-section {
+        @include variable-penengah-jati-diri-large(70px, 92px);
+        text-align: left;
+        display: flex;
+
+        .first-section-article {
+          width: 750px;
+          margin-right: 180px;
+
+          .first-section-title {
+            font-size: 60px;
+            line-height: 74px;
+            margin-bottom: 20px;
+          }
+
+          .first-section-p {
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 60px;
+          }
+
+          .first-section-button {
+            font-family: $rubik;
+            font-weight: 600;
+            color: $sub-text-header;
+            background-color: $black;
+            padding: 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            width: 150px;
+          }
+        }
+
+        .first-section-img {
+          margin-top: 40px;
+        }
+      }
+
+      .box-second-section {
+        @include variable-penengah-jati-diri-large(250px, 0);
+        text-align: center;
+
+        .second-small-title {
+          @include red-small-title();
+        }
+        .second-big-title {
+          margin-top: 10px;
+          @include black-title();
+        }
+      }
+
+      .box-third-section {
+        padding: 0 0 0 200px;
+        margin-top: 100px;
+        margin-bottom: 35px;
+        display: flex;
+
+        .third-section-left {
+          max-width: 40%;
+          text-align: left;
+          align-items: flex-start;
+
+          .third-small-title {
+            @include red-small-title();
+          }
+          .third-big-title {
+            @include black-title();
+            margin-top: 0;
+          }
+          .third-p-left {
+            font-family: $inter;
+            font-size: 18px;
+            color: $text-desc;
+          }
+
+          .third-box-button {
+            display: flex;
+
+            .third-round-button {
+              display: block;
+              transition: 0.1s;
+              width: 70px;
+              height: 70px;
+              border: 1px solid #858585;
+              box-sizing: border-box;
+              border-radius: 50%;
+              position: relative;
+              margin-top: 50px;
+              margin-right: 10px;
+
+              .third-svg {
+                fill: #6a6a6a;
+                position: absolute;
+                top: 38%;
+                left: 38%;
+              }
+
+              &:hover {
+                background-color: $main2;
+                border: 0;
+                cursor: pointer;
+
+                .third-svg {
+                  fill: white;
+                }
+              }
+            }
+          }
+        }
+
+        .third-section-right {
+          margin-top: 20px;
+          max-width: 60%;
+
+          .third-slider {
+            padding-left: 15%;
+          }
+
+          .third-box-button-responsive {
+            display: none;
+          }
+        }
+      }
+
+      .box-fourth-section {
+        @include variable-penengah-jati-diri-large(0, 20px);
+        padding-bottom: 80px;
+        padding-top: 80px;
+        background-color: white;
+        text-align: center;
+
+        .fourth-small-title {
+          @include red-small-title;
+        }
+
+        .fourth-big-title {
+          @include black-title;
+          margin-top: 0;
+        }
+
+        .fourth-gallery {
+          margin-top: 50px;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          justify-content: space-evenly;
+          row-gap: 20px;
+
+          .fourth-content {
+            position: relative;
+            height: 380px;
+            width: 360px;
+
+            &:nth-child(2) {
+              margin-top: 40px;
+            }
+
+            &:nth-child(3) {
+              margin-top: 80px;
+            }
+
+            &:nth-child(4) {
+              margin-top: -80px;
+            }
+
+            &:nth-child(5) {
+              margin-top: -40px;
+            }
+
+            &:nth-child(7) {
+              margin-top: -80px;
+            }
+
+            &:nth-child(8) {
+              margin-top: -40px;
+            }
+          }
+        }
+
+        .fourth-gallery-responsive {
+          display: none;
+        }
+
+        .fourth-button-see {
+          margin: 0;
+          margin-top: 50px;
+          font-family: $rubik;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          color: $text-desc;
+
+          border: 1px solid #858585;
+          box-sizing: border-box;
+          border-radius: 60px;
+          background-color: transparent;
+
+          width: 160px;
+          height: 50px;
+        }
+      }
+
+      .box-fifth-section {
+        @include variable-penengah-jati-diri-large(50px, 0);
+
+        .fifth-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .fifth-top-left {
+            width: 50%;
+            text-align: left;
+
+            .fifth-small-title {
+              @include red-small-title;
+            }
+
+            .fifth-big-title {
+              @include black-title;
+              margin-top: 25px;
+            }
+          }
+
+          .fifth-top-right {
+            display: block;
+
+            .fifth-round-button {
+              transition: 0.1s;
+              width: 70px;
+              height: 70px;
+              border: 1px solid #858585;
+              box-sizing: border-box;
+              border-radius: 50%;
+              position: relative;
+              margin-right: 10px;
+
+              .fifth-svg {
+                fill: #6a6a6a;
+                position: absolute;
+                top: 38%;
+                left: 38%;
+              }
+
+              &:hover {
+                background-color: $main2;
+                border: 0;
+                cursor: pointer;
+
+                .fifth-svg {
+                  fill: white;
+                }
+              }
+            }
+          }
+        }
+
+        .fifth-bottom {
+          margin-bottom: 80px;
+
+          .fifth-box-button-responsive {
+            display: none;
+          }
+
+          .fifth-slider-item {
+            padding-left: 5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.whole-page {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    width: 90vw;
+    padding-top: 56.25%;
+
+    @media only screen and (min-width: 1024px) {
+      width: 80vw;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      width: 60vw;
+    }
+
+    @media only screen and (min-width: 1536px) {
+      width: 55vw;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      width: 50vw;
+    }
+
+    .responsiveYt {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

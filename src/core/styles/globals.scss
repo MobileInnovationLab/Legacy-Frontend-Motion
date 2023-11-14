@@ -1,0 +1,74 @@
+@charset "utf-8";
+//css reset
+
+html,
+h2,
+body,
+div,
+ul,
+ol,
+li,
+a,
+img,
+span,
+p,
+b,
+input,
+label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+//smooth scroll
+
+html {
+	scroll-behavior: smooth;
+	transition: 0.3s;
+}
+
+// slicklmao
+
+.slider-mobile {
+	.slick-slider {
+		.slick-dots {
+			fill: #858585;
+
+			.slick-active {
+				svg {
+					fill: #f82f1e;
+				}
+			}
+		}
+	}
+}
+
+.animate-enter {
+	opacity: 0;
+}
+
+.animate-active {
+	opacity: 1;
+}
+
+.animate-exit {
+	opacity: 1;
+}
+
+.animate-exit-active {
+	opacity: 0;
+}

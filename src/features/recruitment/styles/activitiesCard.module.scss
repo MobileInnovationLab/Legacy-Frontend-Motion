@@ -1,0 +1,128 @@
+@import "../../../core/styles/variable/var.scss";
+
+.second-box-body {
+    justify-content: center;
+    display: flex;
+
+    img {
+        width: 30% !important;
+        height: auto;
+    }
+
+    .second-box-division {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .second-box-div-inside {
+            transition: 0.5s;
+    
+            .second-box-article {
+                background-color: white;
+                padding: 70px 40px 40px 40px;
+                margin-top: -130px;
+                max-width: 250px;
+                height: 180px;
+    
+                .second-box-article-title {
+                    font-family: $rubik;
+                    font-weight: 600;
+                    color: $black;
+                    font-size: 24px;
+                }
+    
+                .second-box-article-p {
+                    font-family: $inter;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $text-desc;
+                    font-size: 16px;
+                }
+            }
+    
+            &:hover {
+                .second-box-article {
+                    box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.035);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .second-box-division {
+        margin-top: 10px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .second-box-division {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .second-box-division {
+        margin-top: 30px;
+
+        .second-box-div-inside {
+            .second-box-article {
+                background-color: white;
+                padding: 70px 40px 40px 40px;
+                margin-top: -130px;
+                max-width: 320px;
+                height: 200px;
+
+                .second-box-article-title {
+                    font-family: $rubik;
+                    font-weight: 600;
+                    color: $black;
+                    font-size: 28px;
+                }
+
+                .second-box-article-p {
+                    font-family: $inter;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $text-desc;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .second-box-division {
+        margin-top: 50px;
+
+        .second-box-div-inside {
+            .second-box-article {
+                background-color: white;
+                padding: 70px 40px 40px 40px;
+                margin-top: -130px;
+                max-width: 400px;
+                height: 180px;
+
+                .second-box-article-title {
+                    font-family: $rubik;
+                    font-weight: 600;
+                    color: $black;
+                    font-size: 28px;
+                }
+
+                .second-box-article-p {
+                    font-family: $inter;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $text-desc;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
